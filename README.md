@@ -1,8 +1,7 @@
 # E14 robustness: missing-EDA evaluation on WESAD
 
 Code and derived data for the preprint drafted in `e14-preprint-outline.md`
-("No evidence that modality gating adds to missingness-aware training when
-wearable EDA drops out"), plus the separate WESAD × MIT-BIH dataset-identity
+(see `paper/main.pdf`; the long supplement is the outline), plus the separate WESAD × MIT-BIH dataset-identity
 audit (`audit/`, companion note).
 
 Nothing in this repository was pre-registered. `configs/preregistration.yaml`
@@ -21,11 +20,22 @@ page-1 provenance note and `results/decision_timeline.md`.
     meditation, session timing, signal quality, wrist E4 features). Its
     manifest records that its chest baseline/stress rows reproduce the frozen
     table exactly from the raw files.
-- Licence: WESAD is used for research only. UCI defers to the original licence
-  in `wesad_readme.pdf` (inside the official zip), whose wording is not yet
-  recorded here. Released WESAD-derived tables, if any, must cite Schmidt et al.
-  (ICMI 2018) and are offered under the same terms as WESAD, for research use.
-  WESAD-derived models and features are not used commercially.
+- Licence and data use: see `DATA_NOTICE.md`. WESAD terms (checked 2026-10-04): scientific,
+  non-commercial use with credit to Schmidt et al. (ICMI 2018); redistribution of derived data is not
+  addressed, so the window-level feature tables are withheld and only their hashes are published.
+  Code is MIT-licensed (`LICENSE`). WESAD-derived models and features are not used commercially.
+- MIT-BIH (round-6 probe only): set `MITBIH_ROOT` to a folder with the `.dat/.hea/.atr` files.
+
+## Quick check by an outside reader (no WESAD download needed for the first two)
+
+```bash
+pip install -r requirements.txt
+python -m pytest -q tests     # 44 tests, ~1 min: a regression test for each pipeline error
+python check_numbers.py          # ties the outline's numbers to the stored results files
+```
+
+To re-run the primary comparison you need the official WESAD files (see below). Corrections and
+independent re-runs are welcome via GitHub issues.
 
 ## Reproducing the paper's numbers (CPU, Python 3.13; `pip install -r requirements.txt`)
 
@@ -49,6 +59,7 @@ python run_operating_points.py                 # round 5 (prespec_round5.md): op
 python run_mnar.py                             # round 5 (prespec_round5.md): label/motion-driven EDA missingness (~10 min)
 python run_mnar.py --no-added-masking          # review 9, post hoc: same, without each system's own 50% MCAR training mask (~5 min)
 python run_intercept_recal.py                  # review 9, post hoc: intercept-only / slope-only / Platt recalibration (~4 min)
+python run_mitbih_failure.py                   # round 6 (prespec_round6_mitbih.md): arrhythmia failure-mode probe on MIT-BIH (~2 min)
 python reimpl/minimal_primary.py               # author-side minimal re-implementation
 python make_figures.py
 python check_numbers.py                        # ties outline numbers to results files
