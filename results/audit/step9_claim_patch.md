@@ -1,4 +1,4 @@
-# Preprint claim patch — audit decision as of 2026-10-02
+# Preprint claim patch — audit decision as of 2026-10-04
 
 **Decision:** `C_partial_inconclusive`
 
