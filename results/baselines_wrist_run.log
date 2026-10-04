@@ -1,0 +1,60 @@
+[Parallel(n_jobs=18)]: Using backend LokyBackend with 18 concurrent workers.
+[Parallel(n_jobs=18)]: Done  36 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=18)]: Done 126 tasks      | elapsed:  2.2min
+[Parallel(n_jobs=18)]: Done 210 out of 210 | elapsed:  2.7min finished
+[baselines] 434 WESAD windows, 15 subjects; feature table sha256 3b384d7f66c7
+  [loso] 15 folds x 14 models done
+
+=== loso | raw | reduced condition, pooled OOF (95% subject-bootstrap CI) ===
+  model                                             Brier              ECE_sweep                  AUROC  wsAUROC  slope                   AURC
+  lgbm_zero_fill_at_test              0.296 [0.273,0.314]    0.283 [0.227,0.322]    0.858 [0.773,0.941]    0.872   0.88    0.124 [0.091,0.162]
+  lgbm_nan_at_test                    0.296 [0.273,0.314]    0.283 [0.227,0.322]    0.858 [0.773,0.941]    0.872   0.88    0.124 [0.091,0.162]
+  lgbm_nan_training_p0.5              0.117 [0.075,0.161]    0.045 [0.018,0.080]    0.899 [0.833,0.958]    0.889   0.93    0.070 [0.024,0.121]
+  lgbm_ecg_only_per_config            0.115 [0.073,0.161]    0.021 [0.013,0.106]    0.902 [0.838,0.958]    0.903   0.84    0.066 [0.025,0.120]
+  lgbm_mean_impute_recal              0.145 [0.090,0.200]    0.091 [0.038,0.170]    0.868 [0.800,0.939]    0.891   0.87    0.105 [0.042,0.177]
+  hr_only                             0.231 [0.189,0.273]    0.063 [0.013,0.148]    0.614 [0.496,0.734]    0.633   0.35    0.356 [0.232,0.444]
+  gated_dropout_p0.5                  0.082 [0.055,0.110]    0.029 [0.016,0.063]    0.942 [0.905,0.975]    0.950   0.63    0.039 [0.014,0.068]
+  gated_no_dropout                    0.098 [0.062,0.139]    0.050 [0.022,0.109]    0.932 [0.890,0.969]    0.946   0.53    0.044 [0.019,0.075]
+  mlp_nongated_dropout_p0.5           0.090 [0.055,0.125]    0.049 [0.020,0.082]    0.931 [0.880,0.974]    0.938   0.53    0.048 [0.015,0.088]
+  gated_dropout_hr_removed            0.190 [0.135,0.244]    0.073 [0.030,0.148]    0.757 [0.644,0.865]    0.757   0.54    0.183 [0.098,0.285]
+  gated_dropout_hr_resid              0.178 [0.151,0.204]    0.040 [0.020,0.092]    0.778 [0.723,0.839]    0.794   0.57    0.188 [0.131,0.256]
+  lgbm_nan_training_hr_removed        0.185 [0.134,0.239]    0.048 [0.025,0.139]    0.754 [0.633,0.867]    0.752   0.67    0.205 [0.111,0.310]
+  lgbm_ecg_only_hr_removed            0.190 [0.137,0.244]    0.062 [0.027,0.146]    0.756 [0.642,0.862]    0.759   0.62    0.196 [0.108,0.293]
+  mlp_nongated_no_dropout             0.119 [0.075,0.166]    0.086 [0.043,0.140]    0.910 [0.855,0.958]    0.911   0.34    0.060 [0.025,0.103]
+
+=== loso | platt | reduced condition, pooled OOF (95% subject-bootstrap CI) ===
+  model                                             Brier              ECE_sweep                  AUROC  wsAUROC  slope                   AURC
+  lgbm_zero_fill_at_test                  0.260 [nan,nan]        0.240 [nan,nan]        0.835 [nan,nan]    0.872   1.42        0.139 [nan,nan]
+  lgbm_nan_at_test                        0.260 [nan,nan]        0.240 [nan,nan]        0.835 [nan,nan]    0.872   1.42        0.139 [nan,nan]
+  lgbm_nan_training_p0.5                  0.120 [nan,nan]        0.066 [nan,nan]        0.900 [nan,nan]    0.889   1.29        0.069 [nan,nan]
+  lgbm_ecg_only_per_config                0.117 [nan,nan]        0.006 [nan,nan]        0.902 [nan,nan]    0.903   1.01        0.067 [nan,nan]
+  lgbm_mean_impute_recal                  0.133 [nan,nan]        0.056 [nan,nan]        0.879 [nan,nan]    0.891   1.22        0.076 [nan,nan]
+  hr_only                                 0.222 [nan,nan]        0.037 [nan,nan]        0.607 [nan,nan]    0.633   0.83        0.317 [nan,nan]
+  gated_dropout_p0.5                      0.103 [nan,nan]        0.108 [nan,nan]        0.937 [nan,nan]    0.950   1.87        0.041 [nan,nan]
+  gated_no_dropout                        0.117 [nan,nan]        0.108 [nan,nan]        0.924 [nan,nan]    0.946   1.97        0.049 [nan,nan]
+  mlp_nongated_dropout_p0.5               0.112 [nan,nan]        0.096 [nan,nan]        0.924 [nan,nan]    0.938   1.70        0.052 [nan,nan]
+  gated_dropout_hr_removed                0.198 [nan,nan]        0.087 [nan,nan]        0.750 [nan,nan]    0.757   1.77        0.191 [nan,nan]
+  gated_dropout_hr_resid                  0.200 [nan,nan]        0.086 [nan,nan]        0.767 [nan,nan]    0.794   1.93        0.204 [nan,nan]
+  lgbm_nan_training_hr_removed            0.186 [nan,nan]        0.063 [nan,nan]        0.756 [nan,nan]    0.752   1.24        0.196 [nan,nan]
+  lgbm_ecg_only_hr_removed                0.188 [nan,nan]        0.033 [nan,nan]        0.754 [nan,nan]    0.759   1.07        0.192 [nan,nan]
+  mlp_nongated_no_dropout                 0.121 [nan,nan]        0.083 [nan,nan]        0.907 [nan,nan]    0.911   1.64        0.060 [nan,nan]
+
+=== loso | platt_pc | reduced condition, pooled OOF (95% subject-bootstrap CI) ===
+  model                                             Brier              ECE_sweep                  AUROC  wsAUROC  slope                   AURC
+  lgbm_zero_fill_at_test              0.166 [0.124,0.213]    0.103 [0.050,0.187]    0.859 [0.770,0.950]    0.872   0.99    0.159 [0.054,0.271]
+  lgbm_nan_at_test                    0.166 [0.124,0.213]    0.103 [0.050,0.187]    0.859 [0.770,0.950]    0.872   0.99    0.159 [0.054,0.271]
+  lgbm_nan_training_p0.5              0.119 [0.082,0.158]    0.036 [0.018,0.085]    0.897 [0.832,0.956]    0.889   1.04    0.078 [0.027,0.126]
+  lgbm_ecg_only_per_config            0.117 [0.080,0.156]    0.006 [0.013,0.104]    0.902 [0.839,0.956]    0.903   1.01    0.067 [0.027,0.113]
+  lgbm_mean_impute_recal              0.133 [0.101,0.166]    0.056 [0.025,0.107]    0.879 [0.811,0.943]    0.891   1.22    0.076 [0.036,0.125]
+  hr_only                             0.222 [0.206,0.238]    0.037 [0.007,0.126]    0.607 [0.492,0.732]    0.633   0.83    0.317 [0.230,0.394]
+  gated_dropout_p0.5                  0.091 [0.068,0.114]    0.059 [0.035,0.100]    0.942 [0.908,0.973]    0.950   1.42    0.036 [0.016,0.062]
+  gated_no_dropout                    0.105 [0.079,0.132]    0.070 [0.033,0.104]    0.925 [0.880,0.964]    0.946   1.37    0.047 [0.023,0.077]
+  mlp_nongated_dropout_p0.5           0.097 [0.072,0.124]    0.059 [0.027,0.098]    0.930 [0.882,0.969]    0.938   1.28    0.045 [0.018,0.083]
+  gated_dropout_hr_removed            0.198 [0.172,0.224]    0.049 [0.019,0.159]    0.741 [0.626,0.855]    0.757   1.28    0.214 [0.130,0.302]
+  gated_dropout_hr_resid              0.190 [0.174,0.207]    0.100 [0.043,0.145]    0.776 [0.721,0.836]    0.794   1.17    0.205 [0.145,0.269]
+  lgbm_nan_training_hr_removed        0.185 [0.149,0.222]    0.033 [0.020,0.127]    0.753 [0.635,0.864]    0.752   1.06    0.196 [0.107,0.287]
+  lgbm_ecg_only_hr_removed            0.188 [0.154,0.222]    0.033 [0.020,0.117]    0.754 [0.643,0.860]    0.759   1.07    0.192 [0.112,0.275]
+  mlp_nongated_no_dropout             0.113 [0.082,0.144]    0.055 [0.020,0.089]    0.908 [0.851,0.957]    0.911   1.15    0.059 [0.027,0.101]
+  rule fires: raw=True; platt=True; platt_pc=True
+
+[baselines] wrote D:\Trần An Khánh\E14\robustness\results\baselines_wrist.json

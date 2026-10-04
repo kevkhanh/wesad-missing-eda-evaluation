@@ -1,0 +1,43 @@
+# Decision-timeline appendix
+
+Addresses peer-review C2 (pre-registration claims cannot be verified) and
+C3 (no version control). Each row records a methodological decision, the
+date it was made, the data that had been seen at that point, and whether
+a dated external artefact exists.
+
+| # | Date (YYYY-MM-DD) | Decision | Data seen at the time | Dated artefact |
+|---|---|---|---|---|
+| 1 | pre-2026-09-20 | Initial record-level train/test split for H-B1/H-C1 | WESAD-internal features | none (no git) |
+| 2 | pre-2026-09-20 | Discovered the record-level split leaked (same subject in train and test) | leaky-split H-B1 numbers (see case study in 4.3) | none (no git) |
+| 3 | pre-2026-09-30 | Switched to subject-level 5-fold GroupKFold | leaky-split numbers from (2) | none (no git) |
+| 4 | 2026-09-30 (pre-run) | Wrote `configs/preregistration.yaml` with the audit thresholds | within-dataset null splits (N1/N2 subject partitions) | **not under git at the time**; the file's modification date is on-disk only (per peer-review C2, this is NOT a valid pre-registration timestamp) |
+| 5 | 2026-09-30 22:18 | Executed `audit/run_all.py --fast` | pre-registration YAML + raw features | audit logs under `results/audit/` (filesystem mtime only) |
+| 6 | 2026-10-01 | Observed N2 p95 = 0.71 > 0.70 SUBSTANTIALLY cut-off; flagged as prima-facie evidence the thresholds were seen alongside null data | audit output | this file |
+| 7 | 2026-10-01 | Fixed `audit/step4_identity_probe.py::_verdict_step4` to apply the SUBSTANTIALLY/BORDERLINE bands to the lower CI, not the point estimate (per peer-review MA7) | audit output | **code commit (user to tag post-git-init)** |
+| 8 | 2026-10-01 | Retired PATHOLOGY_LIKELY verdict in `audit/step3_shortcut.py` (per peer-review M1) | audit output | **code commit (user to tag post-git-init)** |
+| 9 | 2026-10-01 | Specified baseline set (i)–(iv), (hr), (hr-removed), (hr-resid) and pre-stated falsification rule for Section 5.2 | peer_review_updated.md + prior-draft point estimates | **planned OSF registration + git tag `baselines-plan-v1` BEFORE running baselines** |
+| 10 | 2026-10-01 | Executed `run_baselines.py` and `run_repeated_cv.py` (20 repeats × 5 folds) | pre-stated falsification rule in (9) | `results/baselines.json`, `results/repeated_cv.json` (filesystem only; code commit pending git init) |
+| 11 | 2026-10-01 | Falsification rule from (9) **fired**: gated + dropout does not beat NaN-training LightGBM or per-configuration ECG-only on Brier, debiased ECE or AUROC. Paper is reframed as a candid negative-result evaluation (per the rule) | all of (10) | this file + updated outline Sections 5.2 / 6 / 8 |
+| 12 | 2026-10-01 | Round-3 review found implementation defects behind rows 10–11: (a) repeated CV reused one subject partition (rows shuffled, `GroupKFold` ignores row order; 1 distinct partition in 20); (b) Platt protocol in Methods not implemented for most models, and (iv)'s Platt fit on in-sample predictions; (c) "debiased ECE" was min-over-bins of a zero-clipped estimate (20/40 reduced per-fold values = 0); (d) complete/reduced tiers scored on disjoint random halves; (e) hr-resid kept `hrv_mean_nn` as input; (f) the 2026-09-20 locked ratio table came from a 445-window cache that no longer exists (current: 434) | rows 10–11 outputs + code | `peer_review_round3.md`; pre-fix outputs archived in `results/archive/*_prefix.*` |
+| 13 | 2026-10-01 | Froze the feature table (SHA-256 in `results/feature_table_manifest.json`); every Section 5.2 script now refuses to run on a different table | rows 10–12 | `results/feature_table_manifest.json` (filesystem only) |
+| 14 | 2026-10-01 | Fixed (a)–(e) in `eval_core.py`, `run_metrics.py`, `run_baselines.py`, `run_repeated_cv.py`; added LOSO, pooled OOF metrics with subject-cluster bootstrap CIs, within-subject AUROC, per-subject table, a capacity-matched non-gated MLP, and HR-removed LightGBM variants. Re-evaluated the row-9 falsification rule on the fixed endpoints (ECE_sweep replaces the mis-implemented "debiased ECE"). These additions were specified after seeing the row-10 results | rows 10–12 | `results/baselines.json`, `results/repeated_cv.json` (filesystem only) |
+| 15 | 2026-10-01 | Updated `requirements.txt` to the versions that actually ran (old pins did not match the installed environment) | — | `requirements.txt` |
+| 16 | 2026-10-01 | Confirmed raw WESAD `.pkl` archives (S2–S17) exist at the path used by `run_full_audit.sh`; MA9/MA4 are not data-blocked | — | this file |
+| 17 | 2026-10-01 | Added nested tuning (inner subject-level CV), a gated-vs-MLP capacity sweep, subject-level H2a reanalysis and the per-subject figure; replaced the outline with the restructured v3 (H-C1 cut, audit moved to a separate note) | rows 10–16 outputs | `results/repeated_cv_tuned.json`, `results/repeated_cv_capacity.json`, `results/h2a_subject_level.json`, `archive/` (filesystem only) |
+| 18 | 2026-10-01 | Added per-condition Platt for every model, tie-aware AURC / risk–coverage, regenerated interpretability (LOSO, out-of-fold), documented feature extraction. Under per-condition Platt the row-9 rule does not fire in repeated CV or LOSO (fires in single 5-fold); reported as calibration-dependent | rows 14–17 outputs | `results/repeated_cv.json`, `results/baselines.json`, `results/interpretability_frozen.json` (filesystem only) |
+| 19 | 2026-10-02 | Round-4 review (`peer_reviewe_v2.md`) received. Author confirmed in writing that **no superseded number** (4.23×/2.21×/1.61×, "5/5 folds", leaky-split results) appeared in investor, accelerator, grant, talk, website or social-media material; Appendix A placeholder replaced accordingly | review | this file + outline Appendix A |
+| 20 | 2026-10-02 | Fixed the post-hoc equivalence margins (SESOI: Brier 0.02, AUROC 0.03) in `run_repeated_cv.py` **before** running the round-4 analyses; margins chosen from external anchors (≈9% of the prevalence-only Brier; a conventional minimal AUROC difference) but the comparisons themselves were already known, so every equivalence result is labelled post hoc | rows 14–18 outputs (known) | `run_repeated_cv.SESOI` (filesystem only) |
+| 21 | 2026-10-02 | Added the missing factorial cell (never-masked MLP), complete-condition paired CIs, B–F with df = 14, participant-level inference, TOST/ROPE, SmoothECE, E-AURC, BCa participant bootstrap (B = 2,000); re-ran all repeated-CV sets (default reproduced the round-3 numbers exactly) plus HRV-subset, masking-rate and per-subject-normalisation sensitivity sets | rows 19–20 | `results/repeated_cv*.json` |
+| 22 | 2026-10-02 | Extracted an extended table from raw WESAD `.pkl` (amusement, meditation, timing, signal quality, wrist E4). Its chest baseline/stress rows reproduce the frozen table exactly (434/434 rows, 0 mismatched values) | raw data | `results/extended_table_manifest.json` |
+| 23 | 2026-10-02 | Ran order-confound checks (stress vs amusement, negative control, baseline vs meditation), the E4 wrist replication and an author-side minimal re-implementation. All labelled "requested (round 4)"; none pre-registered (author chose to run rather than register first) | rows 21–22 | `results/order_confound.json`, `results/repeated_cv_wrist.json`, `results/baselines_wrist.json`, `results/reimpl_minimal_primary.json` |
+
+## Items pending (require future action)
+
+- **(C3)** `git init` in the project root and tag the current commit as `preprint-v1-post-peer-review`. The user is doing this personally (per the clarification before the revision began).
+- **(C2)** OSF registration of `configs/preregistration.yaml` and of `run_baselines.py`'s baseline-set config + falsification rule. OSF DOIs will be inserted into Section 5.6 and 5.2 respectively.
+- **(MA7)** Full `audit/run_all.py` (no `--fast`) rerun with 10,000/1,000 permutations, 8 harmonization stages, leave-one-stage-out attribution, Holm correction, and seed-sensitivity sweep. Fragility-band report for Branch C.
+- ~~**(MA9)**~~ E4 BVP and wrist EDA extracted in row 22 (`extract_extended.py`). RespiBAN respiration features not extracted (not needed by any round-4 analysis).
+- **(MA4)** Real H-C1 tiers: the wrist table now exists (row 22); the wrist-only replication (row 23) covers Tier 2/3 within the wrist; a chest-vs-wrist tier comparison remains future work.
+- **(round 4, M9)** An independent re-implementation by someone who has not seen the code; the row-23 re-implementation is author-side only.
+- **(round 4, COI)** Independent check of the primary analysis by a statistician without equity.
+- **(m7)** Dated systematic search backing the H-B2 "no public dataset pairs panic + cardiac" claim — see `results/hb2_search.md`.

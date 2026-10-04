@@ -1,0 +1,56 @@
+{
+  "C1": {
+    "P1": {
+      "subject_auc": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_value_subject_permutation": 1.0,
+      "n_subjects_scored": 9,
+      "n_seeds": 3,
+      "n_boot": 500,
+      "n_perm": 100
+    },
+    "P2": {
+      "subject_auc": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_value_subject_permutation": 1.0,
+      "n_subjects_scored": 9,
+      "n_seeds": 3,
+      "n_boot": 500,
+      "n_perm": 100
+    },
+    "P3": {
+      "subject_auc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "p_value_subject_permutation": 0.009900990099009901,
+      "n_subjects_scored": 9,
+      "n_seeds": 3,
+      "n_boot": 500,
+      "n_perm": 100
+    }
+  },
+  "null_floor": {
+    "N1": {
+      "n_reps": 10,
+      "median": 0.33333333333333337,
+      "p95": 0.33333333333333337
+    },
+    "N2": {
+      "n_reps": 10,
+      "median": 0.125,
+      "p95": 0.125
+    }
+  },
+  "verdict": {
+    "band": "NOT_SEPARABLE",
+    "note": "AUC=0.000 CI=[0.00,0.00] N1-floor=0.33333333333333337 (band derived from lower CI, per preregistration)"
+  }
+}

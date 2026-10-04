@@ -1,0 +1,65 @@
+[repeated_cv:hrv_subset:chest:none] 100 fold tasks x 4 models, n_jobs=16
+[Parallel(n_jobs=16)]: Using backend LokyBackend with 16 concurrent workers.
+[Parallel(n_jobs=16)]: Done  40 tasks      | elapsed:   59.6s
+[Parallel(n_jobs=16)]: Done  90 out of 100 | elapsed:  1.3min remaining:    8.6s
+[Parallel(n_jobs=16)]: Done 100 out of 100 | elapsed:  1.4min finished
+
+=== Repeated subject-level CV (hrv_subset, chest, none): 20 x 5 folds, 15 subjects, 20 distinct partitions ===
+
+--- reduced | raw: means (SD across folds) ---
+  hrvsub_gated_dropout_p0.5          Brier 0.1397 (0.0755)  AUROC 0.910  ECE_sweep 0.123  smECE 0.127  E-AURC 0.048
+  hrvsub_lgbm_ecg_only_per_config    Brier 0.1486 (0.0837)  AUROC 0.881  ECE_sweep 0.124  smECE 0.127  E-AURC 0.081
+  hrvsub_lgbm_nan_training_p0.5      Brier 0.1468 (0.0848)  AUROC 0.888  ECE_sweep 0.127  smECE 0.128  E-AURC 0.071
+  hrvsub_mlp_nongated_dropout_p0.5   Brier 0.1424 (0.0760)  AUROC 0.908  ECE_sweep 0.125  smECE 0.129  E-AURC 0.049
+--- reduced | raw: pairwise (A - B) ---
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_nan_training_p0.5
+    Brier BF -0.0070 [-0.0339, +0.0198] df14 [-0.0361, +0.0220] TOST p=0.171 eqb=0.030 ROPE=0.81 | participant -0.0066 [-0.0258, +0.0126] TOST p=0.078 (9/15) | AUROC BF +0.0219 [-0.0432, +0.0870] TOST p=0.402
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_ecg_only_per_config
+    Brier BF -0.0088 [-0.0379, +0.0202] df14 [-0.0403, +0.0226] TOST p=0.224 eqb=0.033 ROPE=0.75 | participant -0.0084 [-0.0309, +0.0140] TOST p=0.144 (9/15) | AUROC BF +0.0285 [-0.0397, +0.0968] TOST p=0.483
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_mlp_nongated_dropout_p0.5
+    Brier BF -0.0027 [-0.0181, +0.0127] df14 [-0.0194, +0.0139] TOST p=0.014 eqb=0.016 ROPE=0.98 | participant -0.0027 [-0.0112, +0.0059] TOST p=0.000 (9/15) | AUROC BF +0.0023 [-0.0163, +0.0209] TOST p=0.002
+  rule fires (reduced, raw): False (without ECE: False)
+
+--- reduced | platt_pc: means (SD across folds) ---
+  hrvsub_gated_dropout_p0.5          Brier 0.1374 (0.0500)  AUROC 0.910  ECE_sweep 0.133  smECE 0.123  E-AURC 0.044
+  hrvsub_lgbm_ecg_only_per_config    Brier 0.1513 (0.0577)  AUROC 0.882  ECE_sweep 0.151  smECE 0.135  E-AURC 0.061
+  hrvsub_lgbm_nan_training_p0.5      Brier 0.1511 (0.0588)  AUROC 0.888  ECE_sweep 0.155  smECE 0.137  E-AURC 0.057
+  hrvsub_mlp_nongated_dropout_p0.5   Brier 0.1396 (0.0481)  AUROC 0.908  ECE_sweep 0.136  smECE 0.125  E-AURC 0.045
+--- reduced | platt_pc: pairwise (A - B) ---
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_nan_training_p0.5
+    Brier BF -0.0136 [-0.0370, +0.0097] df14 [-0.0389, +0.0116] TOST p=0.295 eqb=0.033 ROPE=0.70 | participant -0.0133 [-0.0318, +0.0051] TOST p=0.226 (11/15) | AUROC BF +0.0219 [-0.0432, +0.0870] TOST p=0.402
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_ecg_only_per_config
+    Brier BF -0.0139 [-0.0375, +0.0097] df14 [-0.0394, +0.0116] TOST p=0.304 eqb=0.034 ROPE=0.69 | participant -0.0137 [-0.0333, +0.0059] TOST p=0.250 (11/15) | AUROC BF +0.0284 [-0.0399, +0.0967] TOST p=0.482
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_mlp_nongated_dropout_p0.5
+    Brier BF -0.0022 [-0.0169, +0.0125] df14 [-0.0181, +0.0137] TOST p=0.009 eqb=0.015 ROPE=0.99 | participant -0.0022 [-0.0079, +0.0035] TOST p=0.000 (7/15) | AUROC BF +0.0023 [-0.0163, +0.0209] TOST p=0.002
+  rule fires (reduced, platt_pc): False (without ECE: False)
+
+--- complete | raw: means (SD across folds) ---
+  hrvsub_gated_dropout_p0.5          Brier 0.1196 (0.0707)  AUROC 0.942  ECE_sweep 0.113  smECE 0.115  E-AURC 0.044
+  hrvsub_lgbm_ecg_only_per_config    Brier 0.1486 (0.0837)  AUROC 0.881  ECE_sweep 0.124  smECE 0.127  E-AURC 0.081
+  hrvsub_lgbm_nan_training_p0.5      Brier 0.0863 (0.0610)  AUROC 0.958  ECE_sweep 0.099  smECE 0.097  E-AURC 0.019
+  hrvsub_mlp_nongated_dropout_p0.5   Brier 0.1160 (0.0745)  AUROC 0.947  ECE_sweep 0.114  smECE 0.117  E-AURC 0.040
+--- complete | raw: pairwise (A - B) ---
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_nan_training_p0.5
+    Brier BF +0.0334 [-0.0434, +0.1101] df14 [-0.0496, +0.1163] TOST p=0.635 eqb=0.098 ROPE=0.28 | participant +0.0334 [-0.0194, +0.0862] TOST p=0.703 (5/15) | AUROC BF -0.0162 [-0.0743, +0.0420] TOST p=0.319
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_ecg_only_per_config
+    Brier BF -0.0289 [-0.1325, +0.0746] df14 [-0.1409, +0.0830] TOST p=0.568 eqb=0.116 ROPE=0.26 | participant -0.0291 [-0.1142, +0.0559] TOST p=0.589 (10/15) | AUROC BF +0.0609 [-0.0410, +0.1627] TOST p=0.726
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_mlp_nongated_dropout_p0.5
+    Brier BF +0.0037 [-0.0316, +0.0389] df14 [-0.0344, +0.0417] TOST p=0.180 eqb=0.033 ROPE=0.73 | participant +0.0035 [-0.0062, +0.0132] TOST p=0.001 (8/15) | AUROC BF -0.0043 [-0.0325, +0.0239] TOST p=0.037
+  rule fires (complete, raw): True (without ECE: True)
+
+--- complete | platt_pc: means (SD across folds) ---
+  hrvsub_gated_dropout_p0.5          Brier 0.1140 (0.0482)  AUROC 0.942  ECE_sweep 0.128  smECE 0.116  E-AURC 0.037
+  hrvsub_lgbm_ecg_only_per_config    Brier 0.1513 (0.0577)  AUROC 0.882  ECE_sweep 0.151  smECE 0.135  E-AURC 0.061
+  hrvsub_lgbm_nan_training_p0.5      Brier 0.0874 (0.0459)  AUROC 0.958  ECE_sweep 0.112  smECE 0.103  E-AURC 0.019
+  hrvsub_mlp_nongated_dropout_p0.5   Brier 0.1108 (0.0508)  AUROC 0.947  ECE_sweep 0.134  smECE 0.122  E-AURC 0.034
+--- complete | platt_pc: pairwise (A - B) ---
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_nan_training_p0.5
+    Brier BF +0.0266 [-0.0308, +0.0840] df14 [-0.0355, +0.0886] TOST p=0.590 eqb=0.075 ROPE=0.36 | participant +0.0266 [-0.0111, +0.0644] TOST p=0.644 (4/15) | AUROC BF -0.0162 [-0.0743, +0.0420] TOST p=0.319
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_lgbm_ecg_only_per_config
+    Brier BF -0.0373 [-0.1124, +0.0377] df14 [-0.1184, +0.0438] TOST p=0.676 eqb=0.100 ROPE=0.26 | participant -0.0375 [-0.0978, +0.0229] TOST p=0.728 (10/15) | AUROC BF +0.0608 [-0.0411, +0.1627] TOST p=0.725
+  hrvsub_gated_dropout_p0.5__vs__hrvsub_mlp_nongated_dropout_p0.5
+    Brier BF +0.0032 [-0.0194, +0.0258] df14 [-0.0212, +0.0276] TOST p=0.072 eqb=0.022 ROPE=0.91 | participant +0.0031 [-0.0055, +0.0118] TOST p=0.000 (8/15) | AUROC BF -0.0043 [-0.0325, +0.0239] TOST p=0.037
+  rule fires (complete, platt_pc): True (without ECE: True)
+
+[repeated_cv] wrote D:\Trần An Khánh\E14\robustness\results\repeated_cv_hrv_subset.json

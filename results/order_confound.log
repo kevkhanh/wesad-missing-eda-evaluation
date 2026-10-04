@@ -1,0 +1,43 @@
+
+A. stress vs amusement (LOSO, raw)
+  gated_dropout_hr_removed       complete pooled 0.713 [0.596 0.816] ws 0.720 [0.596 0.836] by protocol 0.775/0.671
+  gated_dropout_hr_removed       reduced  pooled 0.583 [0.467 0.687] ws 0.595 [0.471 0.713] by protocol 0.669/0.529
+  gated_dropout_p0.5             complete pooled 0.907 [0.851 0.955] ws 0.943 [0.888 0.984] by protocol 0.944/0.942
+  gated_dropout_p0.5             reduced  pooled 0.866 [0.799 0.931] ws 0.914 [0.839 0.976] by protocol 0.889/0.937
+  hr_only                        complete pooled 0.851 [0.786 0.911] ws 0.938 [0.851 1.   ] by protocol 0.952/0.925
+  hr_only                        reduced  pooled 0.851 [0.786 0.911] ws 0.938 [0.851 1.   ] by protocol 0.952/0.925
+  lgbm_ecg_only_hr_removed       complete pooled 0.680 [0.573 0.785] ws 0.703 [0.579 0.818] by protocol 0.717/0.691
+  lgbm_ecg_only_hr_removed       reduced  pooled 0.680 [0.573 0.785] ws 0.703 [0.579 0.818] by protocol 0.717/0.691
+  lgbm_ecg_only_per_config       complete pooled 0.911 [0.86  0.958] ws 0.946 [0.892 0.997] by protocol 0.953/0.940
+  lgbm_ecg_only_per_config       reduced  pooled 0.911 [0.86  0.958] ws 0.946 [0.892 0.997] by protocol 0.953/0.940
+  lgbm_nan_training_hr_removed   complete pooled 0.799 [0.673 0.914] ws 0.777 [0.657 0.9  ] by protocol 0.739/0.811
+  lgbm_nan_training_hr_removed   reduced  pooled 0.666 [0.554 0.777] ws 0.684 [0.548 0.815] by protocol 0.688/0.681
+  lgbm_nan_training_p0.5         complete pooled 0.925 [0.874 0.975] ws 0.974 [0.942 0.999] by protocol 0.963/0.984
+  lgbm_nan_training_p0.5         reduced  pooled 0.909 [0.857 0.954] ws 0.936 [0.871 0.989] by protocol 0.969/0.908
+  mlp_nongated_dropout_p0.5      complete pooled 0.872 [0.803 0.939] ws 0.932 [0.863 0.984] by protocol 0.925/0.938
+  mlp_nongated_dropout_p0.5      reduced  pooled 0.857 [0.781 0.925] ws 0.894 [0.799 0.972] by protocol 0.875/0.910
+  _hr_delta_mean_nn_stress_minus_amusement_ms {'median': -216.31476530681965, 'range': [-391.5287835474069, 56.26445020154938]}
+  _n_windows {'stress': 152, 'amusement': 79}
+
+B. negative control: fraction of windows predicted stress (p>=0.5)
+  gated_dropout_p0.5           complete amusement 0.10  baseline 0.16  meditation_1 0.14  meditation_2 0.11  stress 0.86
+  gated_dropout_p0.5           reduced  amusement 0.14  baseline 0.14  meditation_1 0.23  meditation_2 0.21  stress 0.70
+  hr_only                      complete amusement 0.28  baseline 0.22  meditation_1 0.13  meditation_2 0.13  stress 0.65
+  hr_only                      reduced  amusement 0.28  baseline 0.22  meditation_1 0.13  meditation_2 0.13  stress 0.65
+  lgbm_ecg_only_per_config     complete amusement 0.19  baseline 0.17  meditation_1 0.21  meditation_2 0.14  stress 0.75
+  lgbm_ecg_only_per_config     reduced  amusement 0.19  baseline 0.17  meditation_1 0.21  meditation_2 0.14  stress 0.75
+  lgbm_nan_at_test             complete amusement 0.27  baseline 0.09  meditation_1 0.09  meditation_2 0.07  stress 0.88
+  lgbm_nan_at_test             reduced  amusement 0.00  baseline 0.00  meditation_1 0.00  meditation_2 0.00  stress 0.00
+  lgbm_nan_training_p0.5       complete amusement 0.13  baseline 0.13  meditation_1 0.12  meditation_2 0.08  stress 0.86
+  lgbm_nan_training_p0.5       reduced  amusement 0.18  baseline 0.18  meditation_1 0.15  meditation_2 0.10  stress 0.72
+  mlp_nongated_dropout_p0.5    complete amusement 0.20  baseline 0.13  meditation_1 0.12  meditation_2 0.12  stress 0.78
+  mlp_nongated_dropout_p0.5    reduced  amusement 0.15  baseline 0.15  meditation_1 0.26  meditation_2 0.17  stress 0.73
+
+C. baseline vs meditation (complete)
+  gated_no_dropout             pooled 0.726 ws 0.758 [0.681 0.833]
+  hr_only                      pooled 0.426 ws 0.438 [0.3   0.575]
+  lgbm_ecg_only_per_config     pooled 0.732 ws 0.750 [0.635 0.85 ]
+  lgbm_eda_only                pooled 0.455 ws 0.423 [0.287 0.556]
+  lgbm_nan_at_test             pooled 0.627 ws 0.622 [0.478 0.754]
+
+D. {'eda_tonic_mean': (0.019298245614035085, 8), 'hrv_mean_nn': (-0.0543859649122807, 7)}

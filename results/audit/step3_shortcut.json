@@ -1,0 +1,40 @@
+{
+  "conditions": {
+    "a_mitbih_nsr": {
+      "n_windows": 24,
+      "n_subjects": 5,
+      "median_p": 0.003251039534919715,
+      "mean_p": 0.003251039534919715,
+      "subject_mean_p_median": 0.003251039534919715
+    },
+    "b_mitbih_arr": {
+      "n_windows": 24,
+      "n_subjects": 5,
+      "median_p": 0.9967489604650802,
+      "mean_p": 0.9967489604650802,
+      "subject_mean_p_median": 0.9967489604650802
+    },
+    "c_wesad_base": {
+      "n_windows": 24,
+      "n_subjects": 4,
+      "median_p": 0.003251039534919715,
+      "mean_p": 0.003251039534919715,
+      "subject_mean_p_median": 0.003251039534919715
+    },
+    "d_wesad_stress": {
+      "n_windows": 24,
+      "n_subjects": 4,
+      "median_p": 0.9967489604650802,
+      "mean_p": 0.9967489604650802,
+      "subject_mean_p_median": 0.9967489604650802
+    }
+  },
+  "subject_level_auc": {
+    "auc_b_vs_a_pathology": 1.0,
+    "auc_a_vs_c_dataset": 0.5
+  },
+  "verdict": {
+    "conclusion": "inconclusive",
+    "reasons": []
+  }
+}

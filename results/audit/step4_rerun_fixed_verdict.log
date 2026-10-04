@@ -1,0 +1,13 @@
+
+[step4] Probe P1 — C1 cross-validated subject-level AUC
+  P1 subject AUC = 0.843  95% CI [0.70, 0.95]  subj-perm p = 0.0010
+
+[step4] Probe P2 — C1 cross-validated subject-level AUC
+  P2 subject AUC = 0.810  95% CI [0.65, 0.94]  subj-perm p = 0.0020
+
+[step4] Probe P3 — C1 cross-validated subject-level AUC
+  P3 subject AUC = 0.830  95% CI [0.67, 0.96]  subj-perm p = 0.0010
+  Null N1: median 0.520, 95th pct 0.836 (30 reps)
+  Null N2: median 0.438, 95th pct 0.742 (30 reps)
+
+[step4] Verdict: SUBSTANTIALLY_SEPARABLE (AUC=0.843 CI=[0.70,0.95] N1-floor=0.8355 (band derived from lower CI, per preregistration))

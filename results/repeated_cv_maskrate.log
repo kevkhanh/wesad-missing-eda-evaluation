@@ -1,0 +1,133 @@
+[repeated_cv:maskrate:chest:none] 100 fold tasks x 12 models, n_jobs=16
+[Parallel(n_jobs=16)]: Using backend LokyBackend with 16 concurrent workers.
+[Parallel(n_jobs=16)]: Done  40 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=16)]: Done  90 out of 100 | elapsed:  3.1min remaining:   20.7s
+[Parallel(n_jobs=16)]: Done 100 out of 100 | elapsed:  3.3min finished
+
+=== Repeated subject-level CV (maskrate, chest, none): 20 x 5 folds, 15 subjects, 20 distinct partitions ===
+
+--- reduced | raw: means (SD across folds) ---
+  maskrate_gated_p0.1                Brier 0.1553 (0.0813)  AUROC 0.890  ECE_sweep 0.134  smECE 0.139  E-AURC 0.062
+  maskrate_gated_p0.25               Brier 0.1507 (0.0772)  AUROC 0.892  ECE_sweep 0.131  smECE 0.132  E-AURC 0.063
+  maskrate_gated_p0.5                Brier 0.1482 (0.0748)  AUROC 0.892  ECE_sweep 0.126  smECE 0.129  E-AURC 0.063
+  maskrate_gated_p0.75               Brier 0.1466 (0.0721)  AUROC 0.891  ECE_sweep 0.122  smECE 0.126  E-AURC 0.065
+  maskrate_lgbm_p0.1                 Brier 0.1530 (0.0858)  AUROC 0.881  ECE_sweep 0.136  smECE 0.137  E-AURC 0.069
+  maskrate_lgbm_p0.25                Brier 0.1488 (0.0847)  AUROC 0.882  ECE_sweep 0.132  smECE 0.130  E-AURC 0.073
+  maskrate_lgbm_p0.5                 Brier 0.1460 (0.0840)  AUROC 0.882  ECE_sweep 0.123  smECE 0.124  E-AURC 0.075
+  maskrate_lgbm_p0.75                Brier 0.1453 (0.0831)  AUROC 0.884  ECE_sweep 0.123  smECE 0.122  E-AURC 0.086
+  maskrate_mlp_p0.1                  Brier 0.1548 (0.0819)  AUROC 0.890  ECE_sweep 0.132  smECE 0.138  E-AURC 0.063
+  maskrate_mlp_p0.25                 Brier 0.1495 (0.0777)  AUROC 0.891  ECE_sweep 0.130  smECE 0.130  E-AURC 0.061
+  maskrate_mlp_p0.5                  Brier 0.1463 (0.0748)  AUROC 0.892  ECE_sweep 0.125  smECE 0.126  E-AURC 0.065
+  maskrate_mlp_p0.75                 Brier 0.1450 (0.0709)  AUROC 0.893  ECE_sweep 0.123  smECE 0.126  E-AURC 0.065
+--- reduced | raw: pairwise (A - B) ---
+  maskrate_gated_p0.1__vs__maskrate_mlp_p0.1
+    Brier BF +0.0005 [-0.0310, +0.0320] df14 [-0.0336, +0.0345] TOST p=0.111 eqb=0.027 ROPE=0.79 | participant +0.0004 [-0.0139, +0.0146] TOST p=0.005 (6/15) | AUROC BF +0.0001 [-0.0410, +0.0412] TOST p=0.076
+  maskrate_gated_p0.25__vs__maskrate_mlp_p0.25
+    Brier BF +0.0012 [-0.0222, +0.0246] df14 [-0.0241, +0.0265] TOST p=0.057 eqb=0.021 ROPE=0.91 | participant +0.0012 [-0.0088, +0.0112] TOST p=0.001 (7/15) | AUROC BF +0.0003 [-0.0307, +0.0313] TOST p=0.030
+  maskrate_gated_p0.5__vs__maskrate_mlp_p0.5
+    Brier BF +0.0020 [-0.0160, +0.0200] df14 [-0.0175, +0.0214] TOST p=0.025 eqb=0.017 ROPE=0.97 | participant +0.0021 [-0.0042, +0.0083] TOST p=0.000 (7/15) | AUROC BF -0.0002 [-0.0248, +0.0245] TOST p=0.009
+  maskrate_gated_p0.75__vs__maskrate_mlp_p0.75
+    Brier BF +0.0016 [-0.0157, +0.0189] df14 [-0.0171, +0.0203] TOST p=0.019 eqb=0.016 ROPE=0.97 | participant +0.0017 [-0.0030, +0.0063] TOST p=0.000 (6/15) | AUROC BF -0.0020 [-0.0271, +0.0231] TOST p=0.015
+  maskrate_gated_p0.1__vs__maskrate_lgbm_p0.1
+    Brier BF +0.0023 [-0.0363, +0.0409] df14 [-0.0394, +0.0440] TOST p=0.182 eqb=0.035 ROPE=0.69 | participant +0.0026 [-0.0146, +0.0199] TOST p=0.024 (7/15) | AUROC BF +0.0092 [-0.0578, +0.0762] TOST p=0.270
+  maskrate_gated_p0.25__vs__maskrate_lgbm_p0.25
+    Brier BF +0.0019 [-0.0296, +0.0334] df14 [-0.0321, +0.0359] TOST p=0.128 eqb=0.028 ROPE=0.79 | participant +0.0022 [-0.0149, +0.0193] TOST p=0.021 (7/15) | AUROC BF +0.0097 [-0.0553, +0.0747] TOST p=0.268
+  maskrate_gated_p0.5__vs__maskrate_lgbm_p0.5
+    Brier BF +0.0022 [-0.0305, +0.0350] df14 [-0.0332, +0.0376] TOST p=0.142 eqb=0.030 ROPE=0.77 | participant +0.0026 [-0.0183, +0.0234] TOST p=0.047 (7/15) | AUROC BF +0.0095 [-0.0581, +0.0772] TOST p=0.275
+  maskrate_gated_p0.75__vs__maskrate_lgbm_p0.75
+    Brier BF +0.0012 [-0.0342, +0.0366] df14 [-0.0371, +0.0395] TOST p=0.148 eqb=0.031 ROPE=0.73 | participant +0.0015 [-0.0216, +0.0245] TOST p=0.054 (6/15) | AUROC BF +0.0068 [-0.0637, +0.0773] TOST p=0.258
+
+--- reduced | platt_pc: means (SD across folds) ---
+  maskrate_gated_p0.1                Brier 0.1424 (0.0445)  AUROC 0.890  ECE_sweep 0.133  smECE 0.120  E-AURC 0.061
+  maskrate_gated_p0.25               Brier 0.1423 (0.0445)  AUROC 0.892  ECE_sweep 0.133  smECE 0.119  E-AURC 0.062
+  maskrate_gated_p0.5                Brier 0.1423 (0.0419)  AUROC 0.892  ECE_sweep 0.134  smECE 0.119  E-AURC 0.062
+  maskrate_gated_p0.75               Brier 0.1422 (0.0412)  AUROC 0.891  ECE_sweep 0.131  smECE 0.117  E-AURC 0.065
+  maskrate_lgbm_p0.1                 Brier 0.1502 (0.0564)  AUROC 0.881  ECE_sweep 0.146  smECE 0.130  E-AURC 0.064
+  maskrate_lgbm_p0.25                Brier 0.1497 (0.0564)  AUROC 0.882  ECE_sweep 0.150  smECE 0.133  E-AURC 0.063
+  maskrate_lgbm_p0.5                 Brier 0.1494 (0.0576)  AUROC 0.882  ECE_sweep 0.148  smECE 0.134  E-AURC 0.067
+  maskrate_lgbm_p0.75                Brier 0.1494 (0.0571)  AUROC 0.884  ECE_sweep 0.152  smECE 0.134  E-AURC 0.070
+  maskrate_mlp_p0.1                  Brier 0.1399 (0.0449)  AUROC 0.890  ECE_sweep 0.125  smECE 0.117  E-AURC 0.062
+  maskrate_mlp_p0.25                 Brier 0.1398 (0.0435)  AUROC 0.891  ECE_sweep 0.128  smECE 0.117  E-AURC 0.060
+  maskrate_mlp_p0.5                  Brier 0.1407 (0.0424)  AUROC 0.892  ECE_sweep 0.132  smECE 0.118  E-AURC 0.062
+  maskrate_mlp_p0.75                 Brier 0.1405 (0.0416)  AUROC 0.893  ECE_sweep 0.128  smECE 0.116  E-AURC 0.064
+--- reduced | platt_pc: pairwise (A - B) ---
+  maskrate_gated_p0.1__vs__maskrate_mlp_p0.1
+    Brier BF +0.0025 [-0.0179, +0.0228] df14 [-0.0195, +0.0244] TOST p=0.045 eqb=0.019 ROPE=0.94 | participant +0.0023 [-0.0071, +0.0117] TOST p=0.001 (6/15) | AUROC BF +0.0001 [-0.0410, +0.0412] TOST p=0.076
+  maskrate_gated_p0.25__vs__maskrate_mlp_p0.25
+    Brier BF +0.0025 [-0.0142, +0.0193] df14 [-0.0156, +0.0206] TOST p=0.021 eqb=0.017 ROPE=0.97 | participant +0.0025 [-0.0036, +0.0085] TOST p=0.000 (7/15) | AUROC BF +0.0003 [-0.0307, +0.0313] TOST p=0.030
+  maskrate_gated_p0.5__vs__maskrate_mlp_p0.5
+    Brier BF +0.0016 [-0.0127, +0.0159] df14 [-0.0139, +0.0171] TOST p=0.006 eqb=0.014 ROPE=0.99 | participant +0.0016 [-0.0013, +0.0044] TOST p=0.000 (6/15) | AUROC BF -0.0002 [-0.0248, +0.0245] TOST p=0.009
+  maskrate_gated_p0.75__vs__maskrate_mlp_p0.75
+    Brier BF +0.0016 [-0.0126, +0.0159] df14 [-0.0137, +0.0170] TOST p=0.006 eqb=0.014 ROPE=0.99 | participant +0.0017 [-0.0016, +0.0049] TOST p=0.000 (6/15) | AUROC BF -0.0020 [-0.0271, +0.0231] TOST p=0.015
+  maskrate_gated_p0.1__vs__maskrate_lgbm_p0.1
+    Brier BF -0.0078 [-0.0359, +0.0202] df14 [-0.0381, +0.0225] TOST p=0.196 eqb=0.031 ROPE=0.78 | participant -0.0077 [-0.0220, +0.0067] TOST p=0.043 (10/15) | AUROC BF +0.0092 [-0.0578, +0.0762] TOST p=0.270
+  maskrate_gated_p0.25__vs__maskrate_lgbm_p0.25
+    Brier BF -0.0074 [-0.0352, +0.0205] df14 [-0.0374, +0.0227] TOST p=0.185 eqb=0.031 ROPE=0.79 | participant -0.0071 [-0.0245, +0.0102] TOST p=0.067 (9/15) | AUROC BF +0.0097 [-0.0553, +0.0747] TOST p=0.268
+  maskrate_gated_p0.5__vs__maskrate_lgbm_p0.5
+    Brier BF -0.0071 [-0.0397, +0.0255] df14 [-0.0423, +0.0281] TOST p=0.217 eqb=0.034 ROPE=0.73 | participant -0.0069 [-0.0293, +0.0155] TOST p=0.115 (9/15) | AUROC BF +0.0095 [-0.0581, +0.0772] TOST p=0.275
+  maskrate_gated_p0.75__vs__maskrate_lgbm_p0.75
+    Brier BF -0.0072 [-0.0409, +0.0264] df14 [-0.0436, +0.0291] TOST p=0.227 eqb=0.035 ROPE=0.72 | participant -0.0071 [-0.0301, +0.0160] TOST p=0.125 (7/15) | AUROC BF +0.0068 [-0.0637, +0.0773] TOST p=0.258
+
+--- complete | raw: means (SD across folds) ---
+  maskrate_gated_p0.1                Brier 0.1331 (0.0672)  AUROC 0.929  ECE_sweep 0.123  smECE 0.129  E-AURC 0.048
+  maskrate_gated_p0.25               Brier 0.1340 (0.0670)  AUROC 0.928  ECE_sweep 0.124  smECE 0.127  E-AURC 0.049
+  maskrate_gated_p0.5                Brier 0.1296 (0.0672)  AUROC 0.930  ECE_sweep 0.121  smECE 0.123  E-AURC 0.047
+  maskrate_gated_p0.75               Brier 0.1257 (0.0667)  AUROC 0.931  ECE_sweep 0.114  smECE 0.116  E-AURC 0.047
+  maskrate_lgbm_p0.1                 Brier 0.0738 (0.0557)  AUROC 0.963  ECE_sweep 0.088  smECE 0.086  E-AURC 0.018
+  maskrate_lgbm_p0.25                Brier 0.0786 (0.0559)  AUROC 0.963  ECE_sweep 0.092  smECE 0.091  E-AURC 0.017
+  maskrate_lgbm_p0.5                 Brier 0.0930 (0.0631)  AUROC 0.952  ECE_sweep 0.104  smECE 0.101  E-AURC 0.022
+  maskrate_lgbm_p0.75                Brier 0.1280 (0.0821)  AUROC 0.912  ECE_sweep 0.121  smECE 0.121  E-AURC 0.052
+  maskrate_mlp_p0.1                  Brier 0.1497 (0.0850)  AUROC 0.920  ECE_sweep 0.139  smECE 0.142  E-AURC 0.055
+  maskrate_mlp_p0.25                 Brier 0.1433 (0.0804)  AUROC 0.922  ECE_sweep 0.130  smECE 0.135  E-AURC 0.053
+  maskrate_mlp_p0.5                  Brier 0.1406 (0.0754)  AUROC 0.922  ECE_sweep 0.127  smECE 0.133  E-AURC 0.053
+  maskrate_mlp_p0.75                 Brier 0.1364 (0.0727)  AUROC 0.926  ECE_sweep 0.124  smECE 0.127  E-AURC 0.050
+--- complete | raw: pairwise (A - B) ---
+  maskrate_gated_p0.1__vs__maskrate_mlp_p0.1
+    Brier BF -0.0166 [-0.0614, +0.0282] df14 [-0.0651, +0.0318] TOST p=0.441 eqb=0.054 ROPE=0.51 | participant -0.0165 [-0.0400, +0.0069] TOST p=0.378 (11/15) | AUROC BF +0.0097 [-0.0218, +0.0411] TOST p=0.101
+  maskrate_gated_p0.25__vs__maskrate_mlp_p0.25
+    Brier BF -0.0093 [-0.0508, +0.0322] df14 [-0.0541, +0.0356] TOST p=0.305 eqb=0.044 ROPE=0.61 | participant -0.0093 [-0.0296, +0.0111] TOST p=0.139 (10/15) | AUROC BF +0.0060 [-0.0280, +0.0401] TOST p=0.083
+  maskrate_gated_p0.5__vs__maskrate_mlp_p0.5
+    Brier BF -0.0109 [-0.0533, +0.0315] df14 [-0.0567, +0.0349] TOST p=0.336 eqb=0.046 ROPE=0.59 | participant -0.0109 [-0.0314, +0.0096] TOST p=0.179 (8/15) | AUROC BF +0.0082 [-0.0249, +0.0413] TOST p=0.097
+  maskrate_gated_p0.75__vs__maskrate_mlp_p0.75
+    Brier BF -0.0107 [-0.0553, +0.0340] df14 [-0.0589, +0.0376] TOST p=0.339 eqb=0.048 ROPE=0.57 | participant -0.0106 [-0.0320, +0.0109] TOST p=0.181 (9/15) | AUROC BF +0.0046 [-0.0283, +0.0376] TOST p=0.065
+  maskrate_gated_p0.1__vs__maskrate_lgbm_p0.1
+    Brier BF +0.0594 [-0.0126, +0.1314] df14 [-0.0185, +0.1372] TOST p=0.860 eqb=0.120 ROPE=0.12 | participant +0.0595 [+0.0111, +0.1079] TOST p=0.949 (3/15) | AUROC BF -0.0339 [-0.0890, +0.0213] TOST p=0.556
+  maskrate_gated_p0.25__vs__maskrate_lgbm_p0.25
+    Brier BF +0.0554 [-0.0132, +0.1240] df14 [-0.0187, +0.1296] TOST p=0.846 eqb=0.113 ROPE=0.14 | participant +0.0555 [+0.0055, +0.1055] TOST p=0.925 (3/15) | AUROC BF -0.0345 [-0.0891, +0.0200] TOST p=0.565
+  maskrate_gated_p0.5__vs__maskrate_lgbm_p0.5
+    Brier BF +0.0366 [-0.0329, +0.1061] df14 [-0.0385, +0.1117] TOST p=0.682 eqb=0.095 ROPE=0.26 | participant +0.0367 [-0.0160, +0.0893] TOST p=0.746 (3/15) | AUROC BF -0.0219 [-0.0785, +0.0347] TOST p=0.388
+  maskrate_gated_p0.75__vs__maskrate_lgbm_p0.75
+    Brier BF -0.0023 [-0.0801, +0.0755] df14 [-0.0864, +0.0818] TOST p=0.326 eqb=0.067 ROPE=0.39 | participant -0.0021 [-0.0617, +0.0576] TOST p=0.265 (6/15) | AUROC BF +0.0190 [-0.0531, +0.0912] TOST p=0.382
+
+--- complete | platt_pc: means (SD across folds) ---
+  maskrate_gated_p0.1                Brier 0.1170 (0.0392)  AUROC 0.929  ECE_sweep 0.117  smECE 0.111  E-AURC 0.042
+  maskrate_gated_p0.25               Brier 0.1183 (0.0397)  AUROC 0.928  ECE_sweep 0.119  smECE 0.109  E-AURC 0.042
+  maskrate_gated_p0.5                Brier 0.1179 (0.0400)  AUROC 0.930  ECE_sweep 0.119  smECE 0.110  E-AURC 0.040
+  maskrate_gated_p0.75               Brier 0.1167 (0.0389)  AUROC 0.931  ECE_sweep 0.116  smECE 0.107  E-AURC 0.040
+  maskrate_lgbm_p0.1                 Brier 0.0728 (0.0459)  AUROC 0.963  ECE_sweep 0.093  smECE 0.090  E-AURC 0.018
+  maskrate_lgbm_p0.25                Brier 0.0783 (0.0433)  AUROC 0.963  ECE_sweep 0.097  smECE 0.096  E-AURC 0.017
+  maskrate_lgbm_p0.5                 Brier 0.0944 (0.0460)  AUROC 0.952  ECE_sweep 0.121  smECE 0.110  E-AURC 0.024
+  maskrate_lgbm_p0.75                Brier 0.1282 (0.0578)  AUROC 0.912  ECE_sweep 0.143  smECE 0.128  E-AURC 0.046
+  maskrate_mlp_p0.1                  Brier 0.1273 (0.0542)  AUROC 0.920  ECE_sweep 0.122  smECE 0.116  E-AURC 0.049
+  maskrate_mlp_p0.25                 Brier 0.1252 (0.0507)  AUROC 0.922  ECE_sweep 0.124  smECE 0.116  E-AURC 0.048
+  maskrate_mlp_p0.5                  Brier 0.1235 (0.0462)  AUROC 0.922  ECE_sweep 0.121  smECE 0.114  E-AURC 0.046
+  maskrate_mlp_p0.75                 Brier 0.1210 (0.0441)  AUROC 0.926  ECE_sweep 0.119  smECE 0.112  E-AURC 0.045
+--- complete | platt_pc: pairwise (A - B) ---
+  maskrate_gated_p0.1__vs__maskrate_mlp_p0.1
+    Brier BF -0.0103 [-0.0417, +0.0212] df14 [-0.0443, +0.0237] TOST p=0.271 eqb=0.037 ROPE=0.70 | participant -0.0102 [-0.0239, +0.0034] TOST p=0.074 (10/15) | AUROC BF +0.0097 [-0.0218, +0.0411] TOST p=0.101
+  maskrate_gated_p0.25__vs__maskrate_mlp_p0.25
+    Brier BF -0.0069 [-0.0342, +0.0204] df14 [-0.0364, +0.0226] TOST p=0.172 eqb=0.030 ROPE=0.80 | participant -0.0069 [-0.0179, +0.0041] TOST p=0.012 (9/15) | AUROC BF +0.0060 [-0.0280, +0.0401] TOST p=0.083
+  maskrate_gated_p0.5__vs__maskrate_mlp_p0.5
+    Brier BF -0.0056 [-0.0302, +0.0189] df14 [-0.0322, +0.0209] TOST p=0.124 eqb=0.026 ROPE=0.86 | participant -0.0056 [-0.0179, +0.0067] TOST p=0.013 (9/15) | AUROC BF +0.0082 [-0.0249, +0.0413] TOST p=0.097
+  maskrate_gated_p0.75__vs__maskrate_mlp_p0.75
+    Brier BF -0.0042 [-0.0300, +0.0215] df14 [-0.0321, +0.0236] TOST p=0.114 eqb=0.026 ROPE=0.85 | participant -0.0042 [-0.0171, +0.0086] TOST p=0.010 (10/15) | AUROC BF +0.0046 [-0.0283, +0.0376] TOST p=0.065
+  maskrate_gated_p0.1__vs__maskrate_lgbm_p0.1
+    Brier BF +0.0442 [-0.0039, +0.0923] df14 [-0.0078, +0.0962] TOST p=0.840 eqb=0.084 ROPE=0.16 | participant +0.0445 [+0.0129, +0.0762] TOST p=0.941 (2/15) | AUROC BF -0.0339 [-0.0890, +0.0213] TOST p=0.556
+  maskrate_gated_p0.25__vs__maskrate_lgbm_p0.25
+    Brier BF +0.0400 [-0.0055, +0.0854] df14 [-0.0092, +0.0891] TOST p=0.807 eqb=0.078 ROPE=0.19 | participant +0.0402 [+0.0070, +0.0735] TOST p=0.893 (2/15) | AUROC BF -0.0345 [-0.0891, +0.0200] TOST p=0.565
+  maskrate_gated_p0.5__vs__maskrate_lgbm_p0.5
+    Brier BF +0.0235 [-0.0237, +0.0708] df14 [-0.0276, +0.0746] TOST p=0.559 eqb=0.063 ROPE=0.41 | participant +0.0237 [-0.0110, +0.0584] TOST p=0.589 (3/15) | AUROC BF -0.0219 [-0.0785, +0.0347] TOST p=0.388
+  maskrate_gated_p0.75__vs__maskrate_lgbm_p0.75
+    Brier BF -0.0115 [-0.0658, +0.0428] df14 [-0.0702, +0.0472] TOST p=0.378 eqb=0.057 ROPE=0.50 | participant -0.0113 [-0.0533, +0.0307] TOST p=0.332 (8/15) | AUROC BF +0.0190 [-0.0531, +0.0912] TOST p=0.382
+
+[repeated_cv] wrote D:\Trần An Khánh\E14\robustness\results\repeated_cv_maskrate.json

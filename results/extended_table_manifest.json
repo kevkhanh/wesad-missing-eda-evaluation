@@ -1,0 +1,36 @@
+{
+  "path": "results/extended_features.csv",
+  "sha256": "3b384d7f66c795dd2d114a41e6afafa068e80346de1384c445c39aa17210f61a",
+  "n_rows": 683,
+  "rows_per_condition": {
+    "baseline": 282,
+    "meditation": 170,
+    "stress": 152,
+    "amusement": 79
+  },
+  "n_subjects": 15,
+  "wesad_root": "C:\\Users\\Lenovo\\Downloads\\wesad_pkls",
+  "verification_vs_frozen_table": {
+    "n_frozen": 434,
+    "n_extended_bs": 434,
+    "n_matched": 434,
+    "n_mismatched_values_per_feature": {
+      "hrv_mean_nn": 0,
+      "hrv_sdnn": 0,
+      "hrv_rmssd": 0,
+      "hrv_pnn50": 0,
+      "hrv_lf_power": 0,
+      "hrv_hf_power": 0,
+      "hrv_lf_hf_ratio": 0,
+      "eda_tonic_mean": 0,
+      "eda_tonic_slope": 0,
+      "eda_phasic_mean_amp": 0,
+      "eda_phasic_rate": 0,
+      "coupling_peak_corr": 0,
+      "coupling_lag_sec": 0
+    },
+    "reproduces_frozen_table": true
+  },
+  "frozen_at_utc": "2026-10-02T02:43:22+00:00",
+  "note": "Round-4 superset of the frozen table: adds amusement/meditation windows, session timing, chest SQI/ACC and wrist (E4) features. The primary analyses still read the frozen table."
+}

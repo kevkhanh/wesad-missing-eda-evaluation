@@ -1,0 +1,22 @@
+  fold 0  eda_only    ECE_complete=0.1637  ECE_reduced=0.2102  ratio=1.28x
+  fold 0  ecg_only    ECE_complete=0.1218  ECE_reduced=0.2454  ratio=2.01x
+  fold 1  eda_only    ECE_complete=0.1066  ECE_reduced=0.1466  ratio=1.37x
+  fold 1  ecg_only    ECE_complete=0.0516  ECE_reduced=0.2785  ratio=5.40x
+  fold 2  eda_only    ECE_complete=0.0967  ECE_reduced=0.0834  ratio=0.86x
+  fold 2  ecg_only    ECE_complete=0.0750  ECE_reduced=0.1942  ratio=2.59x
+  fold 3  eda_only    ECE_complete=0.2200  ECE_reduced=0.1414  ratio=0.64x
+  fold 3  ecg_only    ECE_complete=0.1258  ECE_reduced=0.2278  ratio=1.81x
+  fold 4  eda_only    ECE_complete=0.2301  ECE_reduced=0.3649  ratio=1.59x
+  fold 4  ecg_only    ECE_complete=0.2191  ECE_reduced=0.1275  ratio=0.58x
+
+=== Locked per-modality ablation (EDA-only vs ECG-only) ===
+  Condition        Ratio            95% CI    Interpretation
+  eda_only      1.150x    [0.67, 1.63]    train for right missing modality
+    per-fold: ['1.284', '1.374', '0.862', '0.643', '1.586']
+  ecg_only      2.480x    [0.26, 4.70]    train for wrong missing modality
+    per-fold: ['2.015', '5.402', '2.588', '1.811', '0.582']
+
+  Per-fold delta (eda_only - ecg_only): ['-0.731', '-4.028', '-1.726', '-1.168', '+1.004']
+  Mean delta: -1.3298  SD: 1.8212
+  Paired t-test: t=-1.633, p=0.1779
+  Wilcoxon: W=2.0, p=0.1875

@@ -1,0 +1,9 @@
+{
+  "path": "D:\\Tr\u1ea7n An Kh\u00e1nh\\E14\\stage3_hb1_dataset.csv",
+  "sha256": "df483a7abae0c92c5b405e1730c2c5199328424ce0d804e82da3d394eb810680",
+  "n_rows_total": 1161,
+  "n_rows_wesad_baseline_stress": 434,
+  "n_subjects_wesad": 15,
+  "frozen_at_utc": "2026-10-01T13:24:18+00:00",
+  "note": "Single source for every Section 5.2 number. Supersedes the 445-window cache used by the 2026-09-20 locked run, which was deleted by run_full_audit.sh on 2026-09-30."
+}

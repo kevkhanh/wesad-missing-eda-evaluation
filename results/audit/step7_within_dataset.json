@@ -1,0 +1,76 @@
+{
+  "C3_wesad_baseline_vs_stress": {
+    "auc_mean": 0.5,
+    "per_fold": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "n_subjects": 4
+  },
+  "C4_mitbih_nsr_vs_arrhythmic": {
+    "auc_mean": 0.5,
+    "per_fold": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "n_subjects": 5
+  },
+  "feature_elimination_sweep": [
+    {
+      "features_kept": [
+        "hrv_mean_nn",
+        "hrv_sdnn",
+        "hrv_rmssd",
+        "hrv_pnn50",
+        "hrv_lf_power",
+        "hrv_hf_power",
+        "hrv_lf_hf_ratio"
+      ],
+      "n_features": 7,
+      "identity_auc_C1": 0.5,
+      "clinical_auc_C3": 0.5,
+      "clinical_auc_C4": 0.5,
+      "dropped_so_far": []
+    },
+    {
+      "features_kept": [
+        "hrv_mean_nn",
+        "hrv_rmssd",
+        "hrv_pnn50",
+        "hrv_lf_power",
+        "hrv_hf_power",
+        "hrv_lf_hf_ratio"
+      ],
+      "n_features": 6,
+      "identity_auc_C1": 0.5,
+      "clinical_auc_C3": 0.5,
+      "clinical_auc_C4": 0.5,
+      "dropped_so_far": [
+        "hrv_sdnn"
+      ]
+    },
+    {
+      "features_kept": [
+        "hrv_rmssd",
+        "hrv_pnn50",
+        "hrv_lf_power",
+        "hrv_hf_power",
+        "hrv_lf_hf_ratio"
+      ],
+      "n_features": 5,
+      "identity_auc_C1": 0.5,
+      "clinical_auc_C3": 0.5,
+      "clinical_auc_C4": 0.5,
+      "dropped_so_far": [
+        "hrv_sdnn",
+        "hrv_mean_nn"
+      ]
+    }
+  ],
+  "verdict": "inconclusive"
+}

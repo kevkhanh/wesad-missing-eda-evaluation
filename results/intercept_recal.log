@@ -1,0 +1,66 @@
+[intercept_recal] 100 fold tasks x 6 models, n_jobs=12
+[Parallel(n_jobs=12)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=12)]: Done  48 tasks      | elapsed:   45.8s
+[Parallel(n_jobs=12)]: Done  98 out of 100 | elapsed:  1.2min remaining:    1.3s
+[Parallel(n_jobs=12)]: Done 100 out of 100 | elapsed:  1.2min finished
+
+reduced:raw: gated 0.148  gated_nm 0.186  lgbm 0.294  lgbm 0.146  mlp 0.146  mlp_nm 0.197
+
+reduced:platt_pc: gated 0.142  gated_nm 0.155  lgbm 0.162  lgbm 0.149  mlp 0.141  mlp_nm 0.154
+
+reduced:intercept: gated 0.147  gated_nm 0.185  lgbm 0.157  lgbm 0.151  mlp 0.145  mlp_nm 0.197
+
+reduced:slope: gated 0.142  gated_nm 0.156  lgbm 0.198  lgbm 0.147  mlp 0.141  mlp_nm 0.156
+
+complete:raw: gated 0.130  gated_nm 0.139  lgbm 0.072  lgbm 0.093  mlp 0.141  mlp_nm 0.166
+
+complete:platt_pc: gated 0.118  gated_nm 0.116  lgbm 0.072  lgbm 0.094  mlp 0.123  mlp_nm 0.134
+
+complete:intercept: gated 0.130  gated_nm 0.136  lgbm 0.071  lgbm 0.094  mlp 0.139  mlp_nm 0.164
+
+complete:slope: gated 0.118  gated_nm 0.119  lgbm 0.073  lgbm 0.094  mlp 0.126  mlp_nm 0.138
+
+=== reduced:raw ===
+  main_effect_masking              BF99 -0.044 [-0.088, -0.001] | BF14 [-0.091, +0.003] | participant -0.044 [-0.070, -0.019] (12/15)
+  main_effect_gate                 BF99 -0.005 [-0.036, +0.026] | BF14 [-0.038, +0.029] | participant -0.005 [-0.014, +0.004] (10/15)
+  interaction_gate_x_masking       BF99 +0.013 [-0.042, +0.069] | BF14 [-0.046, +0.073] | participant +0.014 [-0.007, +0.034] (6/15)
+  masking_gated                    BF99 -0.038 [-0.089, +0.014] | BF14 [-0.093, +0.018] | participant -0.037 [-0.060, -0.015] (11/15)
+  masking_mlp                      BF99 -0.051 [-0.102, +0.001] | BF14 [-0.106, +0.005] | participant -0.051 [-0.083, -0.019] (12/15)
+  gate_masked                      BF99 +0.002 [-0.016, +0.020] | BF14 [-0.017, +0.021] | participant +0.002 [-0.004, +0.008] (7/15)
+  gate_never_masked                BF99 -0.011 [-0.067, +0.045] | BF14 [-0.072, +0.049] | participant -0.012 [-0.030, +0.007] (10/15)
+  masking_tree_(ii)_minus_(i)      BF99 -0.148 [-0.259, -0.037] | BF14 [-0.268, -0.028] | participant -0.149 [-0.230, -0.067] (14/15)
+
+=== reduced:platt_pc ===
+  main_effect_masking              BF99 -0.013 [-0.040, +0.014] | BF14 [-0.042, +0.016] | participant -0.013 [-0.028, +0.002] (9/15)
+  main_effect_gate                 BF99 +0.002 [-0.016, +0.019] | BF14 [-0.018, +0.021] | participant +0.001 [-0.004, +0.007] (7/15)
+  interaction_gate_x_masking       BF99 +0.000 [-0.027, +0.027] | BF14 [-0.029, +0.030] | participant +0.000 [-0.012, +0.013] (9/15)
+  masking_gated                    BF99 -0.013 [-0.041, +0.015] | BF14 [-0.043, +0.017] | participant -0.013 [-0.027, +0.002] (10/15)
+  masking_mlp                      BF99 -0.013 [-0.045, +0.019] | BF14 [-0.048, +0.022] | participant -0.013 [-0.030, +0.004] (10/15)
+  gate_masked                      BF99 +0.002 [-0.013, +0.016] | BF14 [-0.014, +0.017] | participant +0.002 [-0.001, +0.004] (6/15)
+  gate_never_masked                BF99 +0.001 [-0.027, +0.030] | BF14 [-0.029, +0.032] | participant +0.001 [-0.010, +0.012] (7/15)
+  masking_tree_(ii)_minus_(i)      BF99 -0.012 [-0.051, +0.026] | BF14 [-0.054, +0.029] | participant -0.013 [-0.044, +0.018] (12/15)
+
+=== reduced:intercept ===
+  main_effect_masking              BF99 -0.045 [-0.093, +0.004] | BF14 [-0.097, +0.008] | participant -0.045 [-0.073, -0.016] (10/15)
+  main_effect_gate                 BF99 -0.005 [-0.036, +0.025] | BF14 [-0.038, +0.028] | participant -0.005 [-0.015, +0.005] (9/15)
+  interaction_gate_x_masking       BF99 +0.015 [-0.038, +0.068] | BF14 [-0.042, +0.072] | participant +0.015 [-0.008, +0.038] (5/15)
+  masking_gated                    BF99 -0.037 [-0.091, +0.016] | BF14 [-0.095, +0.020] | participant -0.037 [-0.065, -0.009] (10/15)
+  masking_mlp                      BF99 -0.052 [-0.110, +0.005] | BF14 [-0.114, +0.010] | participant -0.052 [-0.086, -0.018] (11/15)
+  gate_masked                      BF99 +0.002 [-0.017, +0.021] | BF14 [-0.019, +0.023] | participant +0.002 [-0.004, +0.008] (5/15)
+  gate_never_masked                BF99 -0.013 [-0.067, +0.041] | BF14 [-0.071, +0.045] | participant -0.013 [-0.034, +0.007] (9/15)
+  masking_tree_(ii)_minus_(i)      BF99 -0.007 [-0.050, +0.037] | BF14 [-0.053, +0.040] | participant -0.007 [-0.040, +0.026] (11/15)
+
+=== reduced:slope ===
+  main_effect_masking              BF99 -0.014 [-0.041, +0.013] | BF14 [-0.043, +0.015] | participant -0.014 [-0.029, +0.001] (10/15)
+  main_effect_gate                 BF99 +0.001 [-0.017, +0.018] | BF14 [-0.018, +0.020] | participant +0.001 [-0.005, +0.006] (9/15)
+  interaction_gate_x_masking       BF99 +0.001 [-0.028, +0.029] | BF14 [-0.030, +0.031] | participant +0.001 [-0.013, +0.014] (9/15)
+  masking_gated                    BF99 -0.014 [-0.042, +0.014] | BF14 [-0.044, +0.016] | participant -0.014 [-0.028, +0.001] (10/15)
+  masking_mlp                      BF99 -0.014 [-0.047, +0.018] | BF14 [-0.050, +0.021] | participant -0.014 [-0.033, +0.004] (9/15)
+  gate_masked                      BF99 +0.001 [-0.013, +0.014] | BF14 [-0.014, +0.016] | participant +0.001 [-0.002, +0.004] (7/15)
+  gate_never_masked                BF99 +0.000 [-0.028, +0.029] | BF14 [-0.031, +0.031] | participant +0.000 [-0.012, +0.012] (8/15)
+  masking_tree_(ii)_minus_(i)      BF99 -0.052 [-0.115, +0.012] | BF14 [-0.120, +0.017] | participant -0.052 [-0.108, +0.005] (13/15)
+
+share of masking main effect removed: {'platt_pc': 0.7078093226227298, 'intercept': -0.016197782814937778, 'slope': 0.6814423505896728}
+intercept shifts (reduced): {"gated_dropout_p0.5": {"mean": -0.36715809465140287, "sd": 0.495369495297301, "slope_mean": 0.34787638468965637, "slope_sd": 0.08555811366867529}, "gated_no_dropout": {"mean": -0.05151256245761381, "sd": 1.715230254878558, "slope_mean": 0.19914755760709846, "slope_sd": 0.04586909832709042}, "lgbm_nan_at_test": {"mean": 2.97913842101634, "sd": 0.6436502647123649, "slope_mean": 0.24325956595608889, "slope_sd": 0.06091561121601039}, "lgbm_nan_training_p0.5": {"mean": -0.48891779639468813, "sd": 0.31217833429713415, "slope_mean": 0.5515308344245295, "slope_sd": 0.09953829969105962}, "mlp_nongated_dropout_p0.5": {"mean": -0.4682910523850014, "sd": 0.46809928444885646, "slope_mean": 0.3248107466073475, "slope_sd": 0.08224685253061821}, "mlp_nongated_no_dropout": {"mean": 0.07871892505134513, "sd": 1.1127853042417706, "slope_mean": 0.1722794087995328, "slope_sd": 0.03226155487713193}}
+
+[intercept_recal] wrote D:\Trần An Khánh\E14\robustness\results\intercept_recal.json

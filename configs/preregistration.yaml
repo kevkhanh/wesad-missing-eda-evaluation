@@ -1,0 +1,81 @@
+# Pre-registration for the dataset-identity audit and the H-B1 / H-C1 headline
+# claims. Written BEFORE any audit numbers are seen; commit this file first,
+# then run the audit. If any threshold changes after results are in, that
+# change must be documented as a post-hoc deviation.
+#
+# Reference: dataset_identity_preprint_01.md, Recommendation #2.
+
+audit:
+  # Interpretation bands for the C1 (normal-vs-normal) subject-level AUC.
+  # Applied in audit/step4_identity_probe.py::_verdict_step4.
+  auc_bands:
+    trivially_separable_lower_ci_min: 0.80
+    substantially_separable_min: 0.70
+    borderline_min: 0.60
+    not_separable_upper_ci_max: 0.60
+
+  # Effect-size threshold on the MMD heterogeneity ratio R (Step 5, TODO).
+  # R = MMD^2(C1) / 95th percentile of MMD^2(N1 U N2 subject-split nulls).
+  mmd_heterogeneity_ratio_max_for_null: 1.0
+
+  # Family-wise error control across all (comparison x harmonization-stage)
+  # tests. Holm-Bonferroni per the audit doc.
+  alpha: 0.05
+  multiple_testing_correction: holm
+
+  # Permutation / bootstrap replicates.
+  permutations:
+    identity_probe_subject_perm: 1000     # Step 4
+    mmd_block_perm: 10000                 # Step 5 (TODO)
+    cluster_bootstrap: 2000               # Step 4 CI
+
+  # Cross-validation.
+  cv:
+    n_folds: 5
+    n_seeds: 20
+    scheme: StratifiedGroupKFold
+    group_column: subject_id
+    stratify_column: dataset
+
+# Preprint 1 headline claims. Locked before Step 3 runs. If Step 3 verdict
+# is SHORTCUT_CONFIRMED, apply Branch A actions in the audit doc: withdraw or
+# rewrite the headline; treat robustness/calibration/equity as properties of a
+# dataset classifier; promote C3/C4 within-dataset results only.
+headline_claims:
+  h_b1:
+    metric: ECE_ratio_reduced_over_complete
+    invariant_model_target: 1.61   # outline Section 5.2 locked value
+    baseline_target: 4.23
+    n_folds: 5
+    subject_level_cv: true
+  h_c1:
+    interaction_term: "tier[T.reduced]:model_type[T.invariant]"
+    direction: negative
+    alpha: 0.05
+
+# Data provenance.
+data:
+  wesad:
+    fs_hz: 700
+    labels_used: [1, 2]              # baseline, stress
+    windows_per_condition_cap: 20
+    window_length_sec: 60
+    overlap: none
+  mitbih:
+    fs_hz: 360
+    lead_preference: MLII
+    excluded_records: [102, 104, 107, 217]   # paced (AAMI)
+    shared_subject_group: [201, 202]         # same patient
+    nsr_definition: >
+      All beats in window symbol == 'N', aux_note rhythm == '(N' throughout,
+      no noise or quality annotations, >= 30 beats.
+    arrhythmic_definition: >
+      Rhythm annotation includes one of
+      (AFIB, (AFL, (SVTA, (VT, (VFL, (B, (T
+      OR window contains >= 3 V/A-class ectopic beats.
+
+# Environment freeze.
+environment_freeze:
+  file: requirements.txt
+  step0_module: audit.step0_freeze
+  verify_before_reporting: true

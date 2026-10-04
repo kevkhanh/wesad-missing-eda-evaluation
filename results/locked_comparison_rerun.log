@@ -1,0 +1,87 @@
+  fold 0  dropout_p0.5      ECE_complete=0.1637  ECE_reduced=0.2102  ratio=1.28x
+  fold 0  no_dropout        ECE_complete=0.0960  ECE_reduced=0.3365  ratio=3.51x
+  fold 0  rate_0.2          ECE_complete=0.1717  ECE_reduced=0.2385  ratio=1.39x
+  fold 0  rate_0.4          ECE_complete=0.1798  ECE_reduced=0.2449  ratio=1.36x
+  fold 0  rate_0.5          ECE_complete=0.1637  ECE_reduced=0.2102  ratio=1.28x
+  fold 0  rate_0.6          ECE_complete=0.1762  ECE_reduced=0.2396  ratio=1.36x
+  fold 1  dropout_p0.5      ECE_complete=0.1066  ECE_reduced=0.1466  ratio=1.37x
+  fold 1  no_dropout        ECE_complete=0.0835  ECE_reduced=0.1981  ratio=2.37x
+  fold 1  rate_0.2          ECE_complete=0.0833  ECE_reduced=0.1319  ratio=1.58x
+  fold 1  rate_0.4          ECE_complete=0.0767  ECE_reduced=0.1553  ratio=2.02x
+  fold 1  rate_0.5          ECE_complete=0.1066  ECE_reduced=0.1466  ratio=1.37x
+  fold 1  rate_0.6          ECE_complete=0.1015  ECE_reduced=0.1332  ratio=1.31x
+  fold 2  dropout_p0.5      ECE_complete=0.0967  ECE_reduced=0.0834  ratio=0.86x
+  fold 2  no_dropout        ECE_complete=0.0755  ECE_reduced=0.1093  ratio=1.45x
+  fold 2  rate_0.2          ECE_complete=0.0603  ECE_reduced=0.0775  ratio=1.28x
+  fold 2  rate_0.4          ECE_complete=0.0806  ECE_reduced=0.1049  ratio=1.30x
+  fold 2  rate_0.5          ECE_complete=0.0967  ECE_reduced=0.0834  ratio=0.86x
+  fold 2  rate_0.6          ECE_complete=0.1065  ECE_reduced=0.1081  ratio=1.02x
+  fold 3  dropout_p0.5      ECE_complete=0.2200  ECE_reduced=0.1414  ratio=0.64x
+  fold 3  no_dropout        ECE_complete=0.1719  ECE_reduced=0.0681  ratio=0.40x
+  fold 3  rate_0.2          ECE_complete=0.2494  ECE_reduced=0.1357  ratio=0.54x
+  fold 3  rate_0.4          ECE_complete=0.2457  ECE_reduced=0.1691  ratio=0.69x
+  fold 3  rate_0.5          ECE_complete=0.2200  ECE_reduced=0.1414  ratio=0.64x
+  fold 3  rate_0.6          ECE_complete=0.2075  ECE_reduced=0.1209  ratio=0.58x
+  fold 4  dropout_p0.5      ECE_complete=0.2301  ECE_reduced=0.3649  ratio=1.59x
+  fold 4  no_dropout        ECE_complete=0.1976  ECE_reduced=0.4687  ratio=2.37x
+  fold 4  rate_0.2          ECE_complete=0.1905  ECE_reduced=0.3462  ratio=1.82x
+  fold 4  rate_0.4          ECE_complete=0.2308  ECE_reduced=0.3200  ratio=1.39x
+  fold 4  rate_0.5          ECE_complete=0.2301  ECE_reduced=0.3649  ratio=1.59x
+  fold 4  rate_0.6          ECE_complete=0.2415  ECE_reduced=0.3368  ratio=1.39x
+
+=== Locked comparison: canonical ECE ratios with 95% CI ===
+  Condition           ECE_complete     ECE_reduced   Ratio (mean)            95% CI  folds
+  dropout_p0.5      0.1634 ± 0.0619    0.1893 ± 0.1079    1.150x         [0.67, 1.63]    5
+  no_dropout        0.1249 ± 0.0558    0.2361 ± 0.1658    2.019x         [0.57, 3.46]    5
+  rate_0.2          0.1510 ± 0.0782    0.1859 ± 0.1068    1.324x         [0.73, 1.92]    5
+  rate_0.4          0.1627 ± 0.0806    0.1988 ± 0.0843    1.352x         [0.76, 1.94]    5
+  rate_0.5          0.1634 ± 0.0619    0.1893 ± 0.1079    1.150x         [0.67, 1.63]    5
+  rate_0.6          0.1666 ± 0.0617    0.1877 ± 0.0983    1.133x         [0.71, 1.56]    5
+
+=== Paired test: dropout (p=0.5) vs no_dropout ===
+  Per-fold ECE ratios — dropout p=0.5: ['1.284', '1.374', '0.862', '0.643', '1.586']
+  Per-fold ECE ratios — no_dropout:    ['3.507', '2.371', '1.447', '0.396', '2.373']
+  Per-fold delta (dropout - no_dropout): ['-2.223', '-0.997', '-0.585', '+0.247', '-0.787']
+  Mean delta: -0.8690  SD: 0.8917
+  Paired t-test (n=5 folds): t=-2.179, p=0.0948
+  Wilcoxon signed-rank: W=1.0, p=0.1250
+
+  FINDING: No statistically distinguishable difference between dropout
+  and no-dropout at alpha=0.05 (p=0.0948, n=5 folds).
+  The gated architecture accounts for the bulk of calibration robustness;
+  dropout training adds an increment that cannot be resolved at this sample size.
+  Framing implication: lead with architecture, not dropout, as the mechanism.
+
+=== Rate sweep (EDA-only dropout, locked seeds) ===
+    Rate     Ratio            95% CI
+  p=0.2    1.324x    [0.73, 1.92]
+  p=0.4    1.352x    [0.76, 1.94]
+  p=0.5    1.150x    [0.67, 1.63]
+  p=0.6    1.133x    [0.71, 1.56]
+
+==============================================================================
+LightGBM baseline on locked folds
+==============================================================================
+  fold 0  lgbm_baseline  ECE_complete=0.0591  ECE_reduced=0.3265  ratio=5.53x
+  fold 1  lgbm_baseline  ECE_complete=0.0318  ECE_reduced=0.3243  ratio=10.19x
+  fold 2  lgbm_baseline  ECE_complete=0.0838  ECE_reduced=0.2920  ratio=3.49x
+  fold 3  lgbm_baseline  ECE_complete=0.1416  ECE_reduced=0.3323  ratio=2.35x
+  fold 4  lgbm_baseline  ECE_complete=0.2657  ECE_reduced=0.2579  ratio=0.97x
+
+  LightGBM baseline (locked folds):
+  ECE_complete: 0.1164 +/- 0.0928
+  ECE_reduced:  0.3066 +/- 0.0314
+  Ratio: 4.505x  95% CI [0.05, 8.96]
+  Per-fold ratios: ['5.526', '10.193', '3.485', '2.347', '0.971']
+
+==============================================================================
+Locked H-C1 check
+==============================================================================
+Traceback (most recent call last):
+  File "D:\Trần An Khánh\E14\robustness\run_locked_comparison.py", line 560, in <module>
+    run_locked_hc1()
+    ~~~~~~~~~~~~~~^^
+  File "D:\Trần An Khánh\E14\robustness\run_locked_comparison.py", line 414, in run_locked_hc1
+    ecg_x, eda_x, eda_m, y_tr = _to_tensors(train_s)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 4)
