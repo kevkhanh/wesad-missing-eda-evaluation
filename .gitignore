@@ -28,3 +28,4 @@ paper/*.toc
 
 # Official WESAD archive file, fetched for licence reading only
 wesad_readme.pdf
+clinical_review_request.md
