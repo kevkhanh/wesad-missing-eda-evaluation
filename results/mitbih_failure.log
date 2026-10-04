@@ -1,0 +1,71 @@
+[    0s] 44 MIT-BIH records; building windows ...
+[   41s] 1067 windows from 43 clusters
+[   49s] hard_mask_network seed 0
+[   52s] hard_mask_network seed 1
+[   55s] hard_mask_network seed 2
+[   58s] hard_mask_network seed 3
+[   61s] hard_mask_network seed 4
+[   64s] masked_mlp seed 0
+[   67s] masked_mlp seed 1
+[   70s] masked_mlp seed 2
+[   74s] masked_mlp seed 3
+[   77s] masked_mlp seed 4
+[   77s] lgbm_ii_nan_trained seed 0
+[   77s] lgbm_ii_nan_trained seed 1
+[   77s] lgbm_ii_nan_trained seed 2
+[   78s] lgbm_ii_nan_trained seed 3
+[   78s] lgbm_ii_nan_trained seed 4
+[   78s] lgbm_iii_ecg_only seed 0
+[   78s] lgbm_iii_ecg_only seed 1
+[   78s] lgbm_iii_ecg_only seed 2
+[   78s] lgbm_iii_ecg_only seed 3
+[   79s] lgbm_iii_ecg_only seed 4
+[   79s] hr_only seed 0
+[   79s] hr_only seed 1
+[   79s] hr_only seed 2
+[   79s] hr_only seed 3
+[   79s] hr_only seed 4
+[   82s] hard_mask_network_hr_removed seed 0
+[   86s] hard_mask_network_hr_removed seed 1
+[   89s] hard_mask_network_hr_removed seed 2
+[   92s] hard_mask_network_hr_removed seed 3
+[   95s] hard_mask_network_hr_removed seed 4
+[   95s] lgbm_ecg_only_hr_removed seed 0
+[   95s] lgbm_ecg_only_hr_removed seed 1
+[   95s] lgbm_ecg_only_hr_removed seed 2
+[   95s] lgbm_ecg_only_hr_removed seed 3
+[   96s] lgbm_ecg_only_hr_removed seed 4
+{
+  "n_windows": 1067,
+  "n_clusters": 43,
+  "primary_testable": false,
+  "n_high_rate": 1,
+  "n_high_rate_clusters": 1,
+  "predictions": {
+    "testable": false,
+    "P1_flag_rate_ge_0.50_at_rate_ge_120": null,
+    "P2_hr_removed_flags_at_least_0.20_less": null,
+    "P3_spearman_ge_0.50": {
+      "hard_mask_network": true,
+      "masked_mlp": true,
+      "lgbm_ii_nan_trained": true,
+      "lgbm_iii_ecg_only": true,
+      "hr_only": true
+    },
+    "P4_normal_sinus_flag_rate_le_0.35": {
+      "hard_mask_network": true,
+      "masked_mlp": true,
+      "lgbm_ii_nan_trained": true,
+      "lgbm_iii_ecg_only": true,
+      "hr_only": true,
+      "hard_mask_network_hr_removed": true,
+      "lgbm_ecg_only_hr_removed": true
+    }
+  },
+  "feature_vs_annotated_rate": {
+    "spearman": 0.9944762427384605,
+    "median_abs_error_bpm": 0.3710292249047029,
+    "n_missing_features": 0
+  }
+}
+done in 124s -> D:\Trần An Khánh\E14\robustness\results\mitbih_failure.json
