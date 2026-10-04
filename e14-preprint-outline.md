@@ -904,7 +904,7 @@ Avoid "determines", "not gating" and "disappears": the design shows absence of a
 ## Appendix G. Pending items before posting
 **Blocking (author actions):**
 1. `git init`; commit; tag `post-rerun-2026-10-02`; release code, partitions, per-participant results and (licence permitting) feature tables.
-2. Read the licence wording in `wesad_readme.pdf` (inside the official WESAD zip; not in the local `.pkl` copy) and record it in §9 before releasing the derived feature tables. Until then, release code, partitions and per-participant results only.
+2. ~~Read the licence wording in `wesad_readme.pdf`~~ **Done 2026-10-04:** the readme has no licence terms beyond "please reference the publication"; the distribution page's terms (scientific, non-commercial use with credit) govern and say nothing about redistributing derived data. Window-level feature tables stay withheld (hashes published); see `DATA_NOTICE.md`.
 
 **Open, author decision before posting:**
 - Confirm how review 9 is attributed in §4.7 and Table S11. "Reviewer-requested" is defined there as an internal, AI-assisted review round; if the feedback came from a human expert, change the definition or add a class.

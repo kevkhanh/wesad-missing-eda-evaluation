@@ -25,3 +25,6 @@ paper/*.out
 paper/*.toc
 
 .claude/
+
+# Official WESAD archive file, fetched for licence reading only
+wesad_readme.pdf
