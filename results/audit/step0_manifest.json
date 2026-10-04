@@ -1,0 +1,208 @@
+{
+  "versions": {
+    "python": "3.13.13",
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.11.0",
+    "lightgbm": "4.7.0",
+    "neurokit2": "0.2.13",
+    "wfdb": "4.3.1",
+    "shap": "0.52.0",
+    "statsmodels": "0.15.0"
+  },
+  "feature_provenance": {
+    "hrv_mean_nn": "ecg",
+    "hrv_sdnn": "ecg",
+    "hrv_rmssd": "ecg",
+    "hrv_pnn50": "ecg",
+    "hrv_lf_power": "ecg",
+    "hrv_hf_power": "ecg",
+    "hrv_lf_hf_ratio": "ecg",
+    "eda_tonic_mean": "eda",
+    "eda_tonic_slope": "eda",
+    "eda_phasic_mean_amp": "eda",
+    "eda_phasic_rate": "eda",
+    "coupling_peak_corr": "ecg+eda",
+    "coupling_lag_sec": "ecg+eda"
+  },
+  "nan_pattern": {
+    "hrv_mean_nn": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "hrv_sdnn": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "hrv_rmssd": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "hrv_pnn50": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "hrv_lf_power": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      }
+    },
+    "hrv_hf_power": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "hrv_lf_hf_ratio": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      }
+    },
+    "eda_tonic_mean": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "eda_tonic_slope": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "eda_phasic_mean_amp": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "eda_phasic_rate": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "coupling_peak_corr": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    },
+    "coupling_lag_sec": {
+      "MITBIH": {
+        "n_total": 48,
+        "n_nan": 48,
+        "frac_nan": 1.0
+      },
+      "WESAD": {
+        "n_total": 48,
+        "n_nan": 0,
+        "frac_nan": 0.0
+      }
+    }
+  },
+  "driver1_verdict": {
+    "hrv_mean_nn": "ok",
+    "hrv_sdnn": "ok",
+    "hrv_rmssd": "ok",
+    "hrv_pnn50": "ok",
+    "hrv_lf_power": "ok",
+    "hrv_hf_power": "ok",
+    "hrv_lf_hf_ratio": "ok",
+    "eda_tonic_mean": "dataset_collinear",
+    "eda_tonic_slope": "dataset_collinear",
+    "eda_phasic_mean_amp": "dataset_collinear",
+    "eda_phasic_rate": "dataset_collinear",
+    "coupling_peak_corr": "dataset_collinear",
+    "coupling_lag_sec": "dataset_collinear"
+  },
+  "n_rows": 96,
+  "datasets": [
+    "MITBIH",
+    "WESAD"
+  ]
+}

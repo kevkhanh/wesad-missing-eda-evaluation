@@ -1,0 +1,1470 @@
+{
+  "extended_table_sha256": "3b384d7f66c795dd2d114a41e6afafa068e80346de1384c445c39aa17210f61a",
+  "protocol_versions": {
+    "stress_before_amusement": 7,
+    "n_subjects": 15
+  },
+  "A_stress_vs_amusement": {
+    "gated_dropout_hr_removed": {
+      "complete": {
+        "pooled_auroc": 0.7126915389740173,
+        "pooled_auroc_ci95": [
+          0.595957809585821,
+          0.81603772689299
+        ],
+        "within_subject_auroc": 0.7196094276094275,
+        "within_subject_auroc_ci95": [
+          0.5964979797979799,
+          0.8363279461279459
+        ],
+        "brier": 0.24372837858508553,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.7749206349206349,
+          "stress_after_amusement": 0.6712121212121211,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.5636363636363637,
+          "WESAD_S11": 0.8,
+          "WESAD_S13": 0.9000000000000001,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.6363636363636364,
+          "WESAD_S16": 0.9,
+          "WESAD_S17": 0.6727272727272727,
+          "WESAD_S2": 0.88,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 0.9555555555555555,
+          "WESAD_S5": 0.37777777777777777,
+          "WESAD_S6": 0.6000000000000001,
+          "WESAD_S7": 0.9,
+          "WESAD_S8": 0.36363636363636365,
+          "WESAD_S9": 0.24444444444444444
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.5827781479013991,
+        "pooled_auroc_ci95": [
+          0.46731688169425506,
+          0.6865367135137294
+        ],
+        "within_subject_auroc": 0.5946195286195286,
+        "within_subject_auroc_ci95": [
+          0.4711208754208755,
+          0.7128755892255892
+        ],
+        "brier": 0.2926443479660425,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.669062049062049,
+          "stress_after_amusement": 0.5294823232323232,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.36363636363636365,
+          "WESAD_S11": 0.6545454545454545,
+          "WESAD_S13": 0.7666666666666666,
+          "WESAD_S14": 0.9333333333333333,
+          "WESAD_S15": 0.42424242424242425,
+          "WESAD_S16": 0.5,
+          "WESAD_S17": 0.690909090909091,
+          "WESAD_S2": 0.82,
+          "WESAD_S3": 0.9400000000000001,
+          "WESAD_S4": 0.8,
+          "WESAD_S5": 0.15555555555555556,
+          "WESAD_S6": 0.6799999999999999,
+          "WESAD_S7": 0.6166666666666667,
+          "WESAD_S8": 0.4181818181818182,
+          "WESAD_S9": 0.15555555555555556
+        }
+      }
+    },
+    "gated_dropout_p0.5": {
+      "complete": {
+        "pooled_auroc": 0.9069370419720186,
+        "pooled_auroc_ci95": [
+          0.8507596319607564,
+          0.9554629269767242
+        ],
+        "within_subject_auroc": 0.9425993265993267,
+        "within_subject_auroc_ci95": [
+          0.8882202020202019,
+          0.9835707070707072
+        ],
+        "brier": 0.13066564671697667,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.9438095238095238,
+          "stress_after_amusement": 0.9415404040404041,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.9818181818181819,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 0.9333333333333333,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.8939393939393939,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 0.9454545454545455,
+          "WESAD_S2": 0.9400000000000001,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 0.9777777777777779,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 0.7999999999999999,
+          "WESAD_S9": 0.6666666666666666
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.8660892738174552,
+        "pooled_auroc_ci95": [
+          0.7986734953942498,
+          0.9313749401235943
+        ],
+        "within_subject_auroc": 0.9143097643097644,
+        "within_subject_auroc_ci95": [
+          0.8392146464646466,
+          0.9755606060606061
+        ],
+        "brier": 0.16332464033304153,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.8888888888888887,
+          "stress_after_amusement": 0.9365530303030303,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.9818181818181819,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 0.9500000000000001,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.8333333333333334,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 0.6000000000000001,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 0.7999999999999999,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 0.9272727272727272,
+          "WESAD_S9": 0.6222222222222222
+        }
+      }
+    },
+    "hr_only": {
+      "complete": {
+        "pooled_auroc": 0.85126582278481,
+        "pooled_auroc_ci95": [
+          0.7863171009598157,
+          0.9106626227676173
+        ],
+        "within_subject_auroc": 0.9377777777777777,
+        "within_subject_auroc_ci95": [
+          0.850909090909091,
+          1.0
+        ],
+        "brier": 0.1488386236900784,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.9523809523809524,
+          "stress_after_amusement": 0.925,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.45454545454545453,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 1.0,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 1.0,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 0.9454545454545454,
+          "WESAD_S9": 0.6666666666666667
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.85126582278481,
+        "pooled_auroc_ci95": [
+          0.7863171009598157,
+          0.9106626227676173
+        ],
+        "within_subject_auroc": 0.9377777777777777,
+        "within_subject_auroc_ci95": [
+          0.850909090909091,
+          1.0
+        ],
+        "brier": 0.1488386236900784,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.9523809523809524,
+          "stress_after_amusement": 0.925,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.45454545454545453,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 1.0,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 1.0,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 0.9454545454545454,
+          "WESAD_S9": 0.6666666666666667
+        }
+      }
+    },
+    "lgbm_ecg_only_hr_removed": {
+      "complete": {
+        "pooled_auroc": 0.6800049966688875,
+        "pooled_auroc_ci95": [
+          0.572790572404124,
+          0.7850950584503217
+        ],
+        "within_subject_auroc": 0.7027946127946127,
+        "within_subject_auroc_ci95": [
+          0.5792070707070707,
+          0.8178202020202019
+        ],
+        "brier": 0.21266077204399786,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.7165223665223666,
+          "stress_after_amusement": 0.6907828282828283,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.4363636363636364,
+          "WESAD_S11": 0.8545454545454545,
+          "WESAD_S13": 0.9166666666666667,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.45454545454545453,
+          "WESAD_S16": 0.7000000000000001,
+          "WESAD_S17": 0.7818181818181817,
+          "WESAD_S2": 0.76,
+          "WESAD_S3": 0.83,
+          "WESAD_S4": 0.8222222222222222,
+          "WESAD_S5": 0.2222222222222222,
+          "WESAD_S6": 0.56,
+          "WESAD_S7": 0.9833333333333334,
+          "WESAD_S8": 0.9090909090909091,
+          "WESAD_S9": 0.3111111111111111
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.6800049966688875,
+        "pooled_auroc_ci95": [
+          0.572790572404124,
+          0.7850950584503217
+        ],
+        "within_subject_auroc": 0.7027946127946127,
+        "within_subject_auroc_ci95": [
+          0.5792070707070707,
+          0.8178202020202019
+        ],
+        "brier": 0.21266077204399786,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.7165223665223666,
+          "stress_after_amusement": 0.6907828282828283,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.4363636363636364,
+          "WESAD_S11": 0.8545454545454545,
+          "WESAD_S13": 0.9166666666666667,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.45454545454545453,
+          "WESAD_S16": 0.7000000000000001,
+          "WESAD_S17": 0.7818181818181817,
+          "WESAD_S2": 0.76,
+          "WESAD_S3": 0.83,
+          "WESAD_S4": 0.8222222222222222,
+          "WESAD_S5": 0.2222222222222222,
+          "WESAD_S6": 0.56,
+          "WESAD_S7": 0.9833333333333334,
+          "WESAD_S8": 0.9090909090909091,
+          "WESAD_S9": 0.3111111111111111
+        }
+      }
+    },
+    "lgbm_ecg_only_per_config": {
+      "complete": {
+        "pooled_auroc": 0.9110592938041305,
+        "pooled_auroc_ci95": [
+          0.8602488985597007,
+          0.9582093684800692
+        ],
+        "within_subject_auroc": 0.9460875420875421,
+        "within_subject_auroc_ci95": [
+          0.8918824915824917,
+          0.9973333333333334
+        ],
+        "brier": 0.12087779194131311,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.953015873015873,
+          "stress_after_amusement": 0.9400252525252525,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.7424242424242424,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 0.9600000000000001,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 0.7777777777777778,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.711111111111111
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.9110592938041305,
+        "pooled_auroc_ci95": [
+          0.8602488985597007,
+          0.9582093684800692
+        ],
+        "within_subject_auroc": 0.9460875420875421,
+        "within_subject_auroc_ci95": [
+          0.8918824915824917,
+          0.9973333333333334
+        ],
+        "brier": 0.12087779194131311,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.953015873015873,
+          "stress_after_amusement": 0.9400252525252525,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.7424242424242424,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 0.9600000000000001,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 0.7777777777777778,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.711111111111111
+        }
+      }
+    },
+    "lgbm_nan_training_hr_removed": {
+      "complete": {
+        "pooled_auroc": 0.7988840772818122,
+        "pooled_auroc_ci95": [
+          0.672879829205937,
+          0.9144061131023495
+        ],
+        "within_subject_auroc": 0.7773265993265994,
+        "within_subject_auroc_ci95": [
+          0.6565914141414141,
+          0.8995835016835017
+        ],
+        "brier": 0.17066576660394672,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.7393650793650793,
+          "stress_after_amusement": 0.8105429292929294,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.5272727272727273,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 0.8500000000000001,
+          "WESAD_S14": 0.9666666666666667,
+          "WESAD_S15": 0.9393939393939394,
+          "WESAD_S16": 0.9600000000000001,
+          "WESAD_S17": 0.7454545454545455,
+          "WESAD_S2": 0.88,
+          "WESAD_S3": 0.5,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 0.4222222222222222,
+          "WESAD_S6": 0.5800000000000001,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.28888888888888886
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.6659726848767488,
+        "pooled_auroc_ci95": [
+          0.5538127553955989,
+          0.7766962025316456
+        ],
+        "within_subject_auroc": 0.6843232323232322,
+        "within_subject_auroc_ci95": [
+          0.5478121212121212,
+          0.8152060606060606
+        ],
+        "brier": 0.218454874096469,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.6880519480519479,
+          "stress_after_amusement": 0.6810606060606061,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.4363636363636364,
+          "WESAD_S11": 0.8363636363636363,
+          "WESAD_S13": 0.9333333333333333,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.3181818181818182,
+          "WESAD_S16": 0.78,
+          "WESAD_S17": 0.8363636363636364,
+          "WESAD_S2": 0.76,
+          "WESAD_S3": 0.72,
+          "WESAD_S4": 0.8666666666666667,
+          "WESAD_S5": 0.19999999999999998,
+          "WESAD_S6": 0.52,
+          "WESAD_S7": 0.9666666666666668,
+          "WESAD_S8": 0.8909090909090909,
+          "WESAD_S9": 0.19999999999999998
+        }
+      }
+    },
+    "lgbm_nan_training_p0.5": {
+      "complete": {
+        "pooled_auroc": 0.924966688874084,
+        "pooled_auroc_ci95": [
+          0.8735463987504293,
+          0.975125469807505
+        ],
+        "within_subject_auroc": 0.9742491582491584,
+        "within_subject_auroc_ci95": [
+          0.9416447811447811,
+          0.998989898989899
+        ],
+        "brier": 0.1051851094925502,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.9628571428571427,
+          "stress_after_amusement": 0.9842171717171717,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.9848484848484849,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 0.9400000000000001,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 0.888888888888889,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.8
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.908977348434377,
+        "pooled_auroc_ci95": [
+          0.8565724670992463,
+          0.9535386751089837
+        ],
+        "within_subject_auroc": 0.9362558922558925,
+        "within_subject_auroc_ci95": [
+          0.8707265993265992,
+          0.9894814814814815
+        ],
+        "brier": 0.11951331690310474,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.9688888888888888,
+          "stress_after_amusement": 0.9077020202020203,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.6060606060606061,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 0.96,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 0.9555555555555555,
+          "WESAD_S5": 0.7333333333333334,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 0.9666666666666668,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.8222222222222222
+        }
+      }
+    },
+    "mlp_nongated_dropout_p0.5": {
+      "complete": {
+        "pooled_auroc": 0.8721685542971352,
+        "pooled_auroc_ci95": [
+          0.8025713681342821,
+          0.9393932354688412
+        ],
+        "within_subject_auroc": 0.9318518518518518,
+        "within_subject_auroc_ci95": [
+          0.8632801346801345,
+          0.9842545454545455
+        ],
+        "brier": 0.17675148963082588,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.9253968253968254,
+          "stress_after_amusement": 0.9375,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.9636363636363636,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.9545454545454546,
+          "WESAD_S16": 0.9800000000000001,
+          "WESAD_S17": 0.8,
+          "WESAD_S2": 0.92,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 1.0,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 0.7818181818181819,
+          "WESAD_S9": 0.5777777777777777
+        }
+      },
+      "reduced": {
+        "pooled_auroc": 0.8568454363757495,
+        "pooled_auroc_ci95": [
+          0.7812668681339567,
+          0.9251409880454242
+        ],
+        "within_subject_auroc": 0.8938316498316499,
+        "within_subject_auroc_ci95": [
+          0.7989023569023569,
+          0.9722558922558923
+        ],
+        "brier": 0.1798600633706929,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.8752380952380953,
+          "stress_after_amusement": 0.9101010101010101,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.9818181818181819,
+          "WESAD_S11": 1.0,
+          "WESAD_S13": 1.0,
+          "WESAD_S14": 1.0,
+          "WESAD_S15": 0.696969696969697,
+          "WESAD_S16": 1.0,
+          "WESAD_S17": 1.0,
+          "WESAD_S2": 0.66,
+          "WESAD_S3": 1.0,
+          "WESAD_S4": 1.0,
+          "WESAD_S5": 0.7111111111111111,
+          "WESAD_S6": 1.0,
+          "WESAD_S7": 1.0,
+          "WESAD_S8": 0.8909090909090909,
+          "WESAD_S9": 0.4666666666666667
+        }
+      }
+    },
+    "_hr_delta_mean_nn_stress_minus_amusement_ms": {
+      "median": -216.31476530681965,
+      "range": [
+        -391.5287835474069,
+        56.26445020154938
+      ]
+    },
+    "_n_windows": {
+      "stress": 152,
+      "amusement": 79
+    }
+  },
+  "B_negative_control": {
+    "gated_dropout_p0.5": {
+      "complete": {
+        "amusement": {
+          "frac_pred_stress": 0.10126582278481013,
+          "frac_pred_stress_platt_pc": 0.05063291139240506,
+          "mean_p": 0.13225248600796732,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 0,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.15602836879432624,
+          "frac_pred_stress_platt_pc": 0.09929078014184398,
+          "mean_p": 0.16621902785730283,
+          "subject_frac_median": 0.05263157894736842,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.13953488372093023,
+          "frac_pred_stress_platt_pc": 0.09302325581395349,
+          "mean_p": 0.15619813590202125,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.10714285714285714,
+          "frac_pred_stress_platt_pc": 0.08333333333333333,
+          "mean_p": 0.15173678003489086,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.8618421052631579,
+          "frac_pred_stress_platt_pc": 0.7236842105263158,
+          "mean_p": 0.8288476672314573,
+          "subject_frac_median": 0.9090909090909091,
+          "n_subjects_frac_gt_half": 14,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      },
+      "reduced": {
+        "amusement": {
+          "frac_pred_stress": 0.13924050632911392,
+          "frac_pred_stress_platt_pc": 0.0759493670886076,
+          "mean_p": 0.1754532030524045,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.14184397163120568,
+          "frac_pred_stress_platt_pc": 0.10283687943262411,
+          "mean_p": 0.1684479736747402,
+          "subject_frac_median": 0.05263157894736842,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.23255813953488372,
+          "frac_pred_stress_platt_pc": 0.1744186046511628,
+          "mean_p": 0.23531562648735016,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.21428571428571427,
+          "frac_pred_stress_platt_pc": 0.14285714285714285,
+          "mean_p": 0.19615851127770478,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.7039473684210527,
+          "frac_pred_stress_platt_pc": 0.6118421052631579,
+          "mean_p": 0.6952000238586905,
+          "subject_frac_median": 0.8,
+          "n_subjects_frac_gt_half": 9,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      }
+    },
+    "hr_only": {
+      "complete": {
+        "amusement": {
+          "frac_pred_stress": 0.27848101265822783,
+          "frac_pred_stress_platt_pc": 0.05063291139240506,
+          "mean_p": 0.27823469306138016,
+          "subject_frac_median": 0.2,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.2198581560283688,
+          "frac_pred_stress_platt_pc": 0.1099290780141844,
+          "mean_p": 0.24381046865086758,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.12790697674418605,
+          "frac_pred_stress_platt_pc": 0.0,
+          "mean_p": 0.16692618792669586,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.13095238095238096,
+          "frac_pred_stress_platt_pc": 0.011904761904761904,
+          "mean_p": 0.16049845126891416,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.6513157894736842,
+          "frac_pred_stress_platt_pc": 0.35526315789473684,
+          "mean_p": 0.6493531519076605,
+          "subject_frac_median": 0.6,
+          "n_subjects_frac_gt_half": 9,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      },
+      "reduced": {
+        "amusement": {
+          "frac_pred_stress": 0.27848101265822783,
+          "frac_pred_stress_platt_pc": 0.05063291139240506,
+          "mean_p": 0.27823469306138016,
+          "subject_frac_median": 0.2,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.2198581560283688,
+          "frac_pred_stress_platt_pc": 0.1099290780141844,
+          "mean_p": 0.24381046865086758,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.12790697674418605,
+          "frac_pred_stress_platt_pc": 0.0,
+          "mean_p": 0.16692618792669586,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.13095238095238096,
+          "frac_pred_stress_platt_pc": 0.011904761904761904,
+          "mean_p": 0.16049845126891416,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.6513157894736842,
+          "frac_pred_stress_platt_pc": 0.35526315789473684,
+          "mean_p": 0.6493531519076605,
+          "subject_frac_median": 0.6,
+          "n_subjects_frac_gt_half": 9,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      }
+    },
+    "lgbm_ecg_only_per_config": {
+      "complete": {
+        "amusement": {
+          "frac_pred_stress": 0.189873417721519,
+          "frac_pred_stress_platt_pc": 0.11392405063291139,
+          "mean_p": 0.22319390951120147,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.1702127659574468,
+          "frac_pred_stress_platt_pc": 0.0851063829787234,
+          "mean_p": 0.2019322449419811,
+          "subject_frac_median": 0.05263157894736842,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.20930232558139536,
+          "frac_pred_stress_platt_pc": 0.11627906976744186,
+          "mean_p": 0.21626297624890314,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 4,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.14285714285714285,
+          "frac_pred_stress_platt_pc": 0.08333333333333333,
+          "mean_p": 0.19236062045652827,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.75,
+          "frac_pred_stress_platt_pc": 0.6052631578947368,
+          "mean_p": 0.7200794358698601,
+          "subject_frac_median": 0.8,
+          "n_subjects_frac_gt_half": 13,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      },
+      "reduced": {
+        "amusement": {
+          "frac_pred_stress": 0.189873417721519,
+          "frac_pred_stress_platt_pc": 0.11392405063291139,
+          "mean_p": 0.22319390951120147,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.1702127659574468,
+          "frac_pred_stress_platt_pc": 0.0851063829787234,
+          "mean_p": 0.2019322449419811,
+          "subject_frac_median": 0.05263157894736842,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.20930232558139536,
+          "frac_pred_stress_platt_pc": 0.11627906976744186,
+          "mean_p": 0.21626297624890314,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 4,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.14285714285714285,
+          "frac_pred_stress_platt_pc": 0.08333333333333333,
+          "mean_p": 0.19236062045652827,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.75,
+          "frac_pred_stress_platt_pc": 0.6052631578947368,
+          "mean_p": 0.7200794358698601,
+          "subject_frac_median": 0.8,
+          "n_subjects_frac_gt_half": 13,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      }
+    },
+    "lgbm_nan_at_test": {
+      "complete": {
+        "amusement": {
+          "frac_pred_stress": 0.26582278481012656,
+          "frac_pred_stress_platt_pc": 0.20253164556962025,
+          "mean_p": 0.23891240904321034,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.09219858156028368,
+          "frac_pred_stress_platt_pc": 0.05319148936170213,
+          "mean_p": 0.11319449690238416,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.09302325581395349,
+          "frac_pred_stress_platt_pc": 0.09302325581395349,
+          "mean_p": 0.12121936111567617,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.07142857142857142,
+          "frac_pred_stress_platt_pc": 0.05952380952380952,
+          "mean_p": 0.1031370470135254,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.875,
+          "frac_pred_stress_platt_pc": 0.8552631578947368,
+          "mean_p": 0.8308934390805955,
+          "subject_frac_median": 1.0,
+          "n_subjects_frac_gt_half": 13,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      },
+      "reduced": {
+        "amusement": {
+          "frac_pred_stress": 0.0,
+          "frac_pred_stress_platt_pc": 0.11392405063291139,
+          "mean_p": 0.02125500479121794,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 0,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.0,
+          "frac_pred_stress_platt_pc": 0.08865248226950355,
+          "mean_p": 0.025654965713342748,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 0,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.0,
+          "frac_pred_stress_platt_pc": 0.11627906976744186,
+          "mean_p": 0.01813674692661662,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 0,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.0,
+          "frac_pred_stress_platt_pc": 0.10714285714285714,
+          "mean_p": 0.01736107327004296,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 0,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.0,
+          "frac_pred_stress_platt_pc": 0.40789473684210525,
+          "mean_p": 0.089670802062462,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 0,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      }
+    },
+    "lgbm_nan_training_p0.5": {
+      "complete": {
+        "amusement": {
+          "frac_pred_stress": 0.12658227848101267,
+          "frac_pred_stress_platt_pc": 0.10126582278481013,
+          "mean_p": 0.20429645806760355,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.1276595744680851,
+          "frac_pred_stress_platt_pc": 0.10638297872340426,
+          "mean_p": 0.159696599090957,
+          "subject_frac_median": 0.05263157894736842,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.11627906976744186,
+          "frac_pred_stress_platt_pc": 0.09302325581395349,
+          "mean_p": 0.14977670724262132,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.08333333333333333,
+          "frac_pred_stress_platt_pc": 0.07142857142857142,
+          "mean_p": 0.1289200826084825,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.8618421052631579,
+          "frac_pred_stress_platt_pc": 0.7960526315789473,
+          "mean_p": 0.8122864083255683,
+          "subject_frac_median": 1.0,
+          "n_subjects_frac_gt_half": 13,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      },
+      "reduced": {
+        "amusement": {
+          "frac_pred_stress": 0.17721518987341772,
+          "frac_pred_stress_platt_pc": 0.11392405063291139,
+          "mean_p": 0.22618371154384778,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.1773049645390071,
+          "frac_pred_stress_platt_pc": 0.12056737588652482,
+          "mean_p": 0.20384656934573034,
+          "subject_frac_median": 0.05263157894736842,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.1511627906976744,
+          "frac_pred_stress_platt_pc": 0.09302325581395349,
+          "mean_p": 0.17964838853730744,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.09523809523809523,
+          "frac_pred_stress_platt_pc": 0.08333333333333333,
+          "mean_p": 0.1558057547080427,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.7171052631578947,
+          "frac_pred_stress_platt_pc": 0.6118421052631579,
+          "mean_p": 0.6925882730849856,
+          "subject_frac_median": 0.7272727272727273,
+          "n_subjects_frac_gt_half": 12,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      }
+    },
+    "mlp_nongated_dropout_p0.5": {
+      "complete": {
+        "amusement": {
+          "frac_pred_stress": 0.20253164556962025,
+          "frac_pred_stress_platt_pc": 0.11392405063291139,
+          "mean_p": 0.20700196739199808,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.1276595744680851,
+          "frac_pred_stress_platt_pc": 0.08156028368794327,
+          "mean_p": 0.14224128465090616,
+          "subject_frac_median": 0.05555555555555555,
+          "n_subjects_frac_gt_half": 0,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.11627906976744186,
+          "frac_pred_stress_platt_pc": 0.06976744186046512,
+          "mean_p": 0.12453494090906465,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.11904761904761904,
+          "frac_pred_stress_platt_pc": 0.07142857142857142,
+          "mean_p": 0.12061479953184262,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.7763157894736842,
+          "frac_pred_stress_platt_pc": 0.6578947368421053,
+          "mean_p": 0.7710794804637724,
+          "subject_frac_median": 0.7777777777777778,
+          "n_subjects_frac_gt_half": 12,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      },
+      "reduced": {
+        "amusement": {
+          "frac_pred_stress": 0.1518987341772152,
+          "frac_pred_stress_platt_pc": 0.08860759493670886,
+          "mean_p": 0.17320669541927147,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 79,
+          "mean_t_start_min": 52.69620253164557
+        },
+        "baseline": {
+          "frac_pred_stress": 0.1524822695035461,
+          "frac_pred_stress_platt_pc": 0.09929078014184398,
+          "mean_p": 0.1757698047105556,
+          "subject_frac_median": 0.05263157894736842,
+          "n_subjects_frac_gt_half": 1,
+          "n_windows": 282,
+          "mean_t_start_min": 12.425531914893616
+        },
+        "meditation_1": {
+          "frac_pred_stress": 0.2558139534883721,
+          "frac_pred_stress_platt_pc": 0.11627906976744186,
+          "mean_p": 0.23821034123451582,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 3,
+          "n_windows": 86,
+          "mean_t_start_min": 54.43023255813954
+        },
+        "meditation_2": {
+          "frac_pred_stress": 0.16666666666666666,
+          "frac_pred_stress_platt_pc": 0.09523809523809523,
+          "mean_p": 0.18848185882192084,
+          "subject_frac_median": 0.0,
+          "n_subjects_frac_gt_half": 2,
+          "n_windows": 84,
+          "mean_t_start_min": 89.01190476190476
+        },
+        "stress": {
+          "frac_pred_stress": 0.7302631578947368,
+          "frac_pred_stress_platt_pc": 0.6447368421052632,
+          "mean_p": 0.7172885886646231,
+          "subject_frac_median": 0.8,
+          "n_subjects_frac_gt_half": 11,
+          "n_windows": 152,
+          "mean_t_start_min": 51.026315789473685
+        }
+      }
+    }
+  },
+  "C_baseline_vs_meditation": {
+    "gated_no_dropout": {
+      "complete": {
+        "pooled_auroc": 0.7258239465999164,
+        "pooled_auroc_ci95": [
+          0.6455913805464877,
+          0.8143677333806308
+        ],
+        "within_subject_auroc": 0.7583885640025992,
+        "within_subject_auroc_ci95": [
+          0.6812487152223994,
+          0.8330582284836671
+        ],
+        "brier": 0.2711112664597567,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.7015024936077568,
+          "stress_after_amusement": 0.8081638755980861,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 0.6076555023923444,
+          "WESAD_S13": 0.8803827751196173,
+          "WESAD_S14": 0.5964912280701754,
+          "WESAD_S15": 0.8564593301435406,
+          "WESAD_S16": 0.7017543859649122,
+          "WESAD_S17": 0.7033492822966507,
+          "WESAD_S2": 0.6722222222222223,
+          "WESAD_S3": 0.9074074074074074,
+          "WESAD_S4": 0.7850877192982457,
+          "WESAD_S5": 0.4593301435406698,
+          "WESAD_S6": 0.768421052631579,
+          "WESAD_S7": 0.7807017543859649,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.6565656565656566
+        }
+      }
+    },
+    "hr_only": {
+      "complete": {
+        "pooled_auroc": 0.4263454317897372,
+        "pooled_auroc_ci95": [
+          0.3114712511668926,
+          0.5565616761467359
+        ],
+        "within_subject_auroc": 0.4375181640971115,
+        "within_subject_auroc_ci95": [
+          0.29976475279106857,
+          0.5753450956937797
+        ],
+        "brier": 0.27611070104620966,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.40196703880914403,
+          "stress_after_amusement": 0.46862539872408293,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 1.0,
+          "WESAD_S11": 0.08851674641148324,
+          "WESAD_S13": 0.368421052631579,
+          "WESAD_S14": 0.6798245614035088,
+          "WESAD_S15": 0.02392344497607658,
+          "WESAD_S16": 0.19956140350877194,
+          "WESAD_S17": 0.3038277511961723,
+          "WESAD_S2": 0.5916666666666667,
+          "WESAD_S3": 0.5,
+          "WESAD_S4": 0.48684210526315785,
+          "WESAD_S5": 0.44976076555023925,
+          "WESAD_S6": 0.7289473684210526,
+          "WESAD_S7": 0.5350877192982456,
+          "WESAD_S8": 0.5811403508771931,
+          "WESAD_S9": 0.025252525252525256
+        }
+      }
+    },
+    "lgbm_ecg_only_per_config": {
+      "complete": {
+        "pooled_auroc": 0.7323529411764707,
+        "pooled_auroc_ci95": [
+          0.6330597808927203,
+          0.8248119689030134
+        ],
+        "within_subject_auroc": 0.7497231082757398,
+        "within_subject_auroc_ci95": [
+          0.6350436381357435,
+          0.8504977405635299
+        ],
+        "brier": 0.19684300958620968,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.6637664236348447,
+          "stress_after_amusement": 0.8249352073365231,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.8201754385964912,
+          "WESAD_S11": 0.3851674641148325,
+          "WESAD_S13": 0.952153110047847,
+          "WESAD_S14": 0.7236842105263158,
+          "WESAD_S15": 0.7272727272727273,
+          "WESAD_S16": 0.8771929824561404,
+          "WESAD_S17": 0.8755980861244019,
+          "WESAD_S2": 0.3055555555555556,
+          "WESAD_S3": 0.9236111111111112,
+          "WESAD_S4": 0.5855263157894737,
+          "WESAD_S5": 0.8492822966507177,
+          "WESAD_S6": 0.9210526315789473,
+          "WESAD_S7": 0.7894736842105263,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.51010101010101
+        }
+      }
+    },
+    "lgbm_eda_only": {
+      "complete": {
+        "pooled_auroc": 0.4553191489361702,
+        "pooled_auroc_ci95": [
+          0.33178152260455773,
+          0.5680484745103827
+        ],
+        "within_subject_auroc": 0.42272107035264933,
+        "within_subject_auroc_ci95": [
+          0.28664961013645224,
+          0.5562950779727097
+        ],
+        "brier": 0.3006014406421678,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.3384180147338042,
+          "stress_after_amusement": 0.49648624401913877,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.043859649122807015,
+          "WESAD_S11": 0.4449760765550239,
+          "WESAD_S13": 0.8803827751196173,
+          "WESAD_S14": 0.43640350877192985,
+          "WESAD_S15": 0.6555023923444976,
+          "WESAD_S16": 0.02631578947368423,
+          "WESAD_S17": 0.6985645933014353,
+          "WESAD_S2": 0.07222222222222224,
+          "WESAD_S3": 0.3472222222222222,
+          "WESAD_S4": 0.5789473684210527,
+          "WESAD_S5": 0.13875598086124402,
+          "WESAD_S6": 0.28421052631578947,
+          "WESAD_S7": 0.34649122807017546,
+          "WESAD_S8": 0.6293859649122807,
+          "WESAD_S9": 0.7575757575757576
+        }
+      }
+    },
+    "lgbm_nan_at_test": {
+      "complete": {
+        "pooled_auroc": 0.6265331664580726,
+        "pooled_auroc_ci95": [
+          0.4838336234419547,
+          0.752399253884311
+        ],
+        "within_subject_auroc": 0.6224528914879792,
+        "within_subject_auroc_ci95": [
+          0.4782837660228011,
+          0.7544198195404336
+        ],
+        "brier": 0.24010706778345473,
+        "within_subject_auroc_by_protocol": {
+          "stress_before_amusement": 0.5489677476519581,
+          "stress_after_amusement": 0.6867523923444976,
+          "n": {
+            "stress_before_amusement": 7,
+            "stress_after_amusement": 8
+          }
+        },
+        "per_subject": {
+          "WESAD_S10": 0.30701754385964913,
+          "WESAD_S11": 0.5550239234449761,
+          "WESAD_S13": 0.9760765550239234,
+          "WESAD_S14": 0.5877192982456141,
+          "WESAD_S15": 0.770334928229665,
+          "WESAD_S16": 0.2149122807017544,
+          "WESAD_S17": 0.8373205741626795,
+          "WESAD_S2": 0.1611111111111111,
+          "WESAD_S3": 0.8657407407407407,
+          "WESAD_S4": 0.5657894736842105,
+          "WESAD_S5": 0.291866028708134,
+          "WESAD_S6": 0.8421052631578947,
+          "WESAD_S7": 0.7456140350877192,
+          "WESAD_S8": 1.0,
+          "WESAD_S9": 0.6161616161616161
+        }
+      }
+    }
+  },
+  "D_within_baseline_drift": {
+    "eda_tonic_mean": {
+      "median_rho_vs_time": 0.019298245614035085,
+      "n_positive": 8,
+      "n": 15,
+      "per_subject": {
+        "WESAD_S10": 1.0,
+        "WESAD_S11": 0.0824561403508772,
+        "WESAD_S13": 0.356140350877193,
+        "WESAD_S14": 0.7947368421052632,
+        "WESAD_S15": 1.0,
+        "WESAD_S16": 0.019298245614035085,
+        "WESAD_S17": 0.9228070175438597,
+        "WESAD_S2": -1.0,
+        "WESAD_S3": -0.8369453044375645,
+        "WESAD_S4": 0.8912280701754386,
+        "WESAD_S5": -0.9526315789473684,
+        "WESAD_S6": -0.9859649122807018,
+        "WESAD_S7": -0.9105263157894736,
+        "WESAD_S8": -0.8649122807017543,
+        "WESAD_S9": -0.5603715170278638
+      }
+    },
+    "hrv_mean_nn": {
+      "median_rho_vs_time": -0.0543859649122807,
+      "n_positive": 7,
+      "n": 15,
+      "per_subject": {
+        "WESAD_S10": 0.1736842105263158,
+        "WESAD_S11": 0.32631578947368417,
+        "WESAD_S13": -0.0543859649122807,
+        "WESAD_S14": -0.5596491228070175,
+        "WESAD_S15": -0.3315789473684211,
+        "WESAD_S16": -0.2456140350877193,
+        "WESAD_S17": -0.3649122807017544,
+        "WESAD_S2": 0.003095975232198142,
+        "WESAD_S3": 0.38906088751289986,
+        "WESAD_S4": 0.3192982456140351,
+        "WESAD_S5": -0.18596491228070175,
+        "WESAD_S6": -0.6263157894736843,
+        "WESAD_S7": 0.2719298245614035,
+        "WESAD_S8": -0.531578947368421,
+        "WESAD_S9": 0.09597523219814243
+      }
+    }
+  }
+}

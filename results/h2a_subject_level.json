@@ -1,0 +1,39 @@
+{
+  "n_subjects": 15,
+  "mean_diff_sec": -1.1345289647172,
+  "sd_diff_sec": 2.9392561306256324,
+  "ci95_sec": [
+    -2.7622347557890516,
+    0.49317682635465143
+  ],
+  "d_z": -0.38599186811110303,
+  "d_z_ci95": [
+    -0.9051667743441317,
+    0.14585241882681266
+  ],
+  "t": -1.4949400769657917,
+  "p": 0.15712673453632495,
+  "wilcoxon_p": 0.389404296875,
+  "n_subjects_lag_longer_under_stress": 8,
+  "tost_bound_dz": 0.8,
+  "tost_p": 0.06557548667601044,
+  "note": "Subject-level paired analysis of coupling_lag_sec (stress minus baseline subject means) on the frozen 434-window table. TOST bound d_z=0.8 is provisional: chosen from detectability, not substantive grounds (review M7).",
+  "ci90_sec": [
+    -2.4712095418694062,
+    0.20215161243500623
+  ],
+  "min_equivalence_bound_sec": 2.4712095418694062,
+  "min_equivalence_bound_dz": 0.8407601896686014,
+  "within_subject_sd_lag_baseline_sec": {
+    "median": 8.341401814706897,
+    "min": 5.884281250182115,
+    "max": 10.622346571645503
+  },
+  "lag_distribution_sec": {
+    "median": -0.75,
+    "q25": -6.954285714285715,
+    "q75": 3.645714285714286
+  },
+  "search_range_sec": 15.0,
+  "interpretation": "Window-to-window SD of the lag within a resting participant (~8 s) is comparable to the +/-15 s search range: 60-s cross-correlation lag is not a reliable estimate, so H2a is not testable with this feature at this window length. Equivalence would hold only for bounds > min_equivalence_bound_sec; no smallest effect of interest is chosen post hoc."
+}

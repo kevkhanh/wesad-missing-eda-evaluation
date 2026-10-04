@@ -1,0 +1,118 @@
+[operating_points] 100 fold tasks, n_jobs=12
+[Parallel(n_jobs=12)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=12)]: Done  48 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=12)]: Done  98 out of 100 | elapsed:  1.4min remaining:    1.6s
+[Parallel(n_jobs=12)]: Done 100 out of 100 | elapsed:  1.4min finished
+
+verification vs repeated_cv: {'n_checked': 1000, 'n_expected': 1000, 'max_abs_brier_diff': 9.71445146547012e-17, 'reproduces_repeated_cv': True}
+
+=== reduced ===
+  gated              sens90: sens 0.904 spec 0.594 | spec90: sens 0.556 spec 0.921 | NB .2/.35/.5 0.250/0.208/0.155 | abst60 S/B 0.62/0.27
+  lgbm_nan_training  sens90: sens 0.904 spec 0.672 | spec90: sens 0.462 spec 0.919 | NB .2/.35/.5 0.264/0.211/0.143 | abst60 S/B 0.70/0.23
+  mlp                sens90: sens 0.910 spec 0.594 | spec90: sens 0.584 spec 0.916 | NB .2/.35/.5 0.253/0.208/0.159 | abst60 S/B 0.61/0.28
+  per_config         sens90: sens 0.905 spec 0.650 | spec90: sens 0.490 spec 0.916 | NB .2/.35/.5 0.262/0.210/0.153 | abst60 S/B 0.70/0.23
+  gated__vs__mlp
+    sens90_sens   BF -0.005 [-0.061, +0.050] TOST 0.058 | participant -0.006 [-0.020, +0.008] TOST 0.000
+    sens90_spec   BF +0.000 [-0.108, +0.109] TOST 0.184 | participant +0.001 [-0.019, +0.020] TOST 0.000
+    spec90_sens   BF -0.028 [-0.129, +0.073] TOST 0.336 | participant -0.029 [-0.046, -0.011] TOST 0.010
+    spec90_spec   BF +0.005 [-0.025, +0.036] TOST 0.002 | participant +0.005 [-0.001, +0.011] TOST 0.000
+    nb_0.2        BF -0.003 [-0.023, +0.017] TOST 0.237 | participant -0.003 [-0.007, +0.001] TOST 0.001
+    nb_0.35       BF -0.000 [-0.026, +0.026] TOST 0.226 | participant -0.000 [-0.008, +0.008] TOST 0.010
+    nb_0.5        BF -0.004 [-0.034, +0.026] TOST 0.355 | participant -0.004 [-0.012, +0.003] TOST 0.062
+  gated__vs__lgbm_nan_training
+    sens90_sens   BF +0.000 [-0.082, +0.082] TOST 0.114 | participant +0.000 [-0.021, +0.021] TOST 0.000
+    sens90_spec   BF -0.078 [-0.227, +0.072] TOST 0.643 | participant -0.078 [-0.166, +0.011] TOST 0.742
+    spec90_sens   BF +0.093 [-0.112, +0.298] TOST 0.662 | participant +0.090 [+0.023, +0.158] TOST 0.890
+    spec90_spec   BF +0.002 [-0.064, +0.069] TOST 0.079 | participant +0.002 [-0.015, +0.019] TOST 0.000
+    nb_0.2        BF -0.014 [-0.042, +0.014] TOST 0.610 | participant -0.014 [-0.029, +0.001] TOST 0.711
+    nb_0.35       BF -0.004 [-0.040, +0.033] TOST 0.363 | participant -0.004 [-0.021, +0.014] TOST 0.226
+    nb_0.5        BF +0.011 [-0.039, +0.061] TOST 0.519 | participant +0.011 [-0.015, +0.037] TOST 0.526
+  gated__vs__per_config
+    sens90_sens   BF -0.001 [-0.082, +0.079] TOST 0.117 | participant -0.000 [-0.033, +0.032] TOST 0.003
+    sens90_spec   BF -0.055 [-0.196, +0.086] TOST 0.528 | participant -0.055 [-0.144, +0.034] TOST 0.544
+    spec90_sens   BF +0.066 [-0.131, +0.263] TOST 0.564 | participant +0.064 [-0.007, +0.135] TOST 0.661
+    spec90_spec   BF +0.006 [-0.067, +0.078] TOST 0.113 | participant +0.006 [-0.020, +0.031] TOST 0.001
+    nb_0.2        BF -0.011 [-0.038, +0.015] TOST 0.535 | participant -0.011 [-0.027, +0.005] TOST 0.553
+    nb_0.35       BF -0.002 [-0.035, +0.031] TOST 0.317 | participant -0.002 [-0.019, +0.015] TOST 0.159
+    nb_0.5        BF +0.002 [-0.048, +0.051] TOST 0.371 | participant +0.001 [-0.021, +0.023] TOST 0.208
+  mlp__vs__per_config
+    sens90_sens   BF +0.004 [-0.077, +0.085] TOST 0.133 | participant +0.006 [-0.034, +0.045] TOST 0.016
+    sens90_spec   BF -0.056 [-0.221, +0.110] TOST 0.527 | participant -0.055 [-0.150, +0.039] TOST 0.547
+    spec90_sens   BF +0.094 [-0.092, +0.281] TOST 0.681 | participant +0.093 [+0.021, +0.164] TOST 0.890
+    spec90_spec   BF +0.000 [-0.070, +0.071] TOST 0.083 | participant +0.000 [-0.024, +0.024] TOST 0.000
+    nb_0.2        BF -0.008 [-0.036, +0.019] TOST 0.456 | participant -0.008 [-0.025, +0.009] TOST 0.413
+    nb_0.35       BF -0.002 [-0.033, +0.029] TOST 0.302 | participant -0.002 [-0.022, +0.018] TOST 0.198
+    nb_0.5        BF +0.006 [-0.040, +0.052] TOST 0.435 | participant +0.006 [-0.018, +0.030] TOST 0.355
+  lgbm_nan_training__vs__per_config
+    sens90_sens   BF -0.001 [-0.053, +0.050] TOST 0.033 | participant -0.001 [-0.023, +0.022] TOST 0.000
+    sens90_spec   BF +0.023 [-0.065, +0.110] TOST 0.269 | participant +0.023 [-0.008, +0.054] TOST 0.040
+    spec90_sens   BF -0.027 [-0.158, +0.103] TOST 0.365 | participant -0.026 [-0.056, +0.003] TOST 0.055
+    spec90_spec   BF +0.003 [-0.040, +0.047] TOST 0.018 | participant +0.003 [-0.006, +0.013] TOST 0.000
+    nb_0.2        BF +0.003 [-0.015, +0.020] TOST 0.210 | participant +0.003 [-0.006, +0.012] TOST 0.062
+    nb_0.35       BF +0.002 [-0.022, +0.025] TOST 0.236 | participant +0.002 [-0.005, +0.008] TOST 0.008
+    nb_0.5        BF -0.009 [-0.041, +0.022] TOST 0.486 | participant -0.009 [-0.020, +0.001] TOST 0.453
+  abstention stress-baseline gated              60%: +0.349 [+0.076, +0.621]
+  abstention stress-baseline lgbm_nan_training  60%: +0.468 [+0.192, +0.744]
+  abstention stress-baseline mlp                60%: +0.331 [+0.073, +0.588]
+  abstention stress-baseline per_config         60%: +0.463 [+0.213, +0.714]
+
+=== complete ===
+  gated              sens90: sens 0.900 spec 0.731 | spec90: sens 0.679 spec 0.909 | NB .2/.35/.5 0.271/0.232/0.181 | abst60 S/B 0.61/0.28
+  lgbm_nan_training  sens90: sens 0.913 spec 0.805 | spec90: sens 0.682 spec 0.925 | NB .2/.35/.5 0.294/0.254/0.213 | abst60 S/B 0.63/0.27
+  mlp                sens90: sens 0.900 spec 0.685 | spec90: sens 0.674 spec 0.908 | NB .2/.35/.5 0.265/0.225/0.178 | abst60 S/B 0.58/0.30
+  per_config         sens90: sens 0.893 spec 0.886 | spec90: sens 0.809 spec 0.926 | NB .2/.35/.5 0.299/0.280/0.255 | abst60 S/B 0.60/0.28
+  gated__vs__mlp
+    sens90_sens   BF +0.000 [-0.083, +0.083] TOST 0.119 | participant +0.000 [-0.043, +0.044] TOST 0.014
+    sens90_spec   BF +0.046 [-0.091, +0.183] TOST 0.476 | participant +0.046 [-0.009, +0.101] TOST 0.439
+    spec90_sens   BF +0.005 [-0.154, +0.164] TOST 0.289 | participant +0.004 [-0.054, +0.061] TOST 0.053
+    spec90_spec   BF +0.001 [-0.085, +0.087] TOST 0.131 | participant +0.001 [-0.030, +0.032] TOST 0.002
+    nb_0.2        BF +0.006 [-0.021, +0.032] TOST 0.374 | participant +0.006 [-0.008, +0.020] TOST 0.264
+    nb_0.35       BF +0.006 [-0.028, +0.040] TOST 0.415 | participant +0.006 [-0.009, +0.022] TOST 0.317
+    nb_0.5        BF +0.003 [-0.052, +0.058] TOST 0.400 | participant +0.003 [-0.017, +0.023] TOST 0.238
+  gated__vs__lgbm_nan_training
+    sens90_sens   BF -0.013 [-0.095, +0.069] TOST 0.187 | participant -0.013 [-0.040, +0.015] TOST 0.006
+    sens90_spec   BF -0.074 [-0.242, +0.094] TOST 0.611 | participant -0.073 [-0.199, +0.052] TOST 0.652
+    spec90_sens   BF -0.003 [-0.216, +0.210] TOST 0.331 | participant -0.004 [-0.079, +0.072] TOST 0.103
+    spec90_spec   BF -0.016 [-0.183, +0.151] TOST 0.344 | participant -0.016 [-0.105, +0.073] TOST 0.213
+    nb_0.2        BF -0.023 [-0.054, +0.008] TOST 0.798 | participant -0.023 [-0.043, -0.002] TOST 0.898
+    nb_0.35       BF -0.022 [-0.083, +0.039] TOST 0.652 | participant -0.022 [-0.065, +0.021] TOST 0.722
+    nb_0.5        BF -0.032 [-0.122, +0.058] TOST 0.685 | participant -0.032 [-0.097, +0.032] TOST 0.764
+  gated__vs__per_config
+    sens90_sens   BF +0.007 [-0.155, +0.170] TOST 0.302 | participant +0.003 [-0.113, +0.119] TOST 0.199
+    sens90_spec   BF -0.155 [-0.366, +0.056] TOST 0.837 | participant -0.154 [-0.291, -0.017] TOST 0.937
+    spec90_sens   BF -0.130 [-0.354, +0.093] TOST 0.761 | participant -0.138 [-0.258, -0.018] TOST 0.931
+    spec90_spec   BF -0.017 [-0.168, +0.134] TOST 0.332 | participant -0.017 [-0.105, +0.071] TOST 0.215
+    nb_0.2        BF -0.028 [-0.064, +0.009] TOST 0.833 | participant -0.028 [-0.058, +0.002] TOST 0.890
+    nb_0.35       BF -0.049 [-0.109, +0.011] TOST 0.899 | participant -0.049 [-0.093, -0.005] TOST 0.962
+    nb_0.5        BF -0.074 [-0.148, -0.000] TOST 0.956 | participant -0.075 [-0.124, -0.026] TOST 0.993
+  mlp__vs__per_config
+    sens90_sens   BF +0.007 [-0.156, +0.170] TOST 0.301 | participant +0.003 [-0.109, +0.114] TOST 0.189
+    sens90_spec   BF -0.201 [-0.415, +0.013] TOST 0.917 | participant -0.200 [-0.324, -0.075] TOST 0.989
+    spec90_sens   BF -0.135 [-0.351, +0.080] TOST 0.783 | participant -0.142 [-0.251, -0.032] TOST 0.953
+    spec90_spec   BF -0.018 [-0.161, +0.125] TOST 0.328 | participant -0.018 [-0.093, +0.057] TOST 0.188
+    nb_0.2        BF -0.033 [-0.070, +0.003] TOST 0.897 | participant -0.034 [-0.060, -0.007] TOST 0.962
+    nb_0.35       BF -0.055 [-0.116, +0.006] TOST 0.926 | participant -0.055 [-0.098, -0.013] TOST 0.981
+    nb_0.5        BF -0.077 [-0.169, +0.015] TOST 0.925 | participant -0.078 [-0.134, -0.022] TOST 0.990
+  lgbm_nan_training__vs__per_config
+    sens90_sens   BF +0.020 [-0.131, +0.172] TOST 0.350 | participant +0.016 [-0.094, +0.125] TOST 0.256
+    sens90_spec   BF -0.081 [-0.252, +0.091] TOST 0.639 | participant -0.080 [-0.201, +0.040] TOST 0.703
+    spec90_sens   BF -0.127 [-0.338, +0.083] TOST 0.767 | participant -0.134 [-0.268, -0.001] TOST 0.901
+    spec90_spec   BF -0.001 [-0.150, +0.148] TOST 0.257 | participant -0.001 [-0.093, +0.091] TOST 0.135
+    nb_0.2        BF -0.005 [-0.033, +0.024] TOST 0.357 | participant -0.005 [-0.023, +0.013] TOST 0.286
+    nb_0.35       BF -0.027 [-0.062, +0.009] TOST 0.823 | participant -0.027 [-0.052, -0.002] TOST 0.916
+    nb_0.5        BF -0.042 [-0.110, +0.025] TOST 0.827 | participant -0.043 [-0.087, +0.001] TOST 0.932
+  abstention stress-baseline gated              60%: +0.324 [+0.013, +0.635]
+  abstention stress-baseline lgbm_nan_training  60%: +0.355 [-0.001, +0.711]
+  abstention stress-baseline mlp                60%: +0.286 [-0.007, +0.578]
+  abstention stress-baseline per_config         60%: +0.321 [-0.038, +0.680]
+Traceback (most recent call last):
+  File "D:\Tr\u1ea7n An Khánh\E14\robustness\run_operating_points.py", line 266, in <module>
+    run(a.repeats, a.jobs)
+    ~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Tr\u1ea7n An Khánh\E14\robustness\run_operating_points.py", line 205, in run
+    print(f"\n[operating_points] wrote {OUT_PATH}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u1ea7' in position 32: character maps to <undefined>

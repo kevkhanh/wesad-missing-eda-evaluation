@@ -1,0 +1,21 @@
+# E14 robustness pipeline: versions of the environment that produced the
+# 2026-10-01 post-fix re-run (Python 3.13.13, Windows 11, CPU only).
+#
+# The previous pins (numpy 1.26.4, scikit-learn 1.5.0, torch 2.3.1, ...) did
+# NOT match the installed environment that produced any reported number
+# (peer_review_round3.md, reproducibility). These pins record what actually
+# ran. Update deliberately and re-run audit Step 0 + tests.
+
+numpy==2.4.4
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.9.0
+lightgbm==4.7.0
+torch==2.11.0
+neurokit2==0.2.13
+wfdb==4.3.1
+shap==0.52.0
+statsmodels==0.15.0
+matplotlib==3.10.9
+PyYAML==6.0.3
+pytest==9.0.3

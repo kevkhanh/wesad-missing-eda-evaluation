@@ -1,0 +1,181 @@
+[repeated_cv:default:chest:none] 100 fold tasks x 9 models, n_jobs=16
+[Parallel(n_jobs=16)]: Using backend LokyBackend with 16 concurrent workers.
+[Parallel(n_jobs=16)]: Done  40 tasks      | elapsed:  1.1min
+[Parallel(n_jobs=16)]: Done  90 out of 100 | elapsed:  1.7min remaining:   11.1s
+[Parallel(n_jobs=16)]: Done 100 out of 100 | elapsed:  1.8min finished
+
+=== Repeated subject-level CV (default, chest, none): 20 x 5 folds, 15 subjects, 20 distinct partitions ===
+
+--- reduced | raw: means (SD across folds) ---
+  gated_dropout_p0.5                 Brier 0.1482 (0.0748)  AUROC 0.892  ECE_sweep 0.126  smECE 0.129  E-AURC 0.063
+  gated_no_dropout                   Brier 0.1858 (0.0945)  AUROC 0.877  ECE_sweep 0.170  smECE 0.172  E-AURC 0.076
+  hr_only                            Brier 0.1786 (0.0867)  AUROC 0.854  ECE_sweep 0.138  smECE 0.145  E-AURC 0.079
+  lgbm_ecg_only_per_config           Brier 0.1463 (0.0831)  AUROC 0.882  ECE_sweep 0.123  smECE 0.122  E-AURC 0.089
+  lgbm_mean_impute_recal             Brier 0.1608 (0.1040)  AUROC 0.886  ECE_sweep 0.141  smECE 0.146  E-AURC 0.058
+  lgbm_nan_at_test                   Brier 0.2943 (0.0411)  AUROC 0.871  ECE_sweep 0.293  smECE 0.292  E-AURC 0.059
+  lgbm_nan_training_p0.5             Brier 0.1460 (0.0840)  AUROC 0.882  ECE_sweep 0.123  smECE 0.124  E-AURC 0.075
+  mlp_nongated_dropout_p0.5          Brier 0.1463 (0.0748)  AUROC 0.892  ECE_sweep 0.125  smECE 0.126  E-AURC 0.065
+  mlp_nongated_no_dropout            Brier 0.1971 (0.0953)  AUROC 0.864  ECE_sweep 0.171  smECE 0.181  E-AURC 0.078
+--- reduced | raw: pairwise (A - B) ---
+  gated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF +0.0022 [-0.0305, +0.0350] df14 [-0.0332, +0.0376] TOST p=0.142 eqb=0.030 ROPE=0.77 | participant +0.0026 [-0.0183, +0.0234] TOST p=0.047 (7/15) | AUROC BF +0.0095 [-0.0581, +0.0772] TOST p=0.275
+  gated_dropout_p0.5__vs__lgbm_ecg_only_per_config
+    Brier BF +0.0020 [-0.0328, +0.0367] df14 [-0.0356, +0.0395] TOST p=0.153 eqb=0.031 ROPE=0.74 | participant +0.0022 [-0.0198, +0.0242] TOST p=0.052 (6/15) | AUROC BF +0.0098 [-0.0624, +0.0819] TOST p=0.290
+  gated_dropout_p0.5__vs__lgbm_mean_impute_recal
+    Brier BF -0.0126 [-0.0726, +0.0475] df14 [-0.0774, +0.0523] TOST p=0.403 eqb=0.063 ROPE=0.45 | participant -0.0118 [-0.0718, +0.0483] TOST p=0.386 (6/15) | AUROC BF +0.0058 [-0.0645, +0.0761] TOST p=0.248
+  gated_dropout_p0.5__vs__hr_only
+    Brier BF -0.0303 [-0.0769, +0.0163] df14 [-0.0807, +0.0201] TOST p=0.669 eqb=0.069 ROPE=0.31 | participant -0.0298 [-0.0765, +0.0169] TOST p=0.670 (8/15) | AUROC BF +0.0381 [-0.0389, +0.1150] TOST p=0.582
+  gated_dropout_p0.5__vs__gated_no_dropout
+    Brier BF -0.0375 [-0.0888, +0.0138] df14 [-0.0930, +0.0179] TOST p=0.750 eqb=0.080 ROPE=0.24 | participant -0.0373 [-0.0598, -0.0147] TOST p=0.939 (11/15) | AUROC BF +0.0146 [-0.0358, +0.0650] TOST p=0.273
+  gated_dropout_p0.5__vs__mlp_nongated_dropout_p0.5
+    Brier BF +0.0020 [-0.0160, +0.0200] df14 [-0.0175, +0.0214] TOST p=0.025 eqb=0.017 ROPE=0.97 | participant +0.0021 [-0.0042, +0.0083] TOST p=0.000 (7/15) | AUROC BF -0.0002 [-0.0248, +0.0245] TOST p=0.009
+  mlp_nongated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF +0.0002 [-0.0312, +0.0317] df14 [-0.0338, +0.0343] TOST p=0.108 eqb=0.027 ROPE=0.79 | participant +0.0005 [-0.0206, +0.0216] TOST p=0.034 (7/15) | AUROC BF +0.0097 [-0.0542, +0.0736] TOST p=0.265
+  gated_no_dropout__vs__mlp_nongated_no_dropout
+    Brier BF -0.0113 [-0.0672, +0.0446] df14 [-0.0718, +0.0491] TOST p=0.380 eqb=0.058 ROPE=0.49 | participant -0.0116 [-0.0301, +0.0068] TOST p=0.173 (10/15) | AUROC BF +0.0135 [-0.0341, +0.0611] TOST p=0.247
+  mlp_nongated_dropout_p0.5__vs__mlp_nongated_no_dropout
+    Brier BF -0.0508 [-0.1023, +0.0006] df14 [-0.1065, +0.0048] TOST p=0.881 eqb=0.094 ROPE=0.11 | participant -0.0509 [-0.0827, -0.0192] TOST p=0.972 (12/15) | AUROC BF +0.0283 [-0.0337, +0.0902] TOST p=0.478
+  lgbm_nan_training_p0.5__vs__lgbm_nan_at_test
+    Brier BF -0.1483 [-0.2595, -0.0371] df14 [-0.2685, -0.0281] TOST p=0.988 eqb=0.241 ROPE=0.01 | participant -0.1486 [-0.2303, -0.0669] TOST p=0.998 (14/15) | AUROC BF +0.0111 [-0.0379, +0.0601] TOST p=0.223
+  gated_dropout_p0.5__vs__lgbm_nan_at_test
+    Brier BF -0.1461 [-0.2437, -0.0484] df14 [-0.2516, -0.0405] TOST p=0.994 eqb=0.228 ROPE=0.01 | participant -0.1460 [-0.2157, -0.0763] TOST p=0.999 (14/15) | AUROC BF +0.0206 [-0.0526, +0.0938] TOST p=0.400
+  lgbm_ecg_only_per_config__vs__gated_dropout_p0.5
+    Brier BF -0.0020 [-0.0367, +0.0328] df14 [-0.0395, +0.0356] TOST p=0.153 eqb=0.031 ROPE=0.74 | participant -0.0022 [-0.0242, +0.0198] TOST p=0.052 (9/15) | AUROC BF -0.0098 [-0.0819, +0.0624] TOST p=0.290
+  interaction_gate_x_masking
+    Brier BF +0.0133 [-0.0420, +0.0686] df14 [-0.0464, +0.0731] TOST p=0.405 eqb=0.060 ROPE=0.48 | participant +0.0137 [-0.0071, +0.0345] TOST p=0.263 (6/15) | AUROC BF -0.0137 [-0.0628, +0.0355] TOST p=0.256
+  main_effect_gate
+    Brier BF -0.0047 [-0.0357, +0.0263] df14 [-0.0382, +0.0288] TOST p=0.164 eqb=0.031 ROPE=0.78 | participant -0.0048 [-0.0138, +0.0042] TOST p=0.001 (10/15) | AUROC BF +0.0067 [-0.0222, +0.0356] TOST p=0.056
+  main_effect_masking
+    Brier BF -0.0442 [-0.0875, -0.0008] df14 [-0.0910, +0.0027] TOST p=0.865 eqb=0.080 ROPE=0.13 | participant -0.0441 [-0.0696, -0.0186] TOST p=0.969 (12/15) | AUROC BF +0.0214 [-0.0294, +0.0723] TOST p=0.369
+  rule fires (reduced, raw): True (without ECE: True)
+
+--- reduced | platt_pc: means (SD across folds) ---
+  gated_dropout_p0.5                 Brier 0.1423 (0.0419)  AUROC 0.892  ECE_sweep 0.134  smECE 0.119  E-AURC 0.062
+  gated_no_dropout                   Brier 0.1551 (0.0517)  AUROC 0.877  ECE_sweep 0.149  smECE 0.135  E-AURC 0.074
+  hr_only                            Brier 0.1702 (0.0568)  AUROC 0.854  ECE_sweep 0.153  smECE 0.134  E-AURC 0.059
+  lgbm_ecg_only_per_config           Brier 0.1495 (0.0574)  AUROC 0.882  ECE_sweep 0.150  smECE 0.134  E-AURC 0.071
+  lgbm_mean_impute_recal             Brier 0.1462 (0.0627)  AUROC 0.886  ECE_sweep 0.146  smECE 0.129  E-AURC 0.058
+  lgbm_nan_at_test                   Brier 0.1618 (0.0427)  AUROC 0.871  ECE_sweep 0.174  smECE 0.120  E-AURC 0.065
+  lgbm_nan_training_p0.5             Brier 0.1494 (0.0576)  AUROC 0.882  ECE_sweep 0.148  smECE 0.134  E-AURC 0.067
+  mlp_nongated_dropout_p0.5          Brier 0.1407 (0.0424)  AUROC 0.892  ECE_sweep 0.132  smECE 0.118  E-AURC 0.062
+  mlp_nongated_no_dropout            Brier 0.1536 (0.0502)  AUROC 0.864  ECE_sweep 0.133  smECE 0.123  E-AURC 0.076
+--- reduced | platt_pc: pairwise (A - B) ---
+  gated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF -0.0071 [-0.0397, +0.0255] df14 [-0.0423, +0.0281] TOST p=0.217 eqb=0.034 ROPE=0.73 | participant -0.0069 [-0.0293, +0.0155] TOST p=0.115 (9/15) | AUROC BF +0.0095 [-0.0581, +0.0772] TOST p=0.275
+  gated_dropout_p0.5__vs__lgbm_ecg_only_per_config
+    Brier BF -0.0072 [-0.0398, +0.0253] df14 [-0.0424, +0.0280] TOST p=0.219 eqb=0.034 ROPE=0.73 | participant -0.0070 [-0.0313, +0.0173] TOST p=0.136 (6/15) | AUROC BF +0.0098 [-0.0624, +0.0819] TOST p=0.290
+  gated_dropout_p0.5__vs__lgbm_mean_impute_recal
+    Brier BF -0.0040 [-0.0430, +0.0350] df14 [-0.0461, +0.0382] TOST p=0.208 eqb=0.037 ROPE=0.68 | participant -0.0037 [-0.0366, +0.0292] TOST p=0.153 (6/15) | AUROC BF +0.0058 [-0.0645, +0.0761] TOST p=0.248
+  gated_dropout_p0.5__vs__hr_only
+    Brier BF -0.0279 [-0.0629, +0.0071] df14 [-0.0657, +0.0099] TOST p=0.673 eqb=0.057 ROPE=0.32 | participant -0.0276 [-0.0569, +0.0017] TOST p=0.706 (11/15) | AUROC BF +0.0381 [-0.0389, +0.1150] TOST p=0.582
+  gated_dropout_p0.5__vs__gated_no_dropout
+    Brier BF -0.0129 [-0.0408, +0.0151] df14 [-0.0431, +0.0174] TOST p=0.307 eqb=0.036 ROPE=0.68 | participant -0.0126 [-0.0274, +0.0022] TOST p=0.152 (10/15) | AUROC BF +0.0146 [-0.0358, +0.0650] TOST p=0.273
+  gated_dropout_p0.5__vs__mlp_nongated_dropout_p0.5
+    Brier BF +0.0016 [-0.0127, +0.0159] df14 [-0.0139, +0.0171] TOST p=0.006 eqb=0.014 ROPE=0.99 | participant +0.0016 [-0.0013, +0.0044] TOST p=0.000 (6/15) | AUROC BF -0.0002 [-0.0248, +0.0245] TOST p=0.009
+  mlp_nongated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF -0.0087 [-0.0415, +0.0241] df14 [-0.0442, +0.0268] TOST p=0.248 eqb=0.036 ROPE=0.71 | participant -0.0085 [-0.0302, +0.0132] TOST p=0.137 (8/15) | AUROC BF +0.0097 [-0.0542, +0.0736] TOST p=0.265
+  gated_no_dropout__vs__mlp_nongated_no_dropout
+    Brier BF +0.0015 [-0.0270, +0.0299] df14 [-0.0293, +0.0322] TOST p=0.100 eqb=0.025 ROPE=0.83 | participant +0.0012 [-0.0098, +0.0123] TOST p=0.001 (7/15) | AUROC BF +0.0135 [-0.0341, +0.0611] TOST p=0.247
+  mlp_nongated_dropout_p0.5__vs__mlp_nongated_no_dropout
+    Brier BF -0.0130 [-0.0452, +0.0193] df14 [-0.0478, +0.0219] TOST p=0.333 eqb=0.040 ROPE=0.64 | participant -0.0130 [-0.0303, +0.0044] TOST p=0.200 (10/15) | AUROC BF +0.0283 [-0.0337, +0.0902] TOST p=0.478
+  lgbm_nan_training_p0.5__vs__lgbm_nan_at_test
+    Brier BF -0.0125 [-0.0508, +0.0258] df14 [-0.0539, +0.0289] TOST p=0.349 eqb=0.045 ROPE=0.60 | participant -0.0127 [-0.0436, +0.0183] TOST p=0.310 (12/15) | AUROC BF +0.0111 [-0.0379, +0.0601] TOST p=0.223
+  gated_dropout_p0.5__vs__lgbm_nan_at_test
+    Brier BF -0.0196 [-0.0522, +0.0131] df14 [-0.0549, +0.0157] TOST p=0.490 eqb=0.047 ROPE=0.50 | participant -0.0196 [-0.0346, -0.0045] TOST p=0.475 (12/15) | AUROC BF +0.0206 [-0.0526, +0.0938] TOST p=0.400
+  lgbm_ecg_only_per_config__vs__gated_dropout_p0.5
+    Brier BF +0.0072 [-0.0253, +0.0398] df14 [-0.0280, +0.0424] TOST p=0.219 eqb=0.034 ROPE=0.73 | participant +0.0070 [-0.0173, +0.0313] TOST p=0.136 (9/15) | AUROC BF -0.0098 [-0.0819, +0.0624] TOST p=0.290
+  interaction_gate_x_masking
+    Brier BF +0.0001 [-0.0272, +0.0274] df14 [-0.0294, +0.0296] TOST p=0.076 eqb=0.023 ROPE=0.85 | participant +0.0004 [-0.0119, +0.0126] TOST p=0.002 (9/15) | AUROC BF -0.0137 [-0.0628, +0.0355] TOST p=0.256
+  main_effect_gate
+    Brier BF +0.0015 [-0.0164, +0.0194] df14 [-0.0179, +0.0209] TOST p=0.022 eqb=0.017 ROPE=0.97 | participant +0.0014 [-0.0038, +0.0067] TOST p=0.000 (7/15) | AUROC BF +0.0067 [-0.0222, +0.0356] TOST p=0.056
+  main_effect_masking
+    Brier BF -0.0129 [-0.0398, +0.0140] df14 [-0.0420, +0.0162] TOST p=0.301 eqb=0.035 ROPE=0.69 | participant -0.0128 [-0.0277, +0.0021] TOST p=0.159 (9/15) | AUROC BF +0.0214 [-0.0294, +0.0723] TOST p=0.369
+  rule fires (reduced, platt_pc): False (without ECE: False)
+
+--- complete | raw: means (SD across folds) ---
+  gated_dropout_p0.5                 Brier 0.1296 (0.0672)  AUROC 0.930  ECE_sweep 0.121  smECE 0.123  E-AURC 0.047
+  gated_no_dropout                   Brier 0.1385 (0.0710)  AUROC 0.928  ECE_sweep 0.130  smECE 0.135  E-AURC 0.049
+  hr_only                            Brier 0.1786 (0.0867)  AUROC 0.854  ECE_sweep 0.138  smECE 0.145  E-AURC 0.079
+  lgbm_ecg_only_per_config           Brier 0.1463 (0.0831)  AUROC 0.882  ECE_sweep 0.123  smECE 0.122  E-AURC 0.089
+  lgbm_mean_impute_recal             Brier 0.0718 (0.0576)  AUROC 0.963  ECE_sweep 0.082  smECE 0.084  E-AURC 0.020
+  lgbm_nan_at_test                   Brier 0.0718 (0.0576)  AUROC 0.963  ECE_sweep 0.082  smECE 0.084  E-AURC 0.020
+  lgbm_nan_training_p0.5             Brier 0.0930 (0.0631)  AUROC 0.952  ECE_sweep 0.104  smECE 0.101  E-AURC 0.022
+  mlp_nongated_dropout_p0.5          Brier 0.1406 (0.0754)  AUROC 0.922  ECE_sweep 0.127  smECE 0.133  E-AURC 0.053
+  mlp_nongated_no_dropout            Brier 0.1662 (0.0884)  AUROC 0.907  ECE_sweep 0.154  smECE 0.160  E-AURC 0.067
+--- complete | raw: pairwise (A - B) ---
+  gated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF +0.0366 [-0.0329, +0.1061] df14 [-0.0385, +0.1117] TOST p=0.682 eqb=0.095 ROPE=0.26 | participant +0.0367 [-0.0160, +0.0893] TOST p=0.746 (3/15) | AUROC BF -0.0219 [-0.0785, +0.0347] TOST p=0.388
+  gated_dropout_p0.5__vs__lgbm_ecg_only_per_config
+    Brier BF -0.0166 [-0.1022, +0.0690] df14 [-0.1092, +0.0759] TOST p=0.469 eqb=0.088 ROPE=0.33 | participant -0.0169 [-0.0876, +0.0539] TOST p=0.463 (8/15) | AUROC BF +0.0481 [-0.0443, +0.1406] TOST p=0.651
+  gated_dropout_p0.5__vs__lgbm_mean_impute_recal
+    Brier BF +0.0578 [-0.0116, +0.1273] df14 [-0.0172, +0.1329] TOST p=0.859 eqb=0.116 ROPE=0.13 | participant +0.0579 [+0.0102, +0.1055] TOST p=0.945 (2/15) | AUROC BF -0.0330 [-0.0802, +0.0142] TOST p=0.549
+  gated_dropout_p0.5__vs__hr_only
+    Brier BF -0.0489 [-0.1392, +0.0414] df14 [-0.1465, +0.0487] TOST p=0.737 eqb=0.124 ROPE=0.20 | participant -0.0488 [-0.1328, +0.0351] TOST p=0.763 (10/15) | AUROC BF +0.0764 [-0.0160, +0.1688] TOST p=0.839
+  gated_dropout_p0.5__vs__gated_no_dropout
+    Brier BF -0.0089 [-0.0431, +0.0254] df14 [-0.0459, +0.0281] TOST p=0.260 eqb=0.038 ROPE=0.69 | participant -0.0089 [-0.0233, +0.0055] TOST p=0.060 (10/15) | AUROC BF +0.0020 [-0.0253, +0.0294] TOST p=0.022
+  gated_dropout_p0.5__vs__mlp_nongated_dropout_p0.5
+    Brier BF -0.0109 [-0.0533, +0.0315] df14 [-0.0567, +0.0349] TOST p=0.336 eqb=0.046 ROPE=0.59 | participant -0.0109 [-0.0314, +0.0096] TOST p=0.179 (8/15) | AUROC BF +0.0082 [-0.0249, +0.0413] TOST p=0.097
+  mlp_nongated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF +0.0475 [-0.0366, +0.1316] df14 [-0.0434, +0.1384] TOST p=0.741 eqb=0.118 ROPE=0.20 | participant +0.0476 [-0.0113, +0.1064] TOST p=0.834 (4/15) | AUROC BF -0.0301 [-0.0993, +0.0391] TOST p=0.501
+  gated_no_dropout__vs__mlp_nongated_no_dropout
+    Brier BF -0.0277 [-0.0725, +0.0170] df14 [-0.0761, +0.0207] TOST p=0.634 eqb=0.065 ROPE=0.35 | participant -0.0277 [-0.0469, -0.0084] TOST p=0.797 (13/15) | AUROC BF +0.0213 [-0.0172, +0.0598] TOST p=0.328
+  mlp_nongated_dropout_p0.5__vs__mlp_nongated_no_dropout
+    Brier BF -0.0257 [-0.0680, +0.0166] df14 [-0.0715, +0.0201] TOST p=0.605 eqb=0.061 ROPE=0.38 | participant -0.0256 [-0.0496, -0.0017] TOST p=0.690 (11/15) | AUROC BF +0.0151 [-0.0227, +0.0529] TOST p=0.218
+  lgbm_nan_training_p0.5__vs__lgbm_nan_at_test
+    Brier BF +0.0212 [-0.0308, +0.0733] df14 [-0.0350, +0.0775] TOST p=0.519 eqb=0.065 ROPE=0.42 | participant +0.0212 [-0.0065, +0.0489] TOST p=0.536 (6/15) | AUROC BF -0.0111 [-0.0522, +0.0300] TOST p=0.182
+  gated_dropout_p0.5__vs__lgbm_nan_at_test
+    Brier BF +0.0578 [-0.0116, +0.1273] df14 [-0.0172, +0.1329] TOST p=0.859 eqb=0.116 ROPE=0.13 | participant +0.0579 [+0.0102, +0.1055] TOST p=0.945 (2/15) | AUROC BF -0.0330 [-0.0802, +0.0142] TOST p=0.549
+  lgbm_ecg_only_per_config__vs__gated_dropout_p0.5
+    Brier BF +0.0166 [-0.0690, +0.1022] df14 [-0.0759, +0.1092] TOST p=0.469 eqb=0.088 ROPE=0.33 | participant +0.0169 [-0.0539, +0.0876] TOST p=0.463 (7/15) | AUROC BF -0.0481 [-0.1406, +0.0443] TOST p=0.651
+  interaction_gate_x_masking
+    Brier BF +0.0168 [-0.0191, +0.0528] df14 [-0.0220, +0.0557] TOST p=0.431 eqb=0.047 ROPE=0.55 | participant +0.0168 [-0.0028, +0.0363] TOST p=0.364 (5/15) | AUROC BF -0.0131 [-0.0508, +0.0246] TOST p=0.188
+  main_effect_gate
+    Brier BF -0.0193 [-0.0590, +0.0204] df14 [-0.0623, +0.0236] TOST p=0.487 eqb=0.053 ROPE=0.49 | participant -0.0193 [-0.0366, -0.0020] TOST p=0.466 (12/15) | AUROC BF +0.0148 [-0.0158, +0.0453] TOST p=0.163
+  main_effect_masking
+    Brier BF -0.0173 [-0.0513, +0.0168] df14 [-0.0541, +0.0195] TOST p=0.437 eqb=0.046 ROPE=0.55 | participant -0.0173 [-0.0344, -0.0001] TOST p=0.369 (11/15) | AUROC BF +0.0086 [-0.0185, +0.0356] TOST p=0.059
+  rule fires (complete, raw): True (without ECE: True)
+
+--- complete | platt_pc: means (SD across folds) ---
+  gated_dropout_p0.5                 Brier 0.1179 (0.0400)  AUROC 0.930  ECE_sweep 0.119  smECE 0.110  E-AURC 0.040
+  gated_no_dropout                   Brier 0.1164 (0.0398)  AUROC 0.928  ECE_sweep 0.120  smECE 0.109  E-AURC 0.043
+  hr_only                            Brier 0.1702 (0.0568)  AUROC 0.854  ECE_sweep 0.153  smECE 0.134  E-AURC 0.059
+  lgbm_ecg_only_per_config           Brier 0.1495 (0.0574)  AUROC 0.882  ECE_sweep 0.150  smECE 0.134  E-AURC 0.071
+  lgbm_mean_impute_recal             Brier 0.0717 (0.0435)  AUROC 0.963  ECE_sweep 0.096  smECE 0.093  E-AURC 0.020
+  lgbm_nan_at_test                   Brier 0.0717 (0.0435)  AUROC 0.963  ECE_sweep 0.096  smECE 0.093  E-AURC 0.020
+  lgbm_nan_training_p0.5             Brier 0.0944 (0.0460)  AUROC 0.952  ECE_sweep 0.121  smECE 0.110  E-AURC 0.024
+  mlp_nongated_dropout_p0.5          Brier 0.1235 (0.0462)  AUROC 0.922  ECE_sweep 0.121  smECE 0.114  E-AURC 0.046
+  mlp_nongated_no_dropout            Brier 0.1335 (0.0548)  AUROC 0.907  ECE_sweep 0.125  smECE 0.120  E-AURC 0.060
+--- complete | platt_pc: pairwise (A - B) ---
+  gated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF +0.0235 [-0.0237, +0.0708] df14 [-0.0276, +0.0746] TOST p=0.559 eqb=0.063 ROPE=0.41 | participant +0.0237 [-0.0110, +0.0584] TOST p=0.589 (3/15) | AUROC BF -0.0219 [-0.0785, +0.0347] TOST p=0.388
+  gated_dropout_p0.5__vs__lgbm_ecg_only_per_config
+    Brier BF -0.0316 [-0.0903, +0.0272] df14 [-0.0951, +0.0319] TOST p=0.652 eqb=0.081 ROPE=0.31 | participant -0.0316 [-0.0820, +0.0189] TOST p=0.685 (10/15) | AUROC BF +0.0481 [-0.0443, +0.1406] TOST p=0.651
+  gated_dropout_p0.5__vs__lgbm_mean_impute_recal
+    Brier BF +0.0462 [+0.0057, +0.0866] df14 [+0.0025, +0.0899] TOST p=0.899 eqb=0.080 ROPE=0.10 | participant +0.0465 [+0.0169, +0.0761] TOST p=0.962 (2/15) | AUROC BF -0.0330 [-0.0802, +0.0142] TOST p=0.549
+  gated_dropout_p0.5__vs__hr_only
+    Brier BF -0.0523 [-0.1097, +0.0051] df14 [-0.1144, +0.0098] TOST p=0.867 eqb=0.100 ROPE=0.13 | participant -0.0521 [-0.1027, -0.0016] TOST p=0.903 (10/15) | AUROC BF +0.0764 [-0.0160, +0.1688] TOST p=0.839
+  gated_dropout_p0.5__vs__gated_no_dropout
+    Brier BF +0.0015 [-0.0187, +0.0217] df14 [-0.0203, +0.0233] TOST p=0.036 eqb=0.018 ROPE=0.95 | participant +0.0015 [-0.0081, +0.0111] TOST p=0.001 (6/15) | AUROC BF +0.0020 [-0.0253, +0.0294] TOST p=0.022
+  gated_dropout_p0.5__vs__mlp_nongated_dropout_p0.5
+    Brier BF -0.0056 [-0.0302, +0.0189] df14 [-0.0322, +0.0209] TOST p=0.124 eqb=0.026 ROPE=0.86 | participant -0.0056 [-0.0179, +0.0067] TOST p=0.013 (9/15) | AUROC BF +0.0082 [-0.0249, +0.0413] TOST p=0.097
+  mlp_nongated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    Brier BF +0.0291 [-0.0295, +0.0878] df14 [-0.0342, +0.0925] TOST p=0.621 eqb=0.078 ROPE=0.33 | participant +0.0293 [-0.0120, +0.0707] TOST p=0.682 (3/15) | AUROC BF -0.0301 [-0.0993, +0.0391] TOST p=0.501
+  gated_no_dropout__vs__mlp_nongated_no_dropout
+    Brier BF -0.0171 [-0.0474, +0.0132] df14 [-0.0498, +0.0156] TOST p=0.425 eqb=0.042 ROPE=0.57 | participant -0.0171 [-0.0318, -0.0024] TOST p=0.341 (13/15) | AUROC BF +0.0213 [-0.0172, +0.0598] TOST p=0.328
+  mlp_nongated_dropout_p0.5__vs__mlp_nongated_no_dropout
+    Brier BF -0.0100 [-0.0390, +0.0189] df14 [-0.0413, +0.0213] TOST p=0.248 eqb=0.034 ROPE=0.73 | participant -0.0100 [-0.0241, +0.0041] TOST p=0.075 (9/15) | AUROC BF +0.0151 [-0.0227, +0.0529] TOST p=0.218
+  lgbm_nan_training_p0.5__vs__lgbm_nan_at_test
+    Brier BF +0.0226 [-0.0132, +0.0585] df14 [-0.0161, +0.0614] TOST p=0.558 eqb=0.053 ROPE=0.43 | participant +0.0228 [+0.0034, +0.0423] TOST p=0.620 (3/15) | AUROC BF -0.0111 [-0.0522, +0.0300] TOST p=0.182
+  gated_dropout_p0.5__vs__lgbm_nan_at_test
+    Brier BF +0.0462 [+0.0057, +0.0866] df14 [+0.0025, +0.0899] TOST p=0.899 eqb=0.080 ROPE=0.10 | participant +0.0465 [+0.0169, +0.0761] TOST p=0.962 (2/15) | AUROC BF -0.0330 [-0.0802, +0.0142] TOST p=0.549
+  lgbm_ecg_only_per_config__vs__gated_dropout_p0.5
+    Brier BF +0.0316 [-0.0272, +0.0903] df14 [-0.0319, +0.0951] TOST p=0.652 eqb=0.081 ROPE=0.31 | participant +0.0316 [-0.0189, +0.0820] TOST p=0.685 (5/15) | AUROC BF -0.0481 [-0.1406, +0.0443] TOST p=0.651
+  interaction_gate_x_masking
+    Brier BF +0.0115 [-0.0142, +0.0372] df14 [-0.0162, +0.0392] TOST p=0.256 eqb=0.033 ROPE=0.74 | participant +0.0115 [-0.0027, +0.0257] TOST p=0.109 (5/15) | AUROC BF -0.0131 [-0.0508, +0.0246] TOST p=0.188
+  main_effect_gate
+    Brier BF -0.0114 [-0.0358, +0.0130] df14 [-0.0377, +0.0150] TOST p=0.242 eqb=0.032 ROPE=0.75 | participant -0.0114 [-0.0229, +0.0002] TOST p=0.066 (11/15) | AUROC BF +0.0148 [-0.0158, +0.0453] TOST p=0.163
+  main_effect_masking
+    Brier BF -0.0043 [-0.0257, +0.0171] df14 [-0.0274, +0.0188] TOST p=0.074 eqb=0.022 ROPE=0.91 | participant -0.0043 [-0.0140, +0.0055] TOST p=0.002 (7/15) | AUROC BF +0.0086 [-0.0185, +0.0356] TOST p=0.059
+  rule fires (complete, platt_pc): True (without ECE: True)
+
+[repeated_cv] wrote D:\Trần An Khánh\E14\robustness\results\repeated_cv.json

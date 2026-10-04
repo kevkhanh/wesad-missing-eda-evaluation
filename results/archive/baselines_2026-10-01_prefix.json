@@ -1,0 +1,1242 @@
+{
+  "lgbm_nan_at_test": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.0164013751186762,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.05907624176181232,
+          "log_loss": 0.07460081241907358,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "calibration_slope": 27.80642846447796,
+          "calibration_intercept": -34.17466269170183
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.3152168753391468,
+          "ece_debiased": 0.25161512269401026,
+          "ece_equal_width": 0.32646317065511904,
+          "log_loss": 1.1773767831496376,
+          "auroc": 0.9738095238095238,
+          "auprc": 0.9688888888888889,
+          "calibration_slope": 3.820700271822248,
+          "calibration_intercept": 15.907583611673887
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.004111890431446033,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.03181309718803206,
+          "log_loss": 0.03425806552617708,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "calibration_slope": 5.88966229724014,
+          "calibration_intercept": -1.0575854919277416
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.30823767221369613,
+          "ece_debiased": 0.25003952697130355,
+          "ece_equal_width": 0.3242814809928428,
+          "log_loss": 1.0979695273392924,
+          "auroc": 0.9952380952380951,
+          "auprc": 0.9913888888888889,
+          "calibration_slope": 6.195552508270714,
+          "calibration_intercept": 26.862718640795936
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.10653255610813203,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.08377868005680247,
+          "log_loss": 0.37303463584588786,
+          "auroc": 0.9285714285714286,
+          "auprc": 0.9159052059052057,
+          "calibration_slope": 0.6774178647181374,
+          "calibration_intercept": -0.589631104968082
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.2656251518100794,
+          "ece_debiased": 0.17493342284510954,
+          "ece_equal_width": 0.29200432141634347,
+          "log_loss": 0.7578095703511452,
+          "auroc": 0.9397321428571429,
+          "auprc": 0.8787817028985507,
+          "calibration_slope": 2.294258049193776,
+          "calibration_intercept": 5.8289463490431626
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.12384602678261426,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.14157840048352152,
+          "log_loss": 0.4368813197025146,
+          "auroc": 0.8952380952380953,
+          "auprc": 0.8851359751359751,
+          "calibration_slope": 0.5479886291567986,
+          "calibration_intercept": -0.13161309371505617
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.3110327416540372,
+          "ece_debiased": 0.24642116581375156,
+          "ece_equal_width": 0.33230817634206167,
+          "log_loss": 1.0659551928370374,
+          "auroc": 0.9508928571428572,
+          "auprc": 0.9579248366013071,
+          "calibration_slope": 4.020438837222961,
+          "calibration_intercept": 18.004327942405542
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.18757070239149784,
+          "ece_debiased": 0.006876611736582716,
+          "ece_equal_width": 0.2656911734185985,
+          "log_loss": 0.5317407105843603,
+          "auroc": 0.8916666666666667,
+          "auprc": 0.8394355928701279,
+          "calibration_slope": 1.2766049672758577,
+          "calibration_intercept": -1.7034439171084816
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.27293635630905566,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.2579006846461528,
+          "log_loss": 0.7439774926143244,
+          "auroc": 0.6047619047619047,
+          "auprc": 0.4335291948195174,
+          "calibration_slope": 0.2714002992961796,
+          "calibration_intercept": -0.5126374266799673
+        }
+      }
+    ],
+    "n_folds": 5
+  },
+  "lgbm_nan_training_p0.5": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.08470315138475752,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.1324166966980703,
+          "log_loss": 0.24550882989862483,
+          "auroc": 0.9793103448275862,
+          "auprc": 0.9581902737785091,
+          "calibration_slope": 1.2782245619358203,
+          "calibration_intercept": 1.4746441759580509
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.1255083882904797,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.11381223967987492,
+          "log_loss": 0.3907534534850133,
+          "auroc": 0.930952380952381,
+          "auprc": 0.8948504273504273,
+          "calibration_slope": 1.2632950458869558,
+          "calibration_intercept": 1.6992597394046873
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.0215520384209355,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.05712912060778134,
+          "log_loss": 0.09195393484002357,
+          "auroc": 0.9977011494252874,
+          "auprc": 0.9958333333333333,
+          "calibration_slope": 2.5623408660896536,
+          "calibration_intercept": 2.327953094565882
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.07102816933725226,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.14368464478742857,
+          "log_loss": 0.22787758883836906,
+          "auroc": 0.9904761904761904,
+          "auprc": 0.981498778998779,
+          "calibration_slope": 2.5287525845427723,
+          "calibration_intercept": 2.923225670030826
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.10652482341082137,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.06654207560196977,
+          "log_loss": 0.3288911243124013,
+          "auroc": 0.9238095238095239,
+          "auprc": 0.8572758413470487,
+          "calibration_slope": 0.9818797316357122,
+          "calibration_intercept": -0.3102479858688585
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.07721203958029176,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.0873409326081238,
+          "log_loss": 0.25113491375765046,
+          "auroc": 0.9620535714285714,
+          "auprc": 0.9330560064935065,
+          "calibration_slope": 1.7091689990424,
+          "calibration_intercept": 0.5299083494641508
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.1321189052514914,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.1620407463765538,
+          "log_loss": 0.3852217622426518,
+          "auroc": 0.9071428571428571,
+          "auprc": 0.876403988168694,
+          "calibration_slope": 0.7567602918645017,
+          "calibration_intercept": -0.13920121506289487
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.08962300105960153,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.12187407541682194,
+          "log_loss": 0.2766607747575182,
+          "auroc": 0.9553571428571428,
+          "auprc": 0.9438891700404858,
+          "calibration_slope": 1.0237903756060875,
+          "calibration_intercept": -0.3610872398322971
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.34418164231152454,
+          "ece_debiased": 0.2224418180724893,
+          "ece_equal_width": 0.39591836012887516,
+          "log_loss": 1.2687532877869805,
+          "auroc": 0.7595238095238095,
+          "auprc": 0.6766839922485783,
+          "calibration_slope": 0.5190906951159437,
+          "calibration_intercept": -1.8564534316276118
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.3828530123966871,
+          "ece_debiased": 0.23368976782972364,
+          "ece_equal_width": 0.41827823134393793,
+          "log_loss": 1.5749561888932886,
+          "auroc": 0.6285714285714286,
+          "auprc": 0.5093481719568675,
+          "calibration_slope": 0.21195694830374387,
+          "calibration_intercept": -1.0919156608974236
+        }
+      }
+    ],
+    "n_folds": 5
+  },
+  "lgbm_ecg_only_per_config": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.14385837316084335,
+          "ece_debiased": 0.020524544508989717,
+          "ece_equal_width": 0.16602071056459197,
+          "log_loss": 0.4745378170155126,
+          "auroc": 0.928735632183908,
+          "auprc": 0.8760926305663148,
+          "calibration_slope": 0.9810531307177945,
+          "calibration_intercept": 1.6710816073139
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.14402504386748136,
+          "ece_debiased": 0.02174353981565208,
+          "ece_equal_width": 0.16231699694489596,
+          "log_loss": 0.4632106386086067,
+          "auroc": 0.9238095238095239,
+          "auprc": 0.8762784002489885,
+          "calibration_slope": 0.865327573880557,
+          "calibration_intercept": 1.2591264626493912
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.08040910112933909,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.10189139062881658,
+          "log_loss": 0.2705956899848899,
+          "auroc": 0.9655172413793103,
+          "auprc": 0.9545726495726494,
+          "calibration_slope": 1.4396259335179082,
+          "calibration_intercept": 1.7737220480639266
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.06314621845920251,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.12178125003430416,
+          "log_loss": 0.20018486524305754,
+          "auroc": 0.9904761904761905,
+          "auprc": 0.9814987789987789,
+          "calibration_slope": 2.1217308130547408,
+          "calibration_intercept": 2.7059211903420186
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.10792847774313555,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.0824164410293419,
+          "log_loss": 0.33078045430288044,
+          "auroc": 0.9238095238095239,
+          "auprc": 0.8930391220780237,
+          "calibration_slope": 1.0502532895354835,
+          "calibration_intercept": -0.20089908631133932
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.06260057936198736,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.11784756723304472,
+          "log_loss": 0.22217657094429563,
+          "auroc": 0.9709821428571428,
+          "auprc": 0.9421916716324611,
+          "calibration_slope": 1.7393400445499316,
+          "calibration_intercept": -0.12223339054363858
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.11699503105924863,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.09501167333965116,
+          "log_loss": 0.3545216877800286,
+          "auroc": 0.9107142857142857,
+          "auprc": 0.8879720039162764,
+          "calibration_slope": 0.9164202239032126,
+          "calibration_intercept": -0.46832395654972936
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.09832828916702957,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.1617821070298205,
+          "log_loss": 0.30005411759621475,
+          "auroc": 0.9486607142857143,
+          "auprc": 0.9326468344774981,
+          "calibration_slope": 0.9666981766808788,
+          "calibration_intercept": -0.46235728000025705
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.40494468688325774,
+          "ece_debiased": 0.28328471835904906,
+          "ece_equal_width": 0.42971102896412183,
+          "log_loss": 1.748498807767149,
+          "auroc": 0.5714285714285714,
+          "auprc": 0.36757075677761286,
+          "calibration_slope": 0.2909795003073876,
+          "calibration_intercept": -1.450120938333258
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.3818870848912882,
+          "ece_debiased": 0.23906900774045195,
+          "ece_equal_width": 0.4320430448367586,
+          "log_loss": 1.6666646890476566,
+          "auroc": 0.5809523809523809,
+          "auprc": 0.4221599424540601,
+          "calibration_slope": 0.17604079175106854,
+          "calibration_intercept": -1.0178941505311232
+        }
+      }
+    ],
+    "n_folds": 5
+  },
+  "lgbm_mean_impute_recal": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.022592815634969152,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.02347369633364931,
+          "log_loss": 0.12935882678379326,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "calibration_slope": 8.613034572984784,
+          "calibration_intercept": -56.049464722829285
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.06739356724475963,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.12477241964378756,
+          "log_loss": 0.25984515900344624,
+          "auroc": 0.9619047619047619,
+          "auprc": 0.9655913978494624,
+          "calibration_slope": 1.6527070685373144,
+          "calibration_intercept": 2.1948498835720067
+        },
+        "pre_recal_complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.0164013751186762,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.05907624176181232,
+          "log_loss": 0.07460081241907358,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "calibration_slope": 27.80642846447796,
+          "calibration_intercept": -34.17466269170183
+        },
+        "pre_recal_reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.03925272201997761,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.07525825300015124,
+          "log_loss": 0.19204605824258209,
+          "auroc": 0.9619047619047619,
+          "auprc": 0.9655913978494624,
+          "calibration_slope": 1.2493276093550052,
+          "calibration_intercept": 1.1694558103363548
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.00047465948650576324,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.003404098568435545,
+          "log_loss": 0.003667072911143597,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "calibration_slope": 2.891356784748793,
+          "calibration_intercept": -1.2072023190717363
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.10678382344515223,
+          "ece_debiased": 0.01836886212542052,
+          "ece_equal_width": 0.15308601985074247,
+          "log_loss": 0.30989496843624037,
+          "auroc": 0.9976190476190476,
+          "auprc": 0.9958333333333333,
+          "calibration_slope": 5.329080256436365,
+          "calibration_intercept": 11.293956098462255
+        },
+        "pre_recal_complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.004111890431446033,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.03181309718803206,
+          "log_loss": 0.03425806552617708,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "calibration_slope": 5.88966229724014,
+          "calibration_intercept": -1.0575854919277416
+        },
+        "pre_recal_reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.05896262993985519,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.10134615612926388,
+          "log_loss": 0.17830748460918616,
+          "auroc": 0.9976190476190476,
+          "auprc": 0.9958333333333333,
+          "calibration_slope": 3.8638844891007103,
+          "calibration_intercept": 6.015262597745242
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.1750338417562423,
+          "ece_debiased": 0.09471091844305679,
+          "ece_equal_width": 0.17349971954673912,
+          "log_loss": 1.8580634365756223,
+          "auroc": 0.9130952380952381,
+          "auprc": 0.8210335917312662,
+          "calibration_slope": 0.14423638151556287,
+          "calibration_intercept": -1.0610328897684187
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.10695232452508577,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.1273754775058284,
+          "log_loss": 0.33785754083363684,
+          "auroc": 0.9776785714285714,
+          "auprc": 0.9718137254901961,
+          "calibration_slope": 2.120745864520397,
+          "calibration_intercept": -0.8529452969753155
+        },
+        "pre_recal_complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.10653255610813203,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.08377868005680247,
+          "log_loss": 0.37303463584588786,
+          "auroc": 0.9285714285714286,
+          "auprc": 0.9159052059052057,
+          "calibration_slope": 0.6774178647181374,
+          "calibration_intercept": -0.589631104968082
+        },
+        "pre_recal_reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.1113452543004935,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.12362773836488442,
+          "log_loss": 0.31259692607298945,
+          "auroc": 0.9776785714285714,
+          "auprc": 0.9718137254901961,
+          "calibration_slope": 1.019394654523556,
+          "calibration_intercept": -0.6490318096080693
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.17551814323563886,
+          "ece_debiased": 0.103983688512234,
+          "ece_equal_width": 0.1805139673359002,
+          "log_loss": 1.809357375887304,
+          "auroc": 0.8535714285714286,
+          "auprc": 0.7814846135776369,
+          "calibration_slope": 0.12352761563060813,
+          "calibration_intercept": -0.17928421747638296
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.07146120650980034,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.1269534967603267,
+          "log_loss": 0.27723643897388583,
+          "auroc": 0.9553571428571429,
+          "auprc": 0.9573863636363636,
+          "calibration_slope": 1.555543809656585,
+          "calibration_intercept": 1.3996963915047327
+        },
+        "pre_recal_complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.12384602678261426,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.14157840048352152,
+          "log_loss": 0.4368813197025146,
+          "auroc": 0.8952380952380953,
+          "auprc": 0.8851359751359751,
+          "calibration_slope": 0.5479886291567986,
+          "calibration_intercept": -0.13161309371505617
+        },
+        "pre_recal_reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.06183025005456711,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.073339714525787,
+          "log_loss": 0.22462809854593357,
+          "auroc": 0.9553571428571429,
+          "auprc": 0.9573863636363636,
+          "calibration_slope": 0.8011700891686998,
+          "calibration_intercept": -0.15262696830284858
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.3938832449689495,
+          "ece_debiased": 0.3143478010408495,
+          "ece_equal_width": 0.3946090843776545,
+          "log_loss": 5.818656055283613,
+          "auroc": 0.7119047619047619,
+          "auprc": 0.4828327771598072,
+          "calibration_slope": 0.09991987036674185,
+          "calibration_intercept": -1.6553389769594153
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.40409947992777095,
+          "ece_debiased": 0.22028541403721139,
+          "ece_equal_width": 0.38840759881041964,
+          "log_loss": 1.3189239572916744,
+          "auroc": 0.5928571428571429,
+          "auprc": 0.42731907458640866,
+          "calibration_slope": 0.1782836845161347,
+          "calibration_intercept": -0.8630427264456775
+        },
+        "pre_recal_complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.18757070239149784,
+          "ece_debiased": 0.006876611736582716,
+          "ece_equal_width": 0.2656911734185985,
+          "log_loss": 0.5317407105843603,
+          "auroc": 0.8916666666666667,
+          "auprc": 0.8394355928701279,
+          "calibration_slope": 1.2766049672758577,
+          "calibration_intercept": -1.7034439171084816
+        },
+        "pre_recal_reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.42999284624050826,
+          "ece_debiased": 0.26464951075545634,
+          "ece_equal_width": 0.44779863808433035,
+          "log_loss": 1.5077178477928745,
+          "auroc": 0.5928571428571429,
+          "auprc": 0.42731907458640866,
+          "calibration_slope": 0.1822206816228336,
+          "calibration_intercept": -0.9662623507210365
+        }
+      }
+    ],
+    "n_folds": 5
+  },
+  "hr_only": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.17367586287150238,
+          "ece_debiased": 0.059799467770817794,
+          "ece_equal_width": 0.22871328301257732,
+          "log_loss": 0.45170147634521246,
+          "auroc": 0.9505747126436781,
+          "auprc": 0.8573607220666043,
+          "calibration_slope": 1.9536956527043279,
+          "calibration_intercept": 3.5766971379507395
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.14217590248430073,
+          "ece_debiased": 0.012713121313802894,
+          "ece_equal_width": 0.15440795039561392,
+          "log_loss": 0.41228166792407483,
+          "auroc": 0.9345238095238094,
+          "auprc": 0.9005050505050505,
+          "calibration_slope": 1.5161322998884612,
+          "calibration_intercept": 1.955224612500199
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.10338821191304891,
+          "ece_debiased": 0.0033156576643173785,
+          "ece_equal_width": 0.1271464520557929,
+          "log_loss": 0.3239053077439667,
+          "auroc": 0.9747126436781609,
+          "auprc": 0.9585881509794553,
+          "calibration_slope": 1.398178752249173,
+          "calibration_intercept": 2.308329378509293
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.10814499243403404,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.1617159007332516,
+          "log_loss": 0.3079716503742651,
+          "auroc": 0.9892857142857143,
+          "auprc": 0.97906162464986,
+          "calibration_slope": 2.4193580807134993,
+          "calibration_intercept": 3.0623335358668182
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.17989572270472737,
+          "ece_debiased": 0.01024493264418952,
+          "ece_equal_width": 0.18581015543274806,
+          "log_loss": 0.4905894109738421,
+          "auroc": 0.8392857142857143,
+          "auprc": 0.7625625485625485,
+          "calibration_slope": 0.5667638880800746,
+          "calibration_intercept": -0.3573407033637456
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.1315093456308742,
+          "ece_debiased": 0.011530665829003528,
+          "ece_equal_width": 0.13930412384289848,
+          "log_loss": 0.3544049163530846,
+          "auroc": 0.8459821428571428,
+          "auprc": 0.739373252941701,
+          "calibration_slope": 0.8140033307761749,
+          "calibration_intercept": -0.0882922364516343
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.12127708788665152,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.12214957959537293,
+          "log_loss": 0.37044834364642154,
+          "auroc": 0.8952380952380953,
+          "auprc": 0.8694738765071246,
+          "calibration_slope": 0.8568920640601149,
+          "calibration_intercept": -0.4566465292693666
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.08193427480267865,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.07349434060890134,
+          "log_loss": 0.25791671845440683,
+          "auroc": 0.9497767857142857,
+          "auprc": 0.9380647911338449,
+          "calibration_slope": 1.083865247175432,
+          "calibration_intercept": -0.503557495226218
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.4421883352772541,
+          "ece_debiased": 0.3176785697018165,
+          "ece_equal_width": 0.47051373977732014,
+          "log_loss": 1.9919446055032155,
+          "auroc": 0.7214285714285715,
+          "auprc": 0.5656693711967545,
+          "calibration_slope": 0.27548348554647595,
+          "calibration_intercept": -1.5616848422076968
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.4417251202309563,
+          "ece_debiased": 0.25646038549834593,
+          "ece_equal_width": 0.40583751603211704,
+          "log_loss": 2.0043752904498944,
+          "auroc": 0.5726190476190477,
+          "auprc": 0.4236519369298568,
+          "calibration_slope": 0.074572036462256,
+          "calibration_intercept": -0.8287524212557702
+        }
+      }
+    ],
+    "n_folds": 5
+  },
+  "gated_dropout_p0.5": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.15965940463477904,
+          "ece_debiased": 0.06624737284019354,
+          "ece_equal_width": 0.1637279948458141,
+          "log_loss": 0.691588584280759,
+          "auroc": 0.8758620689655172,
+          "auprc": 0.8244371816952462,
+          "calibration_slope": 0.2787519378182851,
+          "calibration_intercept": -0.04705985892505756
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.21505777707194929,
+          "ece_debiased": 0.06801682770095682,
+          "ece_equal_width": 0.21024938076573374,
+          "log_loss": 0.8535035292109371,
+          "auroc": 0.7785714285714286,
+          "auprc": 0.6935180461010632,
+          "calibration_slope": 0.33268802979990636,
+          "calibration_intercept": 0.5063878616207502
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.08301884224843584,
+          "ece_debiased": 0.04147733226738207,
+          "ece_equal_width": 0.1066465784516988,
+          "log_loss": 0.2856878427572578,
+          "auroc": 0.9885057471264368,
+          "auprc": 0.9759432234432235,
+          "calibration_slope": 1.6096471925019877,
+          "calibration_intercept": -4.6474231476486905
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.10435218825796339,
+          "ece_debiased": 0.030194807088463005,
+          "ece_equal_width": 0.1465683024420641,
+          "log_loss": 0.3032481154647169,
+          "auroc": 0.9857142857142858,
+          "auprc": 0.9698826173826174,
+          "calibration_slope": 1.0974613637766841,
+          "calibration_intercept": 2.9679121409085014
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.0710700954033515,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.09674139800389496,
+          "log_loss": 0.2175935777058479,
+          "auroc": 0.9714285714285714,
+          "auprc": 0.953046398046398,
+          "calibration_slope": 0.668416504260266,
+          "calibration_intercept": -0.2749103897215354
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.07018816701682133,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.08339243845740593,
+          "log_loss": 0.21740497278515597,
+          "auroc": 0.9709821428571428,
+          "auprc": 0.9374428971226572,
+          "calibration_slope": 0.8857697425481958,
+          "calibration_intercept": 0.8525746318929169
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.2108088403787438,
+          "ece_debiased": 0.07814781898144665,
+          "ece_equal_width": 0.22001938546206878,
+          "log_loss": 0.6330802013144096,
+          "auroc": 0.8357142857142856,
+          "auprc": 0.7890404848450825,
+          "calibration_slope": 0.3621779796843764,
+          "calibration_intercept": -0.4543332216125011
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.10709727342836496,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.14143891732878314,
+          "log_loss": 0.3529228948448621,
+          "auroc": 0.9218750000000001,
+          "auprc": 0.9172770907605466,
+          "calibration_slope": 0.6656045184749743,
+          "calibration_intercept": -0.6016647320182406
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.1945739925064244,
+          "ece_debiased": 0.06617817029955217,
+          "ece_equal_width": 0.23009436472513994,
+          "log_loss": 0.6695172551219174,
+          "auroc": 0.8738095238095239,
+          "auprc": 0.8105432722529909,
+          "calibration_slope": 0.5204886878653295,
+          "calibration_intercept": -1.37238549725579
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.3234109099470247,
+          "ece_debiased": 0.18312194860938943,
+          "ece_equal_width": 0.36488074090245154,
+          "log_loss": 1.210733851814763,
+          "auroc": 0.7476190476190476,
+          "auprc": 0.6065123573744262,
+          "calibration_slope": 0.3131327661946368,
+          "calibration_intercept": -1.2200816492551068
+        }
+      }
+    ],
+    "n_folds": 5
+  },
+  "gated_dropout_hr_removed": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.3001837354014842,
+          "ece_debiased": 0.17914905728823508,
+          "ece_equal_width": 0.29678886385670983,
+          "log_loss": 1.4544429299679897,
+          "auroc": 0.6873563218390805,
+          "auprc": 0.6344275169275169,
+          "calibration_slope": 0.1292014356480674,
+          "calibration_intercept": -0.7106142292266615
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.30186811313463763,
+          "ece_debiased": 0.10830974420854239,
+          "ece_equal_width": 0.27523249690248874,
+          "log_loss": 1.4714626759966658,
+          "auroc": 0.44047619047619047,
+          "auprc": 0.3947563114487472,
+          "calibration_slope": -0.06405484670514039,
+          "calibration_intercept": -0.8307040380011952
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.1256035842010751,
+          "ece_debiased": 0.020330771147987092,
+          "ece_equal_width": 0.16376916950281906,
+          "log_loss": 0.37810548617985273,
+          "auroc": 0.9517241379310345,
+          "auprc": 0.9240882826560575,
+          "calibration_slope": 1.0646807248511068,
+          "calibration_intercept": -1.7267273701850936
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.2024725594460619,
+          "ece_debiased": 0.0004913314400642188,
+          "ece_equal_width": 0.1999609158101944,
+          "log_loss": 0.6179674167409487,
+          "auroc": 0.7714285714285714,
+          "auprc": 0.5863425606996299,
+          "calibration_slope": 0.5569937219755998,
+          "calibration_intercept": 0.3606274375780639
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.2270297210020507,
+          "ece_debiased": 0.1307977786054184,
+          "ece_equal_width": 0.24591503610954463,
+          "log_loss": 0.7220225005552968,
+          "auroc": 0.838095238095238,
+          "auprc": 0.7545992841581077,
+          "calibration_slope": 0.26017938326416923,
+          "calibration_intercept": 0.09872887176446506
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.16832939748372697,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.16579485121474136,
+          "log_loss": 0.4891255156759397,
+          "auroc": 0.8727678571428571,
+          "auprc": 0.6999420173157596,
+          "calibration_slope": 0.6634939164857188,
+          "calibration_intercept": 0.9304094611859635
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.2000748233861917,
+          "ece_debiased": 0.03300755932665489,
+          "ece_equal_width": 0.18955506846362177,
+          "log_loss": 0.6707936562100506,
+          "auroc": 0.7976190476190476,
+          "auprc": 0.7377339305959996,
+          "calibration_slope": 0.3738279699163158,
+          "calibration_intercept": -0.16161855000230563
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.13372470822137258,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.1843276321570474,
+          "log_loss": 0.41867180630229334,
+          "auroc": 0.8928571428571428,
+          "auprc": 0.7602422197209097,
+          "calibration_slope": 1.2368539308643964,
+          "calibration_intercept": 0.3661025925898244
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.32947572285166005,
+          "ece_debiased": 0.1298618512980437,
+          "ece_equal_width": 0.3113366970575826,
+          "log_loss": 1.217211026926575,
+          "auroc": 0.6071428571428572,
+          "auprc": 0.5361450454225161,
+          "calibration_slope": 0.10795361839828002,
+          "calibration_intercept": -0.629132819365889
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.3320031281351295,
+          "ece_debiased": 0.09958115327152872,
+          "ece_equal_width": 0.3180624839178351,
+          "log_loss": 1.2708388596100006,
+          "auroc": 0.5547619047619048,
+          "auprc": 0.390513289768839,
+          "calibration_slope": -0.008662045419280031,
+          "calibration_intercept": -0.6160995540659097
+        }
+      }
+    ],
+    "n_folds": 5
+  },
+  "gated_dropout_hr_resid": {
+    "per_fold": [
+      {
+        "fold": 0,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.12456797497277629,
+          "ece_debiased": 0.04443641372978107,
+          "ece_equal_width": 0.14433508173979293,
+          "log_loss": 0.5229500671319808,
+          "auroc": 0.9310344827586207,
+          "auprc": 0.9078863750628456,
+          "calibration_slope": 0.31391885554691085,
+          "calibration_intercept": -0.5591036472869663
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.1456852378581971,
+          "ece_debiased": 0.07292383241132054,
+          "ece_equal_width": 0.18268772437101347,
+          "log_loss": 0.729704051456174,
+          "auroc": 0.8119047619047619,
+          "auprc": 0.8019270037011972,
+          "calibration_slope": 0.34840217526265704,
+          "calibration_intercept": 0.23337798464110807
+        }
+      },
+      {
+        "fold": 1,
+        "complete": {
+          "n": 44,
+          "base_rate": 0.3409090909090909,
+          "brier": 0.05730354828258899,
+          "ece_debiased": 0.01897406739735282,
+          "ece_equal_width": 0.07226983752682184,
+          "log_loss": 0.3354073699236525,
+          "auroc": 0.967816091954023,
+          "auprc": 0.9319220975103327,
+          "calibration_slope": 0.5110688654610972,
+          "calibration_intercept": -1.3977554065370963
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.09250316901937229,
+          "ece_debiased": 0.026884004491864122,
+          "ece_equal_width": 0.11059190405607497,
+          "log_loss": 0.27298145001340873,
+          "auroc": 0.9904761904761905,
+          "auprc": 0.9829505135387488,
+          "calibration_slope": 2.431004825690065,
+          "calibration_intercept": 5.803628793411487
+        }
+      },
+      {
+        "fold": 2,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.05309778138770452,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.05852839159673373,
+          "log_loss": 0.17453922840515831,
+          "auroc": 0.9761904761904762,
+          "auprc": 0.961062271062271,
+          "calibration_slope": 0.7715958011897087,
+          "calibration_intercept": -0.5191790921460895
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.06165703448290383,
+          "ece_debiased": 0.0,
+          "ece_equal_width": 0.08640109886892547,
+          "log_loss": 0.18313628129670925,
+          "auroc": 0.9821428571428572,
+          "auprc": 0.967055636357107,
+          "calibration_slope": 0.9959453566675327,
+          "calibration_intercept": 0.6722436665874283
+        }
+      },
+      {
+        "fold": 3,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.16887392888407804,
+          "ece_debiased": 0.0844070030827594,
+          "ece_equal_width": 0.20614286279901217,
+          "log_loss": 0.6216409827919455,
+          "auroc": 0.8380952380952381,
+          "auprc": 0.8156055309001533,
+          "calibration_slope": 0.37683028603851376,
+          "calibration_intercept": -0.05580834983058058
+        },
+        "reduced": {
+          "n": 44,
+          "base_rate": 0.36363636363636365,
+          "brier": 0.11323396661460045,
+          "ece_debiased": 0.00046835615109011575,
+          "ece_equal_width": 0.13800572088793864,
+          "log_loss": 0.41811681930394184,
+          "auroc": 0.8839285714285714,
+          "auprc": 0.895188492063492,
+          "calibration_slope": 0.5682451149310944,
+          "calibration_intercept": -0.44088171226186956
+        }
+      },
+      {
+        "fold": 4,
+        "complete": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.2983058158829873,
+          "ece_debiased": 0.20399588950930106,
+          "ece_equal_width": 0.32198920857087243,
+          "log_loss": 1.3042746223259865,
+          "auroc": 0.8666666666666667,
+          "auprc": 0.8411202803156825,
+          "calibration_slope": 0.34412112258583427,
+          "calibration_intercept": -1.9494259333160888
+        },
+        "reduced": {
+          "n": 43,
+          "base_rate": 0.3488372093023256,
+          "brier": 0.3726011110829898,
+          "ece_debiased": 0.22654339022183245,
+          "ece_equal_width": 0.35854002205265123,
+          "log_loss": 1.87029424759021,
+          "auroc": 0.719047619047619,
+          "auprc": 0.5866971342833411,
+          "calibration_slope": 0.1908875495161148,
+          "calibration_intercept": -1.2724816715991683
+        }
+      }
+    ],
+    "n_folds": 5
+  }
+}

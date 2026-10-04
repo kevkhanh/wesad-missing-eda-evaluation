@@ -1,0 +1,85 @@
+[repeated_cv:capacity:chest:none] 100 fold tasks x 8 models, n_jobs=16
+[Parallel(n_jobs=16)]: Using backend LokyBackend with 16 concurrent workers.
+[Parallel(n_jobs=16)]: Done  40 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=16)]: Done  90 out of 100 | elapsed:  2.4min remaining:   16.1s
+[Parallel(n_jobs=16)]: Done 100 out of 100 | elapsed:  2.6min finished
+
+=== Repeated subject-level CV (capacity, chest, none): 20 x 5 folds, 15 subjects, 20 distinct partitions ===
+
+--- reduced | raw: means (SD across folds) ---
+  cap_gated_d16                      Brier 0.1482 (0.0748)  AUROC 0.892  ECE_sweep 0.126  smECE 0.129  E-AURC 0.063
+  cap_gated_d32                      Brier 0.1487 (0.0729)  AUROC 0.889  ECE_sweep 0.131  smECE 0.130  E-AURC 0.066
+  cap_gated_d64                      Brier 0.1555 (0.0751)  AUROC 0.888  ECE_sweep 0.136  smECE 0.139  E-AURC 0.066
+  cap_gated_d8                       Brier 0.1506 (0.0741)  AUROC 0.886  ECE_sweep 0.130  smECE 0.132  E-AURC 0.066
+  cap_mlp_h25                        Brier 0.1456 (0.0743)  AUROC 0.894  ECE_sweep 0.125  smECE 0.126  E-AURC 0.063
+  cap_mlp_h300                       Brier 0.1503 (0.0776)  AUROC 0.893  ECE_sweep 0.129  smECE 0.135  E-AURC 0.067
+  cap_mlp_h8                         Brier 0.1515 (0.0768)  AUROC 0.885  ECE_sweep 0.129  smECE 0.131  E-AURC 0.068
+  cap_mlp_h84                        Brier 0.1472 (0.0745)  AUROC 0.893  ECE_sweep 0.126  smECE 0.128  E-AURC 0.065
+--- reduced | raw: pairwise (A - B) ---
+  cap_gated_d8__vs__cap_mlp_h8
+    Brier BF -0.0009 [-0.0241, +0.0224] df14 [-0.0260, +0.0242] TOST p=0.052 eqb=0.020 ROPE=0.91 | participant -0.0009 [-0.0066, +0.0048] TOST p=0.000 (4/15) | AUROC BF +0.0017 [-0.0330, +0.0364] TOST p=0.055
+  cap_gated_d16__vs__cap_mlp_h25
+    Brier BF +0.0027 [-0.0154, +0.0208] df14 [-0.0169, +0.0222] TOST p=0.030 eqb=0.018 ROPE=0.96 | participant +0.0027 [-0.0033, +0.0087] TOST p=0.000 (6/15) | AUROC BF -0.0020 [-0.0262, +0.0222] TOST p=0.012
+  cap_gated_d32__vs__cap_mlp_h84
+    Brier BF +0.0015 [-0.0143, +0.0174] df14 [-0.0156, +0.0186] TOST p=0.011 eqb=0.015 ROPE=0.98 | participant +0.0015 [-0.0042, +0.0072] TOST p=0.000 (7/15) | AUROC BF -0.0041 [-0.0288, +0.0206] TOST p=0.020
+  cap_gated_d64__vs__cap_mlp_h300
+    Brier BF +0.0052 [-0.0123, +0.0227] df14 [-0.0137, +0.0241] TOST p=0.048 eqb=0.020 ROPE=0.95 | participant +0.0052 [+0.0002, +0.0102] TOST p=0.000 (6/15) | AUROC BF -0.0049 [-0.0257, +0.0159] TOST p=0.009
+
+--- reduced | platt_pc: means (SD across folds) ---
+  cap_gated_d16                      Brier 0.1423 (0.0419)  AUROC 0.892  ECE_sweep 0.134  smECE 0.119  E-AURC 0.062
+  cap_gated_d32                      Brier 0.1414 (0.0396)  AUROC 0.889  ECE_sweep 0.130  smECE 0.116  E-AURC 0.065
+  cap_gated_d64                      Brier 0.1430 (0.0411)  AUROC 0.888  ECE_sweep 0.131  smECE 0.116  E-AURC 0.065
+  cap_gated_d8                       Brier 0.1454 (0.0436)  AUROC 0.886  ECE_sweep 0.135  smECE 0.121  E-AURC 0.064
+  cap_mlp_h25                        Brier 0.1394 (0.0424)  AUROC 0.894  ECE_sweep 0.129  smECE 0.116  E-AURC 0.062
+  cap_mlp_h300                       Brier 0.1405 (0.0418)  AUROC 0.893  ECE_sweep 0.131  smECE 0.116  E-AURC 0.064
+  cap_mlp_h8                         Brier 0.1439 (0.0457)  AUROC 0.885  ECE_sweep 0.129  smECE 0.119  E-AURC 0.066
+  cap_mlp_h84                        Brier 0.1408 (0.0411)  AUROC 0.893  ECE_sweep 0.130  smECE 0.116  E-AURC 0.062
+--- reduced | platt_pc: pairwise (A - B) ---
+  cap_gated_d8__vs__cap_mlp_h8
+    Brier BF +0.0014 [-0.0152, +0.0181] df14 [-0.0166, +0.0194] TOST p=0.015 eqb=0.015 ROPE=0.98 | participant +0.0014 [-0.0026, +0.0054] TOST p=0.000 (5/15) | AUROC BF +0.0017 [-0.0330, +0.0364] TOST p=0.055
+  cap_gated_d16__vs__cap_mlp_h25
+    Brier BF +0.0029 [-0.0121, +0.0178] df14 [-0.0133, +0.0190] TOST p=0.013 eqb=0.015 ROPE=0.99 | participant +0.0029 [-0.0001, +0.0058] TOST p=0.000 (3/15) | AUROC BF -0.0020 [-0.0262, +0.0222] TOST p=0.012
+  cap_gated_d32__vs__cap_mlp_h84
+    Brier BF +0.0007 [-0.0126, +0.0140] df14 [-0.0137, +0.0151] TOST p=0.002 eqb=0.012 ROPE=1.00 | participant +0.0007 [-0.0040, +0.0054] TOST p=0.000 (7/15) | AUROC BF -0.0041 [-0.0288, +0.0206] TOST p=0.020
+  cap_gated_d64__vs__cap_mlp_h300
+    Brier BF +0.0024 [-0.0114, +0.0163] df14 [-0.0125, +0.0174] TOST p=0.007 eqb=0.014 ROPE=0.99 | participant +0.0025 [-0.0005, +0.0055] TOST p=0.000 (3/15) | AUROC BF -0.0049 [-0.0257, +0.0159] TOST p=0.009
+
+--- complete | raw: means (SD across folds) ---
+  cap_gated_d16                      Brier 0.1296 (0.0672)  AUROC 0.930  ECE_sweep 0.121  smECE 0.123  E-AURC 0.047
+  cap_gated_d32                      Brier 0.1363 (0.0716)  AUROC 0.927  ECE_sweep 0.122  smECE 0.128  E-AURC 0.047
+  cap_gated_d64                      Brier 0.1376 (0.0701)  AUROC 0.931  ECE_sweep 0.126  smECE 0.131  E-AURC 0.045
+  cap_gated_d8                       Brier 0.1252 (0.0606)  AUROC 0.931  ECE_sweep 0.118  smECE 0.121  E-AURC 0.049
+  cap_mlp_h25                        Brier 0.1370 (0.0751)  AUROC 0.926  ECE_sweep 0.128  smECE 0.132  E-AURC 0.051
+  cap_mlp_h300                       Brier 0.1497 (0.0780)  AUROC 0.918  ECE_sweep 0.134  smECE 0.142  E-AURC 0.058
+  cap_mlp_h8                         Brier 0.1410 (0.0782)  AUROC 0.924  ECE_sweep 0.133  smECE 0.134  E-AURC 0.054
+  cap_mlp_h84                        Brier 0.1422 (0.0751)  AUROC 0.918  ECE_sweep 0.130  smECE 0.135  E-AURC 0.058
+--- complete | raw: pairwise (A - B) ---
+  cap_gated_d8__vs__cap_mlp_h8
+    Brier BF -0.0159 [-0.0647, +0.0329] df14 [-0.0687, +0.0369] TOST p=0.434 eqb=0.057 ROPE=0.49 | participant -0.0158 [-0.0324, +0.0008] TOST p=0.298 (12/15) | AUROC BF +0.0077 [-0.0317, +0.0471] TOST p=0.132
+  cap_gated_d16__vs__cap_mlp_h25
+    Brier BF -0.0074 [-0.0577, +0.0429] df14 [-0.0617, +0.0470] TOST p=0.310 eqb=0.049 ROPE=0.55 | participant -0.0074 [-0.0256, +0.0108] TOST p=0.080 (10/15) | AUROC BF +0.0040 [-0.0320, +0.0399] TOST p=0.077
+  cap_gated_d32__vs__cap_mlp_h84
+    Brier BF -0.0059 [-0.0504, +0.0386] df14 [-0.0540, +0.0422] TOST p=0.265 eqb=0.043 ROPE=0.61 | participant -0.0059 [-0.0300, +0.0182] TOST p=0.115 (10/15) | AUROC BF +0.0092 [-0.0314, +0.0497] TOST p=0.155
+  cap_gated_d64__vs__cap_mlp_h300
+    Brier BF -0.0121 [-0.0600, +0.0358] df14 [-0.0639, +0.0397] TOST p=0.372 eqb=0.052 ROPE=0.53 | participant -0.0121 [-0.0444, +0.0201] TOST p=0.305 (11/15) | AUROC BF +0.0130 [-0.0303, +0.0562] TOST p=0.218
+
+--- complete | platt_pc: means (SD across folds) ---
+  cap_gated_d16                      Brier 0.1179 (0.0400)  AUROC 0.930  ECE_sweep 0.119  smECE 0.110  E-AURC 0.040
+  cap_gated_d32                      Brier 0.1177 (0.0426)  AUROC 0.927  ECE_sweep 0.114  smECE 0.110  E-AURC 0.041
+  cap_gated_d64                      Brier 0.1144 (0.0427)  AUROC 0.931  ECE_sweep 0.112  smECE 0.104  E-AURC 0.040
+  cap_gated_d8                       Brier 0.1198 (0.0391)  AUROC 0.931  ECE_sweep 0.128  smECE 0.114  E-AURC 0.044
+  cap_mlp_h25                        Brier 0.1236 (0.0473)  AUROC 0.926  ECE_sweep 0.128  smECE 0.119  E-AURC 0.044
+  cap_mlp_h300                       Brier 0.1238 (0.0508)  AUROC 0.918  ECE_sweep 0.120  smECE 0.114  E-AURC 0.051
+  cap_mlp_h8                         Brier 0.1282 (0.0442)  AUROC 0.924  ECE_sweep 0.135  smECE 0.120  E-AURC 0.047
+  cap_mlp_h84                        Brier 0.1240 (0.0460)  AUROC 0.918  ECE_sweep 0.121  smECE 0.114  E-AURC 0.051
+--- complete | platt_pc: pairwise (A - B) ---
+  cap_gated_d8__vs__cap_mlp_h8
+    Brier BF -0.0083 [-0.0369, +0.0203] df14 [-0.0392, +0.0226] TOST p=0.210 eqb=0.032 ROPE=0.76 | participant -0.0083 [-0.0159, -0.0007] TOST p=0.003 (13/15) | AUROC BF +0.0077 [-0.0317, +0.0471] TOST p=0.132
+  cap_gated_d16__vs__cap_mlp_h25
+    Brier BF -0.0057 [-0.0361, +0.0247] df14 [-0.0385, +0.0271] TOST p=0.176 eqb=0.031 ROPE=0.78 | participant -0.0057 [-0.0177, +0.0062] TOST p=0.011 (9/15) | AUROC BF +0.0040 [-0.0320, +0.0399] TOST p=0.077
+  cap_gated_d32__vs__cap_mlp_h84
+    Brier BF -0.0063 [-0.0313, +0.0187] df14 [-0.0333, +0.0207] TOST p=0.140 eqb=0.027 ROPE=0.84 | participant -0.0063 [-0.0203, +0.0076] TOST p=0.027 (11/15) | AUROC BF +0.0092 [-0.0314, +0.0497] TOST p=0.155
+  cap_gated_d64__vs__cap_mlp_h300
+    Brier BF -0.0094 [-0.0379, +0.0192] df14 [-0.0402, +0.0215] TOST p=0.231 eqb=0.033 ROPE=0.75 | participant -0.0093 [-0.0274, +0.0087] TOST p=0.113 (10/15) | AUROC BF +0.0130 [-0.0303, +0.0562] TOST p=0.218
+
+[repeated_cv] wrote D:\Trần An Khánh\E14\robustness\results\repeated_cv_capacity.json

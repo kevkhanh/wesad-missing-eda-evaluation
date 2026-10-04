@@ -1,0 +1,535 @@
+{
+  "n_windows": 434,
+  "A_loso": {
+    "models": {
+      "movement_only": {
+        "pooled_auroc": {
+          "est": 0.9452337625979843,
+          "ci95": [
+            0.9099264853724438,
+            0.9797176189023087
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.95806131490342,
+          "ci95": [
+            0.9365992822966506,
+            0.977561403508772
+          ]
+        },
+        "brier": {
+          "est": 0.07392519068139909,
+          "ci95": [
+            0.04795530762553552,
+            0.10054020602815901
+          ]
+        }
+      },
+      "posture_only": {
+        "pooled_auroc": {
+          "est": 0.5743514371033968,
+          "ci95": [
+            0.4324866251087934,
+            0.7135683221047094
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.5808781774863647,
+          "ci95": [
+            0.41344545356095064,
+            0.7525719327780731
+          ]
+        },
+        "brier": {
+          "est": 0.2790651789290324,
+          "ci95": [
+            0.22641499324998113,
+            0.3340385503123314
+          ]
+        }
+      },
+      "acc_only": {
+        "pooled_auroc": {
+          "est": 0.9276315789473685,
+          "ci95": [
+            0.8860169435815439,
+            0.9682530799032696
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.9440557623013762,
+          "ci95": [
+            0.9030746057061847,
+            0.9738464469253941
+          ]
+        },
+        "brier": {
+          "est": 0.09306119278838064,
+          "ci95": [
+            0.06461120680281925,
+            0.12119378156527623
+          ]
+        }
+      },
+      "hr_only": {
+        "pooled_auroc": {
+          "est": 0.8200704553938036,
+          "ci95": [
+            0.6942813064587805,
+            0.946679235775846
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.8669066887195542,
+          "ci95": [
+            0.7645171943607615,
+            0.9590693533778328
+          ]
+        },
+        "brier": {
+          "est": 0.17810027418868438,
+          "ci95": [
+            0.10310627252541421,
+            0.26471551205071525
+          ]
+        }
+      },
+      "acc_plus_hr": {
+        "pooled_auroc": {
+          "est": 0.9441256065696155,
+          "ci95": [
+            0.8977130231011233,
+            0.9828919269191052
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.9711361175103865,
+          "ci95": [
+            0.9478812048358832,
+            0.9917703349282296
+          ]
+        },
+        "brier": {
+          "est": 0.09229966452233224,
+          "ci95": [
+            0.05225005023438384,
+            0.13684460292166917
+          ]
+        }
+      },
+      "ecg_only": {
+        "pooled_auroc": {
+          "est": 0.8686543486375513,
+          "ci95": [
+            0.7556915617310754,
+            0.9530024393604645
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.89908638037293,
+          "ci95": [
+            0.7891624086872624,
+            0.9707666922637683
+          ]
+        },
+        "brier": {
+          "est": 0.14238029036895783,
+          "ci95": [
+            0.08272614819638041,
+            0.22221508110324434
+          ]
+        }
+      },
+      "ecg_plus_acc": {
+        "pooled_auroc": {
+          "est": 0.9516144083613287,
+          "ci95": [
+            0.9100816308728334,
+            0.9860064522227541
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.9757126823793489,
+          "ci95": [
+            0.9593981629157068,
+            0.9907973595605174
+          ]
+        },
+        "brier": {
+          "est": 0.08341779897015529,
+          "ci95": [
+            0.0476797557442819,
+            0.1284111363848568
+          ]
+        }
+      }
+    },
+    "contrasts": {
+      "acc_plus_hr__minus__acc_only": {
+        "pooled_auroc": {
+          "est": 0.016494027622247054,
+          "ci95": [
+            -0.02874830233477462,
+            0.057158676158971064
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.02708035520901031,
+          "ci95": [
+            0.005692495126705838,
+            0.05124090810640524
+          ]
+        },
+        "brier": {
+          "est": -0.000761528266048403,
+          "ci95": [
+            -0.034201450052482874,
+            0.04322590674476567
+          ]
+        }
+      },
+      "ecg_plus_acc__minus__acc_only": {
+        "pooled_auroc": {
+          "est": 0.023982829413960238,
+          "ci95": [
+            -0.02281047518830861,
+            0.0679716381932179
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.03165692007797272,
+          "ci95": [
+            0.009816675527201993,
+            0.06043150806308713
+          ]
+        },
+        "brier": {
+          "est": -0.009643393818225349,
+          "ci95": [
+            -0.04614516724328781,
+            0.03768781151119953
+          ]
+        }
+      },
+      "acc_plus_hr__minus__hr_only": {
+        "pooled_auroc": {
+          "est": 0.1240551511758119,
+          "ci95": [
+            0.03219177682712312,
+            0.21257334361533697
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.1042294287908323,
+          "ci95": [
+            0.028680385728631377,
+            0.19043794671864833
+          ]
+        },
+        "brier": {
+          "est": -0.08580060966635214,
+          "ci95": [
+            -0.13099674310659476,
+            -0.04252372792738228
+          ]
+        }
+      },
+      "acc_only__minus__hr_only": {
+        "pooled_auroc": {
+          "est": 0.10756112355356484,
+          "ci95": [
+            -0.009736295803700121,
+            0.22436023907198802
+          ]
+        },
+        "within_subject_auroc": {
+          "est": 0.07714907358182199,
+          "ci95": [
+            -0.0010634660444601566,
+            0.16614111386772198
+          ]
+        },
+        "brier": {
+          "est": -0.08503908140030374,
+          "ci95": [
+            -0.1682947101504545,
+            -0.011685671840749829
+          ]
+        }
+      }
+    }
+  },
+  "B_hr_residualised_on_acc": {
+    "r2_median": 0.9148220419743776,
+    "r2_range": [
+      0.5147937447864075,
+      0.9758388537276637
+    ],
+    "hr": {
+      "within_subject_auroc": 0.9330992183038966,
+      "ci95": [
+        0.8681187262488431,
+        0.9834768740031897
+      ],
+      "n_above_0.5": 15,
+      "per_subject": {
+        "WESAD_S10": 0.84688995215311,
+        "WESAD_S11": 1.0,
+        "WESAD_S13": 1.0,
+        "WESAD_S14": 1.0,
+        "WESAD_S15": 0.6076555023923443,
+        "WESAD_S16": 1.0,
+        "WESAD_S17": 1.0,
+        "WESAD_S2": 0.9055555555555557,
+        "WESAD_S3": 1.0,
+        "WESAD_S4": 1.0,
+        "WESAD_S5": 1.0,
+        "WESAD_S6": 0.9842105263157894,
+        "WESAD_S7": 0.9052631578947369,
+        "WESAD_S8": 1.0,
+        "WESAD_S9": 0.7469135802469136
+      }
+    },
+    "hr_resid": {
+      "within_subject_auroc": 0.5463947466871443,
+      "ci95": [
+        0.5162377084687025,
+        0.5806042688089472
+      ],
+      "n_above_0.5": 11,
+      "per_subject": {
+        "WESAD_S10": 0.48803827751196177,
+        "WESAD_S11": 0.6267942583732058,
+        "WESAD_S13": 0.6631578947368421,
+        "WESAD_S14": 0.5631578947368422,
+        "WESAD_S15": 0.5263157894736842,
+        "WESAD_S16": 0.6789473684210526,
+        "WESAD_S17": 0.5645933014354068,
+        "WESAD_S2": 0.5055555555555556,
+        "WESAD_S3": 0.47777777777777786,
+        "WESAD_S4": 0.4853801169590643,
+        "WESAD_S5": 0.5146198830409356,
+        "WESAD_S6": 0.5368421052631579,
+        "WESAD_S7": 0.5526315789473684,
+        "WESAD_S8": 0.4688995215311005,
+        "WESAD_S9": 0.54320987654321
+      }
+    },
+    "acc_sd": {
+      "within_subject_auroc": 0.9247813416819265,
+      "ci95": [
+        0.877463499517593,
+        0.9632108807371964
+      ],
+      "n_above_0.5": 15,
+      "per_subject": {
+        "WESAD_S10": 0.8803827751196173,
+        "WESAD_S11": 0.9904306220095693,
+        "WESAD_S13": 0.8210526315789474,
+        "WESAD_S14": 1.0,
+        "WESAD_S15": 0.8755980861244019,
+        "WESAD_S16": 1.0,
+        "WESAD_S17": 0.9090909090909091,
+        "WESAD_S2": 0.961111111111111,
+        "WESAD_S3": 1.0,
+        "WESAD_S4": 0.935672514619883,
+        "WESAD_S5": 0.9941520467836258,
+        "WESAD_S6": 0.8526315789473685,
+        "WESAD_S7": 0.968421052631579,
+        "WESAD_S8": 0.9856459330143541,
+        "WESAD_S9": 0.6975308641975309
+      }
+    }
+  },
+  "C_low_motion": {
+    "n_stress_windows_kept": 75,
+    "n_stress_windows_total": 152,
+    "n_participants_ge3": 10,
+    "stress_kept_per_subject": {
+      "WESAD_S10": 7,
+      "WESAD_S11": 1,
+      "WESAD_S13": 10,
+      "WESAD_S14": 0,
+      "WESAD_S15": 6,
+      "WESAD_S16": 0,
+      "WESAD_S17": 11,
+      "WESAD_S2": 5,
+      "WESAD_S3": 0,
+      "WESAD_S4": 9,
+      "WESAD_S5": 1,
+      "WESAD_S6": 10,
+      "WESAD_S7": 3,
+      "WESAD_S8": 3,
+      "WESAD_S9": 9
+    },
+    "hr_low_motion": {
+      "within_subject_auroc": 0.873404808317089,
+      "ci95": [
+        0.7324189408706954,
+        0.9761988304093567
+      ],
+      "n_above_0.5": 9
+    },
+    "acc_sd_low_motion": {
+      "within_subject_auroc": 0.8564265883564129,
+      "ci95": [
+        0.8060862383230804,
+        0.9012179122047542
+      ],
+      "n_above_0.5": 10
+    },
+    "hr_all_windows_same_participants": {
+      "within_subject_auroc": 0.899648827455845,
+      "ci95": [
+        0.8149526773583791,
+        0.9699556530214425
+      ],
+      "n_above_0.5": 10
+    }
+  },
+  "D_posture": {
+    "per_subject": {
+      "WESAD_S10": {
+        "tilt_stress_vs_baseline_deg": 33.18415497905653,
+        "tilt_stress_vs_amusement_deg": 6.103359320458115,
+        "tilt_amusement_vs_baseline_deg": 38.48260662614059,
+        "bpm_stress_minus_baseline": 6.875257756673946,
+        "bpm_stress_minus_amusement": 29.630044445042458
+      },
+      "WESAD_S11": {
+        "tilt_stress_vs_baseline_deg": 5.112704998300426,
+        "tilt_stress_vs_amusement_deg": 10.488337140902626,
+        "tilt_amusement_vs_baseline_deg": 7.409553948980737,
+        "bpm_stress_minus_baseline": 50.16129957460019,
+        "bpm_stress_minus_amusement": 50.372748973137945
+      },
+      "WESAD_S13": {
+        "tilt_stress_vs_baseline_deg": 9.46524999883219,
+        "tilt_stress_vs_amusement_deg": 9.01708870000055,
+        "tilt_amusement_vs_baseline_deg": 7.677759439844711,
+        "bpm_stress_minus_baseline": 21.032765496448462,
+        "bpm_stress_minus_amusement": 21.355265272072714
+      },
+      "WESAD_S14": {
+        "tilt_stress_vs_baseline_deg": 15.844393290918838,
+        "tilt_stress_vs_amusement_deg": 8.874151481176128,
+        "tilt_amusement_vs_baseline_deg": 24.714610926576402,
+        "bpm_stress_minus_baseline": 54.2287167135576,
+        "bpm_stress_minus_amusement": 44.118901263092496
+      },
+      "WESAD_S15": {
+        "tilt_stress_vs_baseline_deg": 5.718670959335315,
+        "tilt_stress_vs_amusement_deg": 32.66121396993239,
+        "tilt_amusement_vs_baseline_deg": 27.439683690124006,
+        "bpm_stress_minus_baseline": 1.4338031767243535,
+        "bpm_stress_minus_amusement": 7.525356058008512
+      },
+      "WESAD_S16": {
+        "tilt_stress_vs_baseline_deg": 3.0897681660043963,
+        "tilt_stress_vs_amusement_deg": 4.2209394027617435,
+        "tilt_amusement_vs_baseline_deg": 7.141484983172255,
+        "bpm_stress_minus_baseline": 61.60069190261862,
+        "bpm_stress_minus_amusement": 39.755672207032504
+      },
+      "WESAD_S17": {
+        "tilt_stress_vs_baseline_deg": 24.295548080258815,
+        "tilt_stress_vs_amusement_deg": 28.020007307938084,
+        "tilt_amusement_vs_baseline_deg": 51.04929245394803,
+        "bpm_stress_minus_baseline": 45.61107171672447,
+        "bpm_stress_minus_amusement": 37.08319889990871
+      },
+      "WESAD_S2": {
+        "tilt_stress_vs_baseline_deg": 31.0205296410878,
+        "tilt_stress_vs_amusement_deg": 11.280192378302948,
+        "tilt_amusement_vs_baseline_deg": 42.30042004591051,
+        "bpm_stress_minus_baseline": 4.7199659296239815,
+        "bpm_stress_minus_amusement": 9.73905330506581
+      },
+      "WESAD_S3": {
+        "tilt_stress_vs_baseline_deg": 26.827575322120243,
+        "tilt_stress_vs_amusement_deg": 2.712796391847633,
+        "tilt_amusement_vs_baseline_deg": 25.771921398668834,
+        "bpm_stress_minus_baseline": 28.94998448908487,
+        "bpm_stress_minus_amusement": 29.27132718801939
+      },
+      "WESAD_S4": {
+        "tilt_stress_vs_baseline_deg": 30.291663060486595,
+        "tilt_stress_vs_amusement_deg": 21.40251375664222,
+        "tilt_amusement_vs_baseline_deg": 16.814456762334697,
+        "bpm_stress_minus_baseline": 18.924665514344895,
+        "bpm_stress_minus_amusement": 17.286117956845906
+      },
+      "WESAD_S5": {
+        "tilt_stress_vs_baseline_deg": 21.17423295825444,
+        "tilt_stress_vs_amusement_deg": 22.623969622400345,
+        "tilt_amusement_vs_baseline_deg": 2.0359511151445493,
+        "bpm_stress_minus_baseline": 25.794486609504055,
+        "bpm_stress_minus_amusement": 22.197774308221938
+      },
+      "WESAD_S6": {
+        "tilt_stress_vs_baseline_deg": 12.551888999272913,
+        "tilt_stress_vs_amusement_deg": 4.63905458867151,
+        "tilt_amusement_vs_baseline_deg": 9.002567126612716,
+        "bpm_stress_minus_baseline": 9.17435699815367,
+        "bpm_stress_minus_amusement": 12.32721275608182
+      },
+      "WESAD_S7": {
+        "tilt_stress_vs_baseline_deg": 3.936462556413227,
+        "tilt_stress_vs_amusement_deg": 11.199536719144298,
+        "tilt_amusement_vs_baseline_deg": 15.053039928323503,
+        "bpm_stress_minus_baseline": 12.289099126434294,
+        "bpm_stress_minus_amusement": 24.70780929550378
+      },
+      "WESAD_S8": {
+        "tilt_stress_vs_baseline_deg": 33.98076678068855,
+        "tilt_stress_vs_amusement_deg": 29.610279625250048,
+        "tilt_amusement_vs_baseline_deg": 21.79095904550964,
+        "bpm_stress_minus_baseline": 19.740047367695936,
+        "bpm_stress_minus_amusement": 20.487311462506923
+      },
+      "WESAD_S9": {
+        "tilt_stress_vs_baseline_deg": 7.468396094627812,
+        "tilt_stress_vs_amusement_deg": 11.930188569424272,
+        "tilt_amusement_vs_baseline_deg": 8.085786369929098,
+        "bpm_stress_minus_baseline": 2.5190884376210363,
+        "bpm_stress_minus_amusement": -6.3248463135036985
+      }
+    },
+    "median": {
+      "tilt_stress_vs_baseline_deg": 15.844393290918838,
+      "tilt_stress_vs_amusement_deg": 11.199536719144298,
+      "tilt_amusement_vs_baseline_deg": 16.814456762334697,
+      "bpm_stress_minus_baseline": 19.740047367695936,
+      "bpm_stress_minus_amusement": 22.197774308221938
+    },
+    "range": {
+      "tilt_stress_vs_baseline_deg": [
+        3.0897681660043963,
+        33.98076678068855
+      ],
+      "tilt_stress_vs_amusement_deg": [
+        2.712796391847633,
+        32.66121396993239
+      ],
+      "tilt_amusement_vs_baseline_deg": [
+        2.0359511151445493,
+        51.04929245394803
+      ],
+      "bpm_stress_minus_baseline": [
+        1.4338031767243535,
+        61.60069190261862
+      ],
+      "bpm_stress_minus_amusement": [
+        -6.3248463135036985,
+        50.372748973137945
+      ]
+    },
+    "stress_vs_amusement_within_subject_auroc": {
+      "tilt_from_amusement": 0.9695555555555555,
+      "acc_sd": 0.8750909090909091,
+      "hr": 0.9342087542087542
+    },
+    "n_bpm_stress_minus_amusement_gt10": 12,
+    "n_bpm_stress_minus_baseline_gt10": 10
+  }
+}

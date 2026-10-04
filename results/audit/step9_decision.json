@@ -1,0 +1,21 @@
+{
+  "decision": {
+    "branch": "C_partial_inconclusive",
+    "reasons": [
+      "Final identity AUC 0.000 sits in the borderline band (0.60-0.80) or CI spans bands"
+    ],
+    "action": [
+      "Identify the residual driver via the Step 6 leave-one-stage-out and SHAP results.",
+      "Drop the implicated features if clinical AUC survives; otherwise report them as a named limitation.",
+      "Restrict claims to within-dataset contrasts + a hedged cross-dataset result.",
+      "Do NOT report device-tier equity findings as clinical fairness."
+    ]
+  },
+  "input_manifests_present": [
+    "step3",
+    "step4",
+    "step5",
+    "step6",
+    "step7"
+  ]
+}

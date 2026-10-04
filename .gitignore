@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pyo
+
+.venv/
+venv/
+*.egg-info/
+
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# WESAD-derived window-level feature tables: withheld until redistribution of
+# derived data is confirmed to be permitted (see DATA_NOTICE.md). Hashes are in
+# results/*_manifest.json.
+stage3_hb1_dataset.csv
+results/extended_features.csv
+results/posture_features.csv
+
+# LaTeX build products
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+
+.claude/

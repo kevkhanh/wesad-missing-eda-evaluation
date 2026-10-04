@@ -1,0 +1,61 @@
+{
+  "stages_applied": [
+    "H0",
+    "H1",
+    "H6"
+  ],
+  "cumulative_ladder": [
+    {
+      "stage_up_to": "H0",
+      "cumulative_stages": [
+        "H0"
+      ],
+      "identity_auc_C1": 1.0,
+      "identity_ci95": [
+        1.0,
+        1.0
+      ],
+      "n_subjects_C1": 16,
+      "shortcut_auc_a_vs_c": 0.5,
+      "shortcut_auc_b_vs_a": 1.0,
+      "median_p_mitbih_nsr": 0.003251039534919701,
+      "clinical_auc_C3": 1.0
+    },
+    {
+      "stage_up_to": "H1",
+      "cumulative_stages": [
+        "H0",
+        "H1"
+      ],
+      "identity_auc_C1": 1.0,
+      "identity_ci95": [
+        1.0,
+        1.0
+      ],
+      "n_subjects_C1": 16,
+      "shortcut_auc_a_vs_c": 0.5,
+      "shortcut_auc_b_vs_a": 1.0,
+      "median_p_mitbih_nsr": 0.003251039534919701,
+      "clinical_auc_C3": 1.0
+    },
+    {
+      "stage_up_to": "H6",
+      "cumulative_stages": [
+        "H0",
+        "H1",
+        "H6"
+      ],
+      "identity_auc_C1": 1.0,
+      "identity_ci95": [
+        1.0,
+        1.0
+      ],
+      "n_subjects_C1": 16,
+      "shortcut_auc_a_vs_c": 0.5,
+      "shortcut_auc_b_vs_a": 1.0,
+      "median_p_mitbih_nsr": 0.003251039534919701,
+      "clinical_auc_C3": 1.0
+    }
+  ],
+  "leave_one_out": []
+}

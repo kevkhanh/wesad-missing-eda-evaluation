@@ -1,0 +1,227 @@
+[mnar] 100 fold tasks x 7 training mechanisms x 4 systems, n_jobs=12
+[Parallel(n_jobs=12)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=12)]: Done  48 tasks      | elapsed:  4.4min
+[Parallel(n_jobs=12)]: Done  98 out of 100 | elapsed:  7.2min remaining:    8.7s
+[Parallel(n_jobs=12)]: Done 100 out of 100 | elapsed:  7.2min finished
+
+mechanisms: {"mcar": {"rate": 0.3, "achieved_rate": 0.29999999999999993, "achieved_or": 1.0}, "label_2": {"p_baseline": 0.24769353186618442, "p_stress": 0.39704226324826314, "achieved_rate": 0.3, "achieved_or": 1.9999999999999996}, "motion_2": {"a": -0.8917076706761495, "b": 0.5202007194364522, "implied_or": 2.0000000000000004, "rate": 0.3, "achieved_rate": 0.3, "achieved_or": 2.0000000000000004}, "label_4": {"p_baseline": 0.1957805418504342, "p_stress": 0.4933545210406418, "achieved_rate": 0.3000000000000001, "achieved_or": 4.0}, "motion_4": {"a": -1.0297627196852237, "b": 1.1586537494477298, "implied_or": 4.000000000000001, "rate": 0.30000000000000004, "achieved_rate": 0.30000000000000004, "achieved_or": 4.000000000000001}, "label_8": {"p_baseline": 0.1481235574086866, "p_stress": 0.5817707684917788, "achieved_rate": 0.30000000000000004, "achieved_or": 8.000000000000004}, "motion_8": {"a": -1.3529318350593735, "b": 2.1765866077527516, "implied_or": 8.0, "rate": 0.3, "achieved_rate": 0.3, "achieved_or": 8.0}}
+
+shortcut index (baseline windows, raw): mean [B-F CI]
+  mcar      gated +0.008 [-0.120, +0.136]  lgbm_nan_training +0.023 [-0.023, +0.069]  mlp -0.004 [-0.153, +0.146]  per_config +0.088 [-0.026, +0.202]
+  label_2   gated +0.031 [-0.097, +0.158]  lgbm_nan_training +0.044 [-0.007, +0.095]  mlp +0.017 [-0.132, +0.166]  per_config +0.100 [-0.014, +0.214]
+  label_4   gated +0.047 [-0.081, +0.175]  lgbm_nan_training +0.062 [+0.011, +0.113]  mlp +0.039 [-0.116, +0.194]  per_config +0.110 [-0.004, +0.225]
+  label_8   gated +0.067 [-0.062, +0.196]  lgbm_nan_training +0.081 [+0.025, +0.136]  mlp +0.069 [-0.079, +0.217]  per_config +0.125 [+0.008, +0.241]
+  motion_2  gated +0.019 [-0.106, +0.145]  lgbm_nan_training +0.035 [-0.013, +0.083]  mlp +0.004 [-0.148, +0.156]  per_config +0.095 [-0.019, +0.209]
+  motion_4  gated +0.027 [-0.100, +0.153]  lgbm_nan_training +0.046 [-0.003, +0.095]  mlp +0.018 [-0.124, +0.161]  per_config +0.102 [-0.011, +0.215]
+  motion_8  gated +0.037 [-0.088, +0.161]  lgbm_nan_training +0.058 [+0.010, +0.107]  mlp +0.036 [-0.113, +0.185]  per_config +0.108 [-0.007, +0.223]
+
+=== S0:mcar->mcar (raw) ===
+  gated              Brier 0.135 AUROC 0.914 (missing rows 0.138, present 0.133)
+  lgbm_nan_training  Brier 0.123 AUROC 0.919 (missing rows 0.138, present 0.116)
+  mlp                Brier 0.146 AUROC 0.905 (missing rows 0.142, present 0.147)
+  per_config         Brier 0.097 AUROC 0.940 (missing rows 0.140, present 0.078)
+  gated__vs__mlp                       Brier BF -0.011 [-0.050, +0.028] TOST 0.324 | participant -0.011 [-0.024, +0.002] TOST 0.075 (11/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.012 [-0.050, +0.074] TOST 0.401 | participant +0.012 [-0.035, +0.060] TOST 0.364 (6/15)
+  gated__vs__per_config                Brier BF +0.037 [-0.025, +0.100] TOST 0.709 | participant +0.037 [-0.006, +0.080] TOST 0.800 (2/15)
+  mlp__vs__per_config                  Brier BF +0.048 [-0.024, +0.121] TOST 0.781 | participant +0.048 [+0.007, +0.089] TOST 0.920 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.025 [-0.024, +0.074] TOST 0.585 | participant +0.025 [-0.006, +0.056] TOST 0.638 (4/15)
+
+=== S1:label_2->label_2 (raw) ===
+  gated              Brier 0.134 AUROC 0.915 (missing rows 0.154, present 0.126) | vs S0 -0.001 [-0.018, +0.017]
+  lgbm_nan_training  Brier 0.122 AUROC 0.923 (missing rows 0.148, present 0.111) | vs S0 -0.001 [-0.011, +0.010]
+  mlp                Brier 0.144 AUROC 0.905 (missing rows 0.156, present 0.139) | vs S0 -0.002 [-0.025, +0.021]
+  per_config         Brier 0.096 AUROC 0.943 (missing rows 0.150, present 0.072) | vs S0 -0.001 [-0.018, +0.015]
+  gated__vs__mlp                       Brier BF -0.010 [-0.047, +0.027] TOST 0.290 | participant -0.010 [-0.023, +0.004] TOST 0.058 (10/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.012 [-0.054, +0.079] TOST 0.408 | participant +0.012 [-0.037, +0.061] TOST 0.371 (4/15)
+  gated__vs__per_config                Brier BF +0.038 [-0.027, +0.103] TOST 0.711 | participant +0.038 [-0.002, +0.079] TOST 0.824 (1/15)
+  mlp__vs__per_config                  Brier BF +0.048 [-0.023, +0.119] TOST 0.782 | participant +0.048 [+0.008, +0.088] TOST 0.921 (1/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.026 [-0.025, +0.077] TOST 0.594 | participant +0.026 [-0.006, +0.058] TOST 0.652 (3/15)
+
+=== S1:label_4->label_4 (raw) ===
+  gated              Brier 0.133 AUROC 0.915 (missing rows 0.165, present 0.120) | vs S0 -0.002 [-0.027, +0.023]
+  lgbm_nan_training  Brier 0.121 AUROC 0.925 (missing rows 0.155, present 0.108) | vs S0 -0.001 [-0.015, +0.012]
+  mlp                Brier 0.141 AUROC 0.908 (missing rows 0.165, present 0.131) | vs S0 -0.004 [-0.038, +0.029]
+  per_config         Brier 0.097 AUROC 0.946 (missing rows 0.161, present 0.070) | vs S0 -0.000 [-0.026, +0.026]
+  gated__vs__mlp                       Brier BF -0.008 [-0.049, +0.033] TOST 0.282 | participant -0.008 [-0.020, +0.004] TOST 0.028 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.012 [-0.057, +0.080] TOST 0.405 | participant +0.012 [-0.037, +0.061] TOST 0.362 (3/15)
+  gated__vs__per_config                Brier BF +0.036 [-0.032, +0.104] TOST 0.676 | participant +0.036 [-0.004, +0.076] TOST 0.793 (2/15)
+  mlp__vs__per_config                  Brier BF +0.044 [-0.035, +0.123] TOST 0.724 | participant +0.044 [+0.003, +0.085] TOST 0.883 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.024 [-0.029, +0.078] TOST 0.560 | participant +0.024 [-0.010, +0.058] TOST 0.594 (3/15)
+
+=== S1:label_8->label_8 (raw) ===
+  gated              Brier 0.130 AUROC 0.917 (missing rows 0.173, present 0.112) | vs S0 -0.005 [-0.036, +0.027]
+  lgbm_nan_training  Brier 0.119 AUROC 0.928 (missing rows 0.156, present 0.104) | vs S0 -0.003 [-0.022, +0.016]
+  mlp                Brier 0.133 AUROC 0.914 (missing rows 0.174, present 0.116) | vs S0 -0.012 [-0.052, +0.027]
+  per_config         Brier 0.093 AUROC 0.951 (missing rows 0.167, present 0.062) | vs S0 -0.004 [-0.037, +0.029]
+  gated__vs__mlp                       Brier BF -0.003 [-0.038, +0.032] TOST 0.172 | participant -0.003 [-0.014, +0.008] TOST 0.003 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.011 [-0.060, +0.082] TOST 0.401 | participant +0.011 [-0.038, +0.060] TOST 0.353 (4/15)
+  gated__vs__per_config                Brier BF +0.037 [-0.027, +0.101] TOST 0.697 | participant +0.037 [-0.001, +0.074] TOST 0.820 (1/15)
+  mlp__vs__per_config                  Brier BF +0.040 [-0.032, +0.112] TOST 0.706 | participant +0.040 [+0.002, +0.077] TOST 0.860 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.026 [-0.028, +0.080] TOST 0.583 | participant +0.025 [-0.008, +0.059] TOST 0.632 (3/15)
+
+=== S1:motion_2->motion_2 (raw) ===
+  gated              Brier 0.137 AUROC 0.911 (missing rows 0.158, present 0.128) | vs S0 +0.002 [-0.016, +0.020]
+  lgbm_nan_training  Brier 0.126 AUROC 0.917 (missing rows 0.155, present 0.115) | vs S0 +0.004 [-0.006, +0.014]
+  mlp                Brier 0.149 AUROC 0.901 (missing rows 0.162, present 0.144) | vs S0 +0.004 [-0.019, +0.026]
+  per_config         Brier 0.100 AUROC 0.940 (missing rows 0.157, present 0.076) | vs S0 +0.002 [-0.015, +0.020]
+  gated__vs__mlp                       Brier BF -0.013 [-0.050, +0.025] TOST 0.345 | participant -0.012 [-0.026, +0.001] TOST 0.127 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.010 [-0.056, +0.076] TOST 0.385 | participant +0.010 [-0.040, +0.061] TOST 0.343 (5/15)
+  gated__vs__per_config                Brier BF +0.037 [-0.027, +0.101] TOST 0.700 | participant +0.037 [-0.003, +0.077] TOST 0.810 (2/15)
+  mlp__vs__per_config                  Brier BF +0.050 [-0.026, +0.125] TOST 0.781 | participant +0.049 [+0.008, +0.091] TOST 0.925 (1/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.027 [-0.022, +0.076] TOST 0.608 | participant +0.027 [-0.007, +0.060] TOST 0.663 (4/15)
+
+=== S1:motion_4->motion_4 (raw) ===
+  gated              Brier 0.138 AUROC 0.908 (missing rows 0.173, present 0.124) | vs S0 +0.003 [-0.024, +0.029]
+  lgbm_nan_training  Brier 0.126 AUROC 0.916 (missing rows 0.164, present 0.112) | vs S0 +0.004 [-0.009, +0.016]
+  mlp                Brier 0.147 AUROC 0.902 (missing rows 0.174, present 0.138) | vs S0 +0.001 [-0.026, +0.028]
+  per_config         Brier 0.099 AUROC 0.941 (missing rows 0.168, present 0.072) | vs S0 +0.002 [-0.018, +0.022]
+  gated__vs__mlp                       Brier BF -0.009 [-0.048, +0.030] TOST 0.291 | participant -0.009 [-0.023, +0.004] TOST 0.052 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.011 [-0.059, +0.082] TOST 0.403 | participant +0.011 [-0.043, +0.066] TOST 0.371 (5/15)
+  gated__vs__per_config                Brier BF +0.038 [-0.027, +0.104] TOST 0.709 | participant +0.038 [-0.003, +0.080] TOST 0.819 (1/15)
+  mlp__vs__per_config                  Brier BF +0.047 [-0.021, +0.115] TOST 0.787 | participant +0.047 [+0.009, +0.086] TOST 0.927 (1/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.027 [-0.022, +0.076] TOST 0.611 | participant +0.027 [-0.010, +0.063] TOST 0.653 (4/15)
+
+=== S1:motion_8->motion_8 (raw) ===
+  gated              Brier 0.136 AUROC 0.910 (missing rows 0.178, present 0.120) | vs S0 +0.001 [-0.027, +0.029]
+  lgbm_nan_training  Brier 0.126 AUROC 0.917 (missing rows 0.165, present 0.110) | vs S0 +0.003 [-0.011, +0.017]
+  mlp                Brier 0.141 AUROC 0.904 (missing rows 0.183, present 0.127) | vs S0 -0.004 [-0.037, +0.029]
+  per_config         Brier 0.099 AUROC 0.942 (missing rows 0.171, present 0.070) | vs S0 +0.001 [-0.022, +0.025]
+  gated__vs__mlp                       Brier BF -0.005 [-0.046, +0.036] TOST 0.241 | participant -0.005 [-0.019, +0.008] TOST 0.017 (11/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.010 [-0.061, +0.081] TOST 0.391 | participant +0.010 [-0.046, +0.067] TOST 0.359 (5/15)
+  gated__vs__per_config                Brier BF +0.037 [-0.027, +0.101] TOST 0.703 | participant +0.037 [-0.004, +0.078] TOST 0.810 (2/15)
+  mlp__vs__per_config                  Brier BF +0.043 [-0.029, +0.114] TOST 0.734 | participant +0.043 [+0.002, +0.084] TOST 0.873 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.027 [-0.022, +0.076] TOST 0.613 | participant +0.027 [-0.012, +0.066] TOST 0.647 (3/15)
+
+=== S2:label_2->mcar (raw) ===
+  gated              Brier 0.131 AUROC 0.917 (missing rows 0.139, present 0.128) | vs S0 -0.003 [-0.019, +0.012]
+  lgbm_nan_training  Brier 0.122 AUROC 0.921 (missing rows 0.138, present 0.115) | vs S0 -0.001 [-0.010, +0.008]
+  mlp                Brier 0.142 AUROC 0.907 (missing rows 0.142, present 0.142) | vs S0 -0.003 [-0.025, +0.018]
+  per_config         Brier 0.096 AUROC 0.941 (missing rows 0.140, present 0.075) | vs S0 -0.002 [-0.015, +0.012]
+  gated__vs__mlp                       Brier BF -0.011 [-0.046, +0.024] TOST 0.305 | participant -0.011 [-0.024, +0.002] TOST 0.082 (11/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.010 [-0.053, +0.072] TOST 0.370 | participant +0.010 [-0.036, +0.055] TOST 0.317 (4/15)
+  gated__vs__per_config                Brier BF +0.036 [-0.026, +0.097] TOST 0.693 | participant +0.036 [-0.003, +0.074] TOST 0.804 (3/15)
+  mlp__vs__per_config                  Brier BF +0.047 [-0.021, +0.114] TOST 0.781 | participant +0.047 [+0.008, +0.085] TOST 0.921 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.026 [-0.022, +0.075] TOST 0.600 | participant +0.026 [-0.002, +0.054] TOST 0.676 (4/15)
+
+=== S2:label_4->mcar (raw) ===
+  gated              Brier 0.131 AUROC 0.916 (missing rows 0.140, present 0.127) | vs S0 -0.004 [-0.023, +0.015]
+  lgbm_nan_training  Brier 0.123 AUROC 0.919 (missing rows 0.139, present 0.117) | vs S0 +0.001 [-0.012, +0.013]
+  mlp                Brier 0.140 AUROC 0.907 (missing rows 0.142, present 0.139) | vs S0 -0.005 [-0.033, +0.022]
+  per_config         Brier 0.096 AUROC 0.941 (missing rows 0.140, present 0.077) | vs S0 -0.001 [-0.019, +0.017]
+  gated__vs__mlp                       Brier BF -0.009 [-0.046, +0.027] TOST 0.284 | participant -0.009 [-0.023, +0.004] TOST 0.054 (13/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.008 [-0.053, +0.068] TOST 0.343 | participant +0.008 [-0.035, +0.050] TOST 0.273 (5/15)
+  gated__vs__per_config                Brier BF +0.034 [-0.028, +0.096] TOST 0.677 | participant +0.034 [-0.002, +0.070] TOST 0.797 (3/15)
+  mlp__vs__per_config                  Brier BF +0.044 [-0.029, +0.116] TOST 0.741 | participant +0.044 [+0.005, +0.083] TOST 0.896 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.027 [-0.022, +0.075] TOST 0.607 | participant +0.027 [+0.000, +0.053] TOST 0.700 (3/15)
+
+=== S2:label_8->mcar (raw) ===
+  gated              Brier 0.132 AUROC 0.912 (missing rows 0.141, present 0.128) | vs S0 -0.002 [-0.029, +0.024]
+  lgbm_nan_training  Brier 0.127 AUROC 0.913 (missing rows 0.141, present 0.121) | vs S0 +0.005 [-0.014, +0.024]
+  mlp                Brier 0.139 AUROC 0.906 (missing rows 0.144, present 0.136) | vs S0 -0.006 [-0.041, +0.028]
+  per_config         Brier 0.098 AUROC 0.938 (missing rows 0.140, present 0.079) | vs S0 +0.001 [-0.022, +0.023]
+  gated__vs__mlp                       Brier BF -0.007 [-0.040, +0.026] TOST 0.217 | participant -0.007 [-0.019, +0.005] TOST 0.020 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.005 [-0.056, +0.066] TOST 0.314 | participant +0.005 [-0.035, +0.046] TOST 0.222 (4/15)
+  gated__vs__per_config                Brier BF +0.034 [-0.023, +0.091] TOST 0.690 | participant +0.034 [+0.002, +0.067] TOST 0.818 (2/15)
+  mlp__vs__per_config                  Brier BF +0.041 [-0.024, +0.107] TOST 0.739 | participant +0.041 [+0.005, +0.078] TOST 0.887 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.029 [-0.017, +0.076] TOST 0.652 | participant +0.029 [+0.006, +0.052] TOST 0.796 (3/15)
+
+=== S2:motion_2->mcar (raw) ===
+  gated              Brier 0.134 AUROC 0.915 (missing rows 0.139, present 0.131) | vs S0 -0.001 [-0.018, +0.016]
+  lgbm_nan_training  Brier 0.125 AUROC 0.918 (missing rows 0.138, present 0.119) | vs S0 +0.002 [-0.007, +0.011]
+  mlp                Brier 0.147 AUROC 0.904 (missing rows 0.142, present 0.149) | vs S0 +0.001 [-0.021, +0.023]
+  per_config         Brier 0.099 AUROC 0.940 (missing rows 0.140, present 0.081) | vs S0 +0.002 [-0.015, +0.019]
+  gated__vs__mlp                       Brier BF -0.013 [-0.049, +0.023] TOST 0.351 | participant -0.013 [-0.027, +0.001] TOST 0.151 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.009 [-0.056, +0.074] TOST 0.368 | participant +0.009 [-0.039, +0.057] TOST 0.318 (5/15)
+  gated__vs__per_config                Brier BF +0.035 [-0.030, +0.099] TOST 0.675 | participant +0.035 [-0.005, +0.074] TOST 0.781 (2/15)
+  mlp__vs__per_config                  Brier BF +0.048 [-0.027, +0.122] TOST 0.770 | participant +0.048 [+0.006, +0.089] TOST 0.914 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.026 [-0.024, +0.075] TOST 0.591 | participant +0.026 [-0.005, +0.056] TOST 0.652 (4/15)
+
+=== S2:motion_4->mcar (raw) ===
+  gated              Brier 0.133 AUROC 0.915 (missing rows 0.139, present 0.129) | vs S0 -0.002 [-0.022, +0.019]
+  lgbm_nan_training  Brier 0.125 AUROC 0.916 (missing rows 0.138, present 0.119) | vs S0 +0.002 [-0.010, +0.015]
+  mlp                Brier 0.143 AUROC 0.906 (missing rows 0.140, present 0.144) | vs S0 -0.002 [-0.027, +0.023]
+  per_config         Brier 0.099 AUROC 0.940 (missing rows 0.140, present 0.081) | vs S0 +0.002 [-0.016, +0.020]
+  gated__vs__mlp                       Brier BF -0.011 [-0.048, +0.026] TOST 0.308 | participant -0.011 [-0.024, +0.003] TOST 0.079 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.008 [-0.056, +0.072] TOST 0.353 | participant +0.008 [-0.040, +0.056] TOST 0.298 (5/15)
+  gated__vs__per_config                Brier BF +0.034 [-0.028, +0.095] TOST 0.669 | participant +0.034 [-0.004, +0.071] TOST 0.777 (2/15)
+  mlp__vs__per_config                  Brier BF +0.044 [-0.022, +0.110] TOST 0.766 | participant +0.044 [+0.007, +0.082] TOST 0.908 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.026 [-0.023, +0.074] TOST 0.594 | participant +0.026 [-0.003, +0.055] TOST 0.660 (5/15)
+
+=== S2:motion_8->mcar (raw) ===
+  gated              Brier 0.133 AUROC 0.913 (missing rows 0.141, present 0.130) | vs S0 -0.001 [-0.022, +0.020]
+  lgbm_nan_training  Brier 0.126 AUROC 0.915 (missing rows 0.138, present 0.122) | vs S0 +0.004 [-0.010, +0.017]
+  mlp                Brier 0.140 AUROC 0.905 (missing rows 0.143, present 0.139) | vs S0 -0.005 [-0.037, +0.026]
+  per_config         Brier 0.101 AUROC 0.937 (missing rows 0.140, present 0.084) | vs S0 +0.004 [-0.020, +0.027]
+  gated__vs__mlp                       Brier BF -0.007 [-0.047, +0.033] TOST 0.257 | participant -0.007 [-0.020, +0.006] TOST 0.026 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.007 [-0.057, +0.071] TOST 0.343 | participant +0.007 [-0.041, +0.055] TOST 0.285 (5/15)
+  gated__vs__per_config                Brier BF +0.032 [-0.029, +0.093] TOST 0.654 | participant +0.032 [-0.003, +0.067] TOST 0.768 (2/15)
+  mlp__vs__per_config                  Brier BF +0.039 [-0.032, +0.110] TOST 0.703 | participant +0.039 [+0.003, +0.076] TOST 0.861 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.025 [-0.023, +0.073] TOST 0.587 | participant +0.025 [-0.004, +0.054] TOST 0.649 (5/15)
+
+=== S3:mcar->label_2 (raw) ===
+  gated              Brier 0.139 AUROC 0.910 (missing rows 0.155, present 0.132) | vs S0 +0.004 [-0.007, +0.015]
+  lgbm_nan_training  Brier 0.124 AUROC 0.919 (missing rows 0.149, present 0.114) | vs S0 +0.001 [-0.003, +0.005]
+  mlp                Brier 0.149 AUROC 0.902 (missing rows 0.157, present 0.146) | vs S0 +0.003 [-0.007, +0.013]
+  per_config         Brier 0.098 AUROC 0.941 (missing rows 0.150, present 0.076) | vs S0 +0.001 [-0.010, +0.012]
+  gated__vs__mlp                       Brier BF -0.010 [-0.052, +0.031] TOST 0.319 | participant -0.010 [-0.023, +0.003] TOST 0.063 (11/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.015 [-0.052, +0.082] TOST 0.438 | participant +0.015 [-0.036, +0.066] TOST 0.416 (4/15)
+  gated__vs__per_config                Brier BF +0.040 [-0.027, +0.107] TOST 0.726 | participant +0.040 [-0.006, +0.087] TOST 0.818 (2/15)
+  mlp__vs__per_config                  Brier BF +0.051 [-0.025, +0.126] TOST 0.787 | participant +0.050 [+0.007, +0.094] TOST 0.924 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.026 [-0.026, +0.078] TOST 0.585 | participant +0.025 [-0.009, +0.060] TOST 0.630 (2/15)
+
+=== S3:mcar->label_4 (raw) ===
+  gated              Brier 0.142 AUROC 0.907 (missing rows 0.170, present 0.131) | vs S0 +0.007 [-0.010, +0.025]
+  lgbm_nan_training  Brier 0.126 AUROC 0.918 (missing rows 0.161, present 0.112) | vs S0 +0.004 [-0.004, +0.011]
+  mlp                Brier 0.152 AUROC 0.900 (missing rows 0.170, present 0.144) | vs S0 +0.006 [-0.011, +0.023]
+  per_config         Brier 0.100 AUROC 0.942 (missing rows 0.161, present 0.074) | vs S0 +0.003 [-0.017, +0.023]
+  gated__vs__mlp                       Brier BF -0.010 [-0.054, +0.035] TOST 0.326 | participant -0.010 [-0.022, +0.002] TOST 0.048 (10/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.016 [-0.055, +0.087] TOST 0.454 | participant +0.016 [-0.038, +0.070] TOST 0.438 (4/15)
+  gated__vs__per_config                Brier BF +0.042 [-0.029, +0.112] TOST 0.727 | participant +0.041 [-0.008, +0.090] TOST 0.819 (2/15)
+  mlp__vs__per_config                  Brier BF +0.051 [-0.028, +0.131] TOST 0.783 | participant +0.051 [+0.005, +0.097] TOST 0.917 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.026 [-0.030, +0.081] TOST 0.582 | participant +0.026 [-0.013, +0.064] TOST 0.617 (3/15)
+
+=== S3:mcar->label_8 (raw) ===
+  gated              Brier 0.144 AUROC 0.904 (missing rows 0.181, present 0.130) | vs S0 +0.010 [-0.012, +0.032]
+  lgbm_nan_training  Brier 0.127 AUROC 0.919 (missing rows 0.169, present 0.110) | vs S0 +0.005 [-0.005, +0.014]
+  mlp                Brier 0.153 AUROC 0.898 (missing rows 0.181, present 0.142) | vs S0 +0.008 [-0.015, +0.031]
+  per_config         Brier 0.100 AUROC 0.943 (missing rows 0.167, present 0.072) | vs S0 +0.003 [-0.024, +0.030]
+  gated__vs__mlp                       Brier BF -0.009 [-0.056, +0.038] TOST 0.319 | participant -0.009 [-0.022, +0.004] TOST 0.043 (9/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.017 [-0.056, +0.091] TOST 0.470 | participant +0.017 [-0.039, +0.074] TOST 0.462 (4/15)
+  gated__vs__per_config                Brier BF +0.044 [-0.029, +0.117] TOST 0.746 | participant +0.044 [-0.007, +0.096] TOST 0.835 (2/15)
+  mlp__vs__per_config                  Brier BF +0.053 [-0.029, +0.136] TOST 0.788 | participant +0.053 [+0.005, +0.101] TOST 0.920 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.027 [-0.032, +0.086] TOST 0.595 | participant +0.027 [-0.016, +0.070] TOST 0.631 (3/15)
+
+=== S3:mcar->motion_2 (raw) ===
+  gated              Brier 0.138 AUROC 0.909 (missing rows 0.157, present 0.131) | vs S0 +0.003 [-0.008, +0.015]
+  lgbm_nan_training  Brier 0.125 AUROC 0.917 (missing rows 0.156, present 0.112) | vs S0 +0.002 [-0.003, +0.007]
+  mlp                Brier 0.149 AUROC 0.902 (missing rows 0.162, present 0.144) | vs S0 +0.003 [-0.009, +0.015]
+  per_config         Brier 0.098 AUROC 0.940 (missing rows 0.157, present 0.074) | vs S0 +0.001 [-0.010, +0.011]
+  gated__vs__mlp                       Brier BF -0.011 [-0.052, +0.031] TOST 0.327 | participant -0.011 [-0.023, +0.002] TOST 0.064 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.014 [-0.051, +0.078] TOST 0.421 | participant +0.014 [-0.036, +0.063] TOST 0.393 (5/15)
+  gated__vs__per_config                Brier BF +0.040 [-0.022, +0.102] TOST 0.737 | participant +0.040 [-0.003, +0.083] TOST 0.830 (2/15)
+  mlp__vs__per_config                  Brier BF +0.051 [-0.022, +0.123] TOST 0.797 | participant +0.050 [+0.010, +0.091] TOST 0.934 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.027 [-0.023, +0.076] TOST 0.603 | participant +0.026 [-0.007, +0.060] TOST 0.654 (3/15)
+
+=== S3:mcar->motion_4 (raw) ===
+  gated              Brier 0.141 AUROC 0.905 (missing rows 0.170, present 0.130) | vs S0 +0.006 [-0.012, +0.024]
+  lgbm_nan_training  Brier 0.126 AUROC 0.916 (missing rows 0.167, present 0.110) | vs S0 +0.003 [-0.004, +0.010]
+  mlp                Brier 0.151 AUROC 0.898 (missing rows 0.176, present 0.144) | vs S0 +0.006 [-0.011, +0.022]
+  per_config         Brier 0.099 AUROC 0.941 (missing rows 0.168, present 0.071) | vs S0 +0.001 [-0.015, +0.018]
+  gated__vs__mlp                       Brier BF -0.010 [-0.052, +0.031] TOST 0.326 | participant -0.010 [-0.022, +0.002] TOST 0.053 (12/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.015 [-0.053, +0.083] TOST 0.443 | participant +0.015 [-0.037, +0.068] TOST 0.424 (5/15)
+  gated__vs__per_config                Brier BF +0.042 [-0.024, +0.108] TOST 0.747 | participant +0.042 [-0.003, +0.087] TOST 0.845 (2/15)
+  mlp__vs__per_config                  Brier BF +0.053 [-0.022, +0.128] TOST 0.806 | participant +0.053 [+0.010, +0.095] TOST 0.940 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.027 [-0.024, +0.078] TOST 0.610 | participant +0.027 [-0.010, +0.064] TOST 0.653 (3/15)
+
+=== S3:mcar->motion_8 (raw) ===
+  gated              Brier 0.141 AUROC 0.904 (missing rows 0.177, present 0.129) | vs S0 +0.006 [-0.016, +0.029]
+  lgbm_nan_training  Brier 0.126 AUROC 0.916 (missing rows 0.172, present 0.108) | vs S0 +0.004 [-0.005, +0.012]
+  mlp                Brier 0.151 AUROC 0.898 (missing rows 0.182, present 0.142) | vs S0 +0.005 [-0.016, +0.027]
+  per_config         Brier 0.097 AUROC 0.941 (missing rows 0.171, present 0.068) | vs S0 -0.000 [-0.020, +0.019]
+  gated__vs__mlp                       Brier BF -0.010 [-0.055, +0.035] TOST 0.329 | participant -0.010 [-0.023, +0.003] TOST 0.055 (11/15)
+  gated__vs__lgbm_nan_training         Brier BF +0.015 [-0.056, +0.086] TOST 0.443 | participant +0.015 [-0.040, +0.071] TOST 0.426 (6/15)
+  gated__vs__per_config                Brier BF +0.044 [-0.023, +0.111] TOST 0.760 | participant +0.044 [-0.004, +0.092] TOST 0.849 (3/15)
+  mlp__vs__per_config                  Brier BF +0.054 [-0.023, +0.130] TOST 0.810 | participant +0.054 [+0.009, +0.098] TOST 0.936 (2/15)
+  lgbm_nan_training__vs__per_config    Brier BF +0.029 [-0.023, +0.081] TOST 0.636 | participant +0.029 [-0.011, +0.069] TOST 0.680 (3/15)
+
+[mnar] wrote D:\Trần An Khánh\E14\robustness\results\mnar.json

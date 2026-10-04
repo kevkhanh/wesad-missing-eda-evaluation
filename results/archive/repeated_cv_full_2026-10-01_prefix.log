@@ -1,0 +1,53 @@
+[repeated_cv] repeat 1/20 done.
+[repeated_cv] repeat 2/20 done.
+[repeated_cv] repeat 3/20 done.
+[repeated_cv] repeat 4/20 done.
+[repeated_cv] repeat 5/20 done.
+[repeated_cv] repeat 6/20 done.
+[repeated_cv] repeat 7/20 done.
+[repeated_cv] repeat 8/20 done.
+[repeated_cv] repeat 9/20 done.
+[repeated_cv] repeat 10/20 done.
+[repeated_cv] repeat 11/20 done.
+[repeated_cv] repeat 12/20 done.
+[repeated_cv] repeat 13/20 done.
+[repeated_cv] repeat 14/20 done.
+[repeated_cv] repeat 15/20 done.
+[repeated_cv] repeat 16/20 done.
+[repeated_cv] repeat 17/20 done.
+[repeated_cv] repeat 18/20 done.
+[repeated_cv] repeat 19/20 done.
+[repeated_cv] repeat 20/20 done.
+
+=== Repeated subject-level CV (20 repeats x 5 folds on 15 subjects) ===
+  mean n_train subjects = 12.0, n_test = 3.0
+
+--- Per-model reduced-condition metrics ---
+  Model                                     Brier        LogLoss          AUROC
+  hr_only                          0.1917 +/- 0.1320   0.6971 +/- 0.6735   0.865 +/- 0.131
+  gated_no_dropout                 0.2007 +/- 0.1427   1.1732 +/- 1.0741   0.870 +/- 0.112
+  gated_dropout_p0.5               0.1728 +/- 0.1040   0.6396 +/- 0.4172   0.869 +/- 0.093
+  lgbm_nan_training_p0.5           0.1592 +/- 0.1237   0.5738 +/- 0.5209   0.874 +/- 0.152
+  lgbm_ecg_only_per_config         0.1574 +/- 0.1255   0.5965 +/- 0.5797   0.877 +/- 0.154
+
+--- Pairwise comparisons (A - B; negative = A better) ---
+
+  gated_dropout_p0.5__vs__lgbm_nan_training_p0.5
+    mean Brier diff (A-B):  +0.0136
+    Bouckaert-Frank t=+0.580  p=0.5631
+    subject sign-flip (n=15): mean subj diff +0.0147  p=0.3254
+
+  gated_dropout_p0.5__vs__lgbm_ecg_only_per_config
+    mean Brier diff (A-B):  +0.0153
+    Bouckaert-Frank t=+0.691  p=0.4914
+    subject sign-flip (n=15): mean subj diff +0.0164  p=0.2767
+
+  gated_dropout_p0.5__vs__hr_only
+    mean Brier diff (A-B):  -0.0190
+    Bouckaert-Frank t=-0.611  p=0.5427
+    subject sign-flip (n=15): mean subj diff -0.0169  p=0.3856
+
+  gated_dropout_p0.5__vs__gated_no_dropout
+    mean Brier diff (A-B):  -0.0280
+    Bouckaert-Frank t=-0.889  p=0.3759
+    subject sign-flip (n=15): mean subj diff -0.0281  p=0.1019

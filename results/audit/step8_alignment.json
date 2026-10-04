@@ -1,0 +1,14 @@
+{
+  "notice": "diagnostic only \u2014 not a preprint-headline pipeline",
+  "coral_map_shape": [
+    7,
+    7
+  ],
+  "identity_auc_before": 0.5,
+  "identity_auc_after": 0.5,
+  "c3_clinical_before": 0.5,
+  "c3_clinical_after": 0.5,
+  "c4_clinical_before": 0.5,
+  "c4_clinical_after": 0.5,
+  "verdict": "alignment_ineffective_or_inconclusive"
+}

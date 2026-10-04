@@ -1,0 +1,6 @@
+{
+  "path": "prespec_round5.md",
+  "sha256": "e0ba7156dd505918317367a41e561c0e7a36650f5ce922dcbefba97cb2eaa320",
+  "recorded_at_utc": "2026-10-02T05:46:57+00:00",
+  "note": "recorded before run_operating_points.py and run_mnar.py existed; not independently timestamped"
+}

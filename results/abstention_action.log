@@ -1,0 +1,36 @@
+[Parallel(n_jobs=12)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=12)]: Done  48 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=12)]: Done  98 out of 100 | elapsed:  3.6min remaining:    4.4s
+[Parallel(n_jobs=12)]: Done 100 out of 100 | elapsed:  3.7min finished
+gated
+  60_alert     sens 0.877  FA/h 18.2
+  60_no_alert  sens 0.256  FA/h 1.8
+  60_remove    sens 0.596  FA/h 3.0
+  80_alert     sens 0.768  FA/h 10.5
+  80_no_alert  sens 0.438  FA/h 3.2
+  80_remove    sens 0.625  FA/h 3.9
+  100_none     sens 0.613  FA/h 5.6
+lgbm_nan_training
+  60_alert     sens 0.899  FA/h 16.9
+  60_no_alert  sens 0.200  FA/h 3.0
+  60_remove    sens 0.519  FA/h 4.5
+  80_alert     sens 0.775  FA/h 11.1
+  80_no_alert  sens 0.412  FA/h 4.8
+  80_remove    sens 0.615  FA/h 5.6
+  100_none     sens 0.618  FA/h 6.8
+mlp
+  60_alert     sens 0.887  FA/h 18.6
+  60_no_alert  sens 0.277  FA/h 1.9
+  60_remove    sens 0.654  FA/h 3.1
+  80_alert     sens 0.777  FA/h 10.7
+  80_no_alert  sens 0.455  FA/h 3.1
+  80_remove    sens 0.649  FA/h 3.9
+  100_none     sens 0.625  FA/h 5.6
+per_config
+  60_alert     sens 0.889  FA/h 17.1
+  60_no_alert  sens 0.194  FA/h 3.2
+  60_remove    sens 0.501  FA/h 4.5
+  80_alert     sens 0.783  FA/h 11.3
+  80_no_alert  sens 0.429  FA/h 4.7
+  80_remove    sens 0.629  FA/h 5.5
+  100_none     sens 0.643  FA/h 6.7

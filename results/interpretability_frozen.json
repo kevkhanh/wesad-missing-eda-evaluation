@@ -1,0 +1,217 @@
+{
+  "scheme": "LOSO, out-of-fold attributions on held-out subjects",
+  "ig": {
+    "steps": 256,
+    "rule": "midpoint",
+    "baseline": "training median (0 after robust standardisation)",
+    "completeness_error_logit": {
+      "max": 0.09248924255371094,
+      "p95": 0.019942522048950185,
+      "median": 0.0038268566131591797
+    }
+  },
+  "gated_dropout_p0.5|complete": {
+    "mean_abs_by_feature": {
+      "hrv_mean_nn": 5.888477589128204,
+      "hrv_pnn50": 2.4776071513303415,
+      "eda_tonic_slope": 1.7163583419290007,
+      "eda_tonic_mean": 1.3652495590772498,
+      "hrv_rmssd": 0.8675379472943495,
+      "hrv_hf_power": 0.6716196877615792,
+      "hrv_sdnn": 0.6673170344620806,
+      "hrv_lf_hf_ratio": 0.6593009206007153,
+      "coupling_lag_sec": 0.5698253262427545,
+      "eda_phasic_rate": 0.5262462054529498,
+      "hrv_lf_power": 0.44525124730053034,
+      "eda_phasic_mean_amp": 0.4412982353966357,
+      "coupling_peak_corr": 0.40677884207343173
+    },
+    "rank": [
+      "hrv_mean_nn",
+      "hrv_pnn50",
+      "eda_tonic_slope",
+      "eda_tonic_mean",
+      "hrv_rmssd",
+      "hrv_hf_power",
+      "hrv_sdnn",
+      "hrv_lf_hf_ratio",
+      "coupling_lag_sec",
+      "eda_phasic_rate",
+      "hrv_lf_power",
+      "eda_phasic_mean_amp",
+      "coupling_peak_corr"
+    ],
+    "group_share": {
+      "HR": 0.3525429020984218,
+      "other_HRV": 0.3465652700024082,
+      "EDA": 0.24242257799741757,
+      "coupling": 0.05846924990175214
+    }
+  },
+  "gated_dropout_p0.5|reduced": {
+    "mean_abs_by_feature": {
+      "hrv_mean_nn": 5.4110064924037955,
+      "hrv_pnn50": 2.443775532981767,
+      "hrv_rmssd": 0.8475232437459005,
+      "hrv_sdnn": 0.6865443051685386,
+      "hrv_hf_power": 0.6272202724685317,
+      "hrv_lf_hf_ratio": 0.6139197300106699,
+      "hrv_lf_power": 0.4370722144430134,
+      "eda_tonic_mean": 0.0,
+      "coupling_peak_corr": 0.0,
+      "coupling_lag_sec": 0.0,
+      "eda_phasic_rate": 0.0,
+      "eda_phasic_mean_amp": 0.0,
+      "eda_tonic_slope": 0.0
+    },
+    "rank": [
+      "hrv_mean_nn",
+      "hrv_pnn50",
+      "hrv_rmssd",
+      "hrv_sdnn",
+      "hrv_hf_power",
+      "hrv_lf_hf_ratio",
+      "hrv_lf_power",
+      "eda_tonic_mean",
+      "coupling_peak_corr",
+      "coupling_lag_sec",
+      "eda_phasic_rate",
+      "eda_phasic_mean_amp",
+      "eda_tonic_slope"
+    ],
+    "group_share": {
+      "HR": 0.48892891306484865,
+      "other_HRV": 0.5110710869351512,
+      "EDA": 0.0,
+      "coupling": 0.0
+    }
+  },
+  "lgbm_ecg_only_per_config|complete": {
+    "mean_abs_by_feature": {
+      "hrv_mean_nn": 2.703873152044454,
+      "hrv_pnn50": 0.41513608637481497,
+      "hrv_rmssd": 0.27144393154311663,
+      "hrv_sdnn": 0.2460577807189299,
+      "hrv_hf_power": 0.166730562844099,
+      "hrv_lf_hf_ratio": 0.05870995246910135,
+      "hrv_lf_power": 0.04516388712169586
+    },
+    "rank": [
+      "hrv_mean_nn",
+      "hrv_pnn50",
+      "hrv_rmssd",
+      "hrv_sdnn",
+      "hrv_hf_power",
+      "hrv_lf_hf_ratio",
+      "hrv_lf_power"
+    ],
+    "group_share": {
+      "HR": 0.6920382194213736,
+      "other_HRV": 0.3079617805786265,
+      "EDA": 0.0,
+      "coupling": 0.0
+    }
+  },
+  "lgbm_ecg_only_per_config|reduced": {
+    "mean_abs_by_feature": {
+      "hrv_mean_nn": 2.703873152044454,
+      "hrv_pnn50": 0.41513608637481497,
+      "hrv_rmssd": 0.27144393154311663,
+      "hrv_sdnn": 0.2460577807189299,
+      "hrv_hf_power": 0.166730562844099,
+      "hrv_lf_hf_ratio": 0.05870995246910135,
+      "hrv_lf_power": 0.04516388712169586
+    },
+    "rank": [
+      "hrv_mean_nn",
+      "hrv_pnn50",
+      "hrv_rmssd",
+      "hrv_sdnn",
+      "hrv_hf_power",
+      "hrv_lf_hf_ratio",
+      "hrv_lf_power"
+    ],
+    "group_share": {
+      "HR": 0.6920382194213736,
+      "other_HRV": 0.3079617805786265,
+      "EDA": 0.0,
+      "coupling": 0.0
+    }
+  },
+  "lgbm_nan_training_p0.5|complete": {
+    "mean_abs_by_feature": {
+      "hrv_mean_nn": 2.4626563264189403,
+      "eda_tonic_slope": 0.6517789241947218,
+      "eda_tonic_mean": 0.5277130282043043,
+      "hrv_pnn50": 0.3104968287880956,
+      "hrv_rmssd": 0.18750763035691498,
+      "hrv_sdnn": 0.15453991212535276,
+      "eda_phasic_mean_amp": 0.09058390314703084,
+      "coupling_lag_sec": 0.061869400439937675,
+      "hrv_hf_power": 0.06021938488449439,
+      "coupling_peak_corr": 0.040268321418432285,
+      "hrv_lf_hf_ratio": 0.036591838234545836,
+      "eda_phasic_rate": 0.030354428056661206,
+      "hrv_lf_power": 0.026284660596288586
+    },
+    "rank": [
+      "hrv_mean_nn",
+      "eda_tonic_slope",
+      "eda_tonic_mean",
+      "hrv_pnn50",
+      "hrv_rmssd",
+      "hrv_sdnn",
+      "eda_phasic_mean_amp",
+      "coupling_lag_sec",
+      "hrv_hf_power",
+      "coupling_peak_corr",
+      "hrv_lf_hf_ratio",
+      "eda_phasic_rate",
+      "hrv_lf_power"
+    ],
+    "group_share": {
+      "HR": 0.5306460208704631,
+      "other_HRV": 0.1671327056559374,
+      "EDA": 0.28021293430605865,
+      "coupling": 0.022008339167540813
+    }
+  },
+  "lgbm_nan_training_p0.5|reduced": {
+    "mean_abs_by_feature": {
+      "hrv_mean_nn": 2.6036877957192077,
+      "hrv_pnn50": 0.3382078180887989,
+      "hrv_rmssd": 0.1970100785387976,
+      "hrv_sdnn": 0.17734410084518717,
+      "eda_tonic_slope": 0.15058903548418578,
+      "eda_tonic_mean": 0.08964349903680886,
+      "hrv_hf_power": 0.06774929994747442,
+      "eda_phasic_mean_amp": 0.04029542045437075,
+      "hrv_lf_hf_ratio": 0.03935319375789439,
+      "coupling_lag_sec": 0.03214046273159405,
+      "hrv_lf_power": 0.02873983197299425,
+      "eda_phasic_rate": 0.02299493126143864,
+      "coupling_peak_corr": 0.015456021549611756
+    },
+    "rank": [
+      "hrv_mean_nn",
+      "hrv_pnn50",
+      "hrv_rmssd",
+      "hrv_sdnn",
+      "eda_tonic_slope",
+      "eda_tonic_mean",
+      "hrv_hf_power",
+      "eda_phasic_mean_amp",
+      "hrv_lf_hf_ratio",
+      "coupling_lag_sec",
+      "hrv_lf_power",
+      "eda_phasic_rate",
+      "coupling_peak_corr"
+    ],
+    "group_share": {
+      "HR": 0.6846024216596839,
+      "other_HRV": 0.22307576781316144,
+      "EDA": 0.07980699655638052,
+      "coupling": 0.012514813970774029
+    }
+  }
+}
