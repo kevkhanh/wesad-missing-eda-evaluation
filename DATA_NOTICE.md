@@ -15,5 +15,7 @@ Anyone reusing anything here must cite Schmidt et al. (2018) and respect WESAD's
 non-commercial terms. No model, feature table or result derived from WESAD is used
 in any E14 Health product.
 
-The licence wording inside the official archive (`wesad_readme.pdf`) has not been
-read; if it is stricter than the page above, it governs.
+The `wesad_readme.pdf` shipped inside the official archive was read on 2026-10-04: it
+contains no licence terms beyond "If you publish material based on this dataset, please
+reference the publication [1]" (Schmidt et al., ICMI 2018). The terms quoted above from the
+distribution page therefore govern.
