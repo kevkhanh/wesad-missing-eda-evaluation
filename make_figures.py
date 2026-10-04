@@ -34,7 +34,7 @@ GRID = "#e1e0d9"
 BASELINE = "#c3c2b7"
 SURFACE = "#fcfcfb"
 SERIES = [  # (model key, label, colour, marker)
-    ("gated_dropout_p0.5", "Gated + dropout", "#2a78d6", "o"),
+    ("gated_dropout_p0.5", "Bit-masked + dropout", "#2a78d6", "o"),
     ("lgbm_nan_training_p0.5", "LightGBM, NaN-trained (ii)", "#eb6834", "s"),
     ("hr_only", "Heart rate only", "#1baf7a", "^"),
 ]
@@ -91,10 +91,10 @@ def forest(scheme: str = "loso") -> Path:
 
     ax.set_ylabel("Subject (ordered by HR response, weakest at top)", color=INK_2)
     ax.legend(loc="lower left", frameon=False, fontsize=8, labelcolor=INK)
-    fig.suptitle("Discrimination without EDA tracks each subject's heart-rate response",
+    fig.suptitle("Without EDA, discrimination tracks each participant's heart-rate response (descriptive)",
                  x=0.02, ha="left", fontsize=10.5, color=INK)
     fig.text(0.02, 0.02,
-             "Spearman, HR-response magnitude vs AUROC (n = 15): " + "; ".join(rho_txt),
+             "Spearman, HR-response magnitude vs AUROC (n = 15):\n" + "; ".join(rho_txt),
              fontsize=7.5, color=MUTED, ha="left")
     fig.subplots_adjust(left=0.11, right=0.98, top=0.9, bottom=0.2)
 
@@ -107,7 +107,7 @@ def forest(scheme: str = "loso") -> Path:
 
 RC_SERIES = [  # (model key, label, colour, dash) - categorical slots 1-4; dashes
     # are the secondary cue for the two sub-3:1-contrast slots (print/CVD).
-    ("gated_dropout_p0.5", "Gated + dropout", "#2a78d6", "-"),
+    ("gated_dropout_p0.5", "Bit-masked + dropout", "#2a78d6", "-"),
     ("lgbm_nan_training_p0.5", "LightGBM, NaN-trained (ii)", "#eb6834", "-"),
     ("lgbm_ecg_only_per_config", "LightGBM, ECG-only (iii)", "#1baf7a", (0, (6, 2))),
     ("lgbm_nan_at_test", "LightGBM, complete-trained (i)", "#eda100", (0, (2, 2))),
@@ -135,16 +135,16 @@ def risk_coverage_fig(scheme: str = "loso", pcol: str = "p_raw") -> Path:
         cov, risk = risk_coverage(g["y"].values, g[pcol].values)
         ax.plot(cov, risk, color=col, lw=2, ls=dash, label=lab, solid_capstyle="round")
         ends.append((dash, f"{lab}  (AURC {aurc(g['y'].values, g[pcol].values):.3f})", col))
-    # Review minor 4: oracle reference for the gated network's own errors
+    # Review minor 4: oracle reference for the bit-masked network's own errors
     # (abstain on errors first): risk(c) = max(0, (r - (1 - c)) / c). Random
     # abstention keeps risk at r (flat).
     g0 = red[red.model == RC_SERIES[0][0]]
     r0 = float(np.mean((g0[pcol] >= 0.5).astype(int) != g0["y"]))
     cgrid = np.linspace(0.05, 1, 200)
     ax.plot(cgrid, np.maximum(0, (r0 - (1 - cgrid)) / cgrid), color=MUTED, lw=1, ls=(0, (1, 2)))
-    ax.text(0.62, 0.012, "oracle (gated network's errors abstained first)", color=MUTED, fontsize=7.5)
+    ax.text(0.62, 0.012, "oracle (bit-masked network's errors abstained first)", color=MUTED, fontsize=7.5)
     ax.axhline(r0, xmin=0, xmax=1, color=MUTED, lw=0.8, ls=(0, (1, 2)))
-    ax.text(0.42, r0 + 0.008, f"random abstention, gated network (error {r0:.2f})", color=MUTED, fontsize=7.5)
+    ax.text(0.42, r0 + 0.008, f"random abstention, bit-masked network (error {r0:.2f})", color=MUTED, fontsize=7.5)
     base = red[red.model == RC_SERIES[0][0]]["y"].mean()
     ax.axhline(min(base, 1 - base), color=BASELINE, lw=1, ls=(0, (3, 3)))
     ax.text(0.99, min(base, 1 - base) - 0.012, "error if always predicting 'baseline'",
@@ -174,7 +174,7 @@ def risk_coverage_fig(scheme: str = "loso", pcol: str = "p_raw") -> Path:
 
 
 def factorial_fig() -> Path:
-    """Gate x masking factorial (review M2): reduced-condition Brier under
+    """Bit mask x EDA dropout factorial (review M2): reduced-condition Brier under
     20x repeated CV, raw, with participant-level 95% CIs (t, df 14) of each
     cell's mean. LightGBM (complete-trained (i) vs NaN-trained (ii)) is shown
     as the tree-family reference."""
@@ -182,8 +182,8 @@ def factorial_fig() -> Path:
     from scipy.stats import t as tdist
     ps = pd.read_csv(RESULTS / "repeated_cv_per_subject.csv")
     ps = ps[(ps.tier == "reduced") & (ps.calib == "raw")]
-    cells = [("Gated network", "#2a78d6", "o", "gated_no_dropout", "gated_dropout_p0.5"),
-             ("Non-gated MLP", "#eb6834", "s", "mlp_nongated_no_dropout", "mlp_nongated_dropout_p0.5"),
+    cells = [("Bit-masked network", "#2a78d6", "o", "gated_no_dropout", "gated_dropout_p0.5"),
+             ("MLP", "#eb6834", "s", "mlp_nongated_no_dropout", "mlp_nongated_dropout_p0.5"),
              ("LightGBM", "#1baf7a", "^", "lgbm_nan_at_test", "lgbm_nan_training_p0.5")]
     plt.rcParams.update({"font.family": "sans-serif",
                          "font.sans-serif": ["Segoe UI", "DejaVu Sans", "Arial"], "font.size": 9})
@@ -208,7 +208,7 @@ def factorial_fig() -> Path:
     ax.axhline(0.35 * 0.65, color=BASELINE, lw=1, ls=(0, (3, 3)))
     ax.text(-0.42, 0.2275 + 0.004, "prevalence-only Brier (0.2275)", color=MUTED, fontsize=7.5, ha="left")
     ax.set_xticks([0, 1])
-    ax.set_xticklabels(["never trained with\nmissing EDA", "trained with 50%\nEDA masking"])
+    ax.set_xticklabels(["never trained with\nmissing EDA", "trained with 50%\nEDA dropout"])
     ax.set_xlim(-0.45, 1.45)
     ax.set_ylabel("Brier with EDA missing (lower is better)", color=INK_2)
     ax.grid(axis="y", color=GRID, lw=0.6)
@@ -219,11 +219,11 @@ def factorial_fig() -> Path:
         ax.spines[side].set_color(BASELINE)
     ax.tick_params(colors=INK_2, length=0)
     ax.legend(loc="upper right", frameon=False, fontsize=8, labelcolor=INK)
-    fig.suptitle("Masking, not the gate, moves reduced-condition Brier",
+    fig.suptitle("EDA dropout, not the bit mask, moves reduced-condition Brier",
                  x=0.02, ha="left", fontsize=10.5, color=INK)
     fig.text(0.02, 0.01, "20x repeated subject-level 5-fold CV, raw probabilities; "
              "bars: participant-level 95% CI of each cell mean.\n"
-             "Paired differences are much narrower (Table 2).", fontsize=7, color=MUTED)
+             "Paired differences are narrower; see the main text.", fontsize=7, color=MUTED)
     fig.subplots_adjust(left=0.13, right=0.97, top=0.9, bottom=0.2)
     out = RESULTS / "fig_factorial_reduced"
     fig.savefig(out.with_suffix(".png"), dpi=200, facecolor=SURFACE)
