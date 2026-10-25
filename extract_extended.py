@@ -44,7 +44,7 @@ from stage1_pipeline import SubjectWindow
 HERE = Path(__file__).resolve().parent
 OUT_CSV = HERE / "results" / "extended_features.csv"
 MANIFEST = HERE / "results" / "extended_table_manifest.json"
-WESAD_ROOT = os.environ.get("WESAD_ROOT", r"C:\Users\Lenovo\Downloads\wesad_pkls")
+WESAD_ROOT = os.environ.get("WESAD_ROOT", r"D:\wesad_pkls")
 FS_CHEST, FS_BVP, FS_WEDA, FS_WACC = 700, 64, 4, 32
 WIN_S = 60
 CAP = 20
