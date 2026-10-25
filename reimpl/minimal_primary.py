@@ -41,7 +41,7 @@ import numpy as np
 import pandas as pd
 from scipy.signal import butter, filtfilt, find_peaks
 
-ROOT = Path(os.environ.get("WESAD_ROOT", r"C:\Users\Lenovo\Downloads\wesad_pkls"))
+ROOT = Path(os.environ.get("WESAD_ROOT", r"D:\wesad_pkls"))
 OUT = Path(__file__).resolve().parent.parent / "results" / "reimpl_minimal_primary.json"
 FS = 700
 WIN = 60 * FS

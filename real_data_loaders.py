@@ -34,7 +34,7 @@ from stage1_pipeline import SubjectWindow
 # Configuration
 # ---------------------------------------------------------------------------
 
-WESAD_ROOT = os.environ.get("WESAD_ROOT", "/mnt/user-data/uploads/WESAD")
+WESAD_ROOT = os.environ.get("WESAD_ROOT", r"D:\wesad_pkls")
 MITBIH_ROOT = os.environ.get("MITBIH_ROOT", "/mnt/user-data/uploads/mit-bih")
 
 WESAD_FS = 700

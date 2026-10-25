@@ -7,7 +7,7 @@ set -o pipefail
 
 ROOT="D:/Trần An Khánh/E14/robustness"
 MITDB="D:/Trần An Khánh/E14/mitdb"
-WESAD="C:/Users/Lenovo/Downloads/wesad_pkls"
+WESAD="D:/wesad_pkls"
 LOG_DIR="$ROOT/results/audit"
 
 export PYTHONIOENCODING=utf-8
