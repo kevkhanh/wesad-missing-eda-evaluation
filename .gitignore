@@ -18,6 +18,10 @@ stage3_hb1_dataset.csv
 results/extended_features.csv
 results/posture_features.csv
 
+# Preprint source and PDF: kept local only, not published in this repository
+paper/*.tex
+paper/*.pdf
+
 # LaTeX build products
 paper/*.aux
 paper/*.log

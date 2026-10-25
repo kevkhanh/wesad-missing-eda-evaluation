@@ -1,7 +1,7 @@
 # E14 robustness: missing-EDA evaluation on WESAD
 
 Code and derived data for the preprint drafted in `e14-preprint-outline.md`
-(see `paper/main.pdf`; the long supplement is the outline), plus the separate WESAD × MIT-BIH dataset-identity
+(the paper itself is distributed through TechRxiv, not this repository; the long supplement is the outline), plus the separate WESAD × MIT-BIH dataset-identity
 audit (`audit/`, companion note).
 
 Nothing in this repository was pre-registered. `configs/preregistration.yaml`
